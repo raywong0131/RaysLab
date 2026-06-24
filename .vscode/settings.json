@@ -1,0 +1,8 @@
+{
+  "code-runner.respectShebang": false,
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "python": "py -3 -u"
+  },
+  "python.defaultInterpreterPath": "D:\\Program Files\\Python312\\python.exe"
+}

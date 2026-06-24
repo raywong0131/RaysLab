@@ -1,0 +1,435 @@
+FFT  (in [um] unit)
+clear;
+
+Data input
+tic
+field = load('194.27_px_HighQ_h1.55_20-20_a820.txt');
+% field00 = load('S4new_DipoleExcite_pyMax_phi00_329.24_h920_a440b146_cav(sca1.15,eta0.96)_clad(sca1eta0.94).txt');
+% field15 = load('S4new_DipoleExcite_pyMax_phi15_329.24_h920_a440b146_cav(sca1.15,eta0.96)_clad(sca1eta0.94).txt');
+% field30 = load('S4new_DipoleExcite_pyMax_phi30_329.24_h920_a440b146_cav(sca1.15,eta0.96)_clad(sca1eta0.94).txt');
+% field45 = load('S4new_DipoleExcite_pyMax_phi45_329.24_h920_a440b146_cav(sca1.15,eta0.96)_clad(sca1eta0.94).txt');
+% field60 = load('S4new_DipoleExcite_pyMax_phi60_329.24_h920_a440b146_cav(sca1.15,eta0.96)_clad(sca1eta0.94).txt');
+% field75 = load('S4new_DipoleExcite_pyMax_phi75_329.24_h920_a440b146_cav(sca1.15,eta0.96)_clad(sca1eta0.94).txt');
+% field90 = load('S4new_DipoleExcite_pyMax_phi90_329.24_h920_a440b146_cav(sca1.15,eta0.96)_clad(sca1eta0.94).txt');
+toc
+
+h0=1.55;                      %(unit: um)
+
+
+% field = (field00 + 2*field15 + 2*field30 + 2*field45 + 2*field60 + 2*field75 + field90)/12;
+% field = field90;
+
+% Other information
+freq=193.97;        %(unit:THz) 
+mode = 4;        %数据中有z坐标信息则==4；只有xy轴则==3 
+a = 0.82;        %(unit:um) lattice constant of single layer cell
+Quarter=0;
+unit=1;
+%确定实空间信息；
+NA=0.9;
+
+expand=1000;    %矩阵外层补0扩充，提高FFT精度
+pol_deg=0;
+pol=pol_deg*pi/180;  % Define y-axis as theta==0 && CCW is the positive direction
+lda0 = 299.792458/freq;       
+k0=2*pi/lda0;            %(unit: 1/um)
+
+Calculating
+S1 Matrixing
+tic
+field(isnan(field)) = eps;
+field = field';
+dim=sqrt(length(field));
+dimE = sqrt(length(field))+expand*2;   %每个模块的x,y像素点数量
+len = length(field);                   %序列长度，取点个数或像素数
+%实空间的坐标序列
+Lx = 2*abs(field(1,1))/unit;                 %实空间x方向的长度
+Ly = 2*abs(field(2,1))/unit;                 %实空间y方向的长度,这里要求对称取点
+dx = Lx/(dim-1);
+dy = Ly/(dim-1);
+LxE = dx*(dimE-1);
+LyE = dy*(dimE-1);
+x = -LxE/2:dx:LxE/2;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+y = -LyE/2:dy:LyE/2;  y=y';      
+%k空间的坐标序列
+Lkx = pi*(dimE-1)/abs(field(1,1))*unit*dim/dimE;
+Lky = pi*(dimE-1)/abs(field(2,1))*unit*dim/dimE;
+dkx = Lkx/(dimE-1);
+dky = Lky/(dimE-1);
+kx = -Lkx/2:dkx:Lkx/2;
+ky = -Lky/2:dky:Lky/2; ky = ky';
+rEx=reshape(field(mode+0,:),[dim,dim]);
+rEy=reshape(field(mode+2,:),[dim,dim]);
+rEz=reshape(field(mode+4,:),[dim,dim]);
+iEx=reshape(field(mode+1,:),[dim,dim]);
+iEy=reshape(field(mode+3,:),[dim,dim]);
+iEz=reshape(field(mode+5,:),[dim,dim]);
+Ex=rEx+1i*iEx;  Ey=rEy+1i*iEy;  Ez=rEz+1i*iEz;
+Ex=padarray(Ex,[expand expand]);
+Ey=padarray(Ey,[expand expand]);
+Ez=padarray(Ez,[expand expand]);
+Ex=Ex.';    Ey=Ey.';    Ez=Ez.';    
+%注意，如果直接用 ' ，表示共轭转置， .' 才是转置
+toc
+
+FFT
+tic
+normEx=conj(Ex).*Ex;
+normEy=conj(Ey).*Ey;
+normEz=conj(Ez).*Ez;
+normE0 = normEx + normEy + normEz;      %计算得到的实空间pattern
+clear Exq Eyq Ezq
+% 做场的积分归一化，使得总场强²加和为1，便于对比
+fEx = fftshift(fft2(Ex));
+fEy = fftshift(fft2(Ey));
+fEz = fftshift(fft2(Ez));                  %对各个分量进行FFT
+normfEx=fEx.*conj(fEx);
+normfEy=fEy.*conj(fEy);
+normfEz=fEz.*conj(fEz);
+normfE0 = normfEx + normfEy + normfEz;  %k空间pattern
+toc
+
+iFFT(+滤波)
+tic
+K0=k0*NA;
+[KX,KY]=meshgrid(kx,ky);
+KZ=sqrt(k0.^2-KX.^2-KY.^2).*((KX.^2+KY.^2)<=K0^2);
+phase=exp(1i*KZ*h0);
+% phase=1;
+ffEx=fEx.*phase.*((KX.^2+KY.^2)<=K0^2);
+ffEy=fEy.*phase.*((KX.^2+KY.^2)<=K0^2);
+ffEz=fEz.*phase.*((KX.^2+KY.^2)<=K0^2);
+normffEx0=ffEx.*conj(ffEx);
+normffEy0=ffEy.*conj(ffEy);
+normffEz0=ffEz.*conj(ffEz);
+normffE0 = normffEx0 + normffEy0 + normffEz0;  %k空间pattern
+ifEx=ifft2(ifftshift(ffEx));
+ifEy=ifft2(ifftshift(ffEy));
+ifEz=ifft2(ifftshift(ffEz));
+normifEx0=ifEx.*conj(ifEx);
+normifEy0=ifEy.*conj(ifEy);
+normifEz0=ifEz.*conj(ifEz);
+normifE0 = normifEx0 + normifEy0 + normifEz0;  %k空间pattern
+toc
+
+Visualizing
+
+infos for graphic
+
+%计算k空间信息；
+kD = 4*pi/(3*a);    %length between Gamma and K point 
+G  = kD*sqrt(3);    %
+Gx = G*cos(pi/6);
+Gy = G*sin(pi/6);
+R_scale = 25*a;     %r空间绘制范围
+K_scale = 1.6*G;     %k空间绘制范围
+
+r-space
+figure; %计算实空间                           
+pcolor(x,y,normE0/max(max(normE0)));
+shading interp;
+set(gca,'DataAspectRatio',[1 1 1]);
+colormap hot;
+colorbar
+hold on;
+xlabel('x (um)')
+ylabel('y (um)')
+title('r-space(|E|^2)-Linear')
+xlim([-R_scale R_scale]);
+ylim([-R_scale R_scale]);
+
+k-space
+figure; %计算k空间                           
+pcolor(kx,ky,log10(normfE0/max(max(normfE0))));
+shading interp;
+set(gca,'DataAspectRatio',[1 1 1]);
+hold on
+%额外信息绘制 start
+tt=0:0.01:2*pi;
+xt=k0*cos(tt);
+yt=k0*sin(tt);
+plot(xt,yt,'w-')
+tt=0:0.01:2*pi;
+xt=NA*k0*cos(tt);
+yt=NA*k0*sin(tt);
+plot(xt,yt,'w--')
+tt = 0:pi/3:2*pi;
+x0 = kD*cos(tt);
+y0 = kD*sin(tt);
+plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+tt = 0:pi/3:2*pi;
+x0 = kD*cos(tt);
+y0 = kD*sin(tt)+G;
+plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+tt = 0:pi/3:2*pi;
+x0 = kD*cos(tt)+Gx;
+y0 = kD*sin(tt)+Gy;
+plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+tt = 0:pi/3:2*pi;
+x0 = kD*cos(tt)-Gx;
+y0 = kD*sin(tt)+Gy;
+plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+tt = 0:pi/3:2*pi;
+x0 = kD*cos(tt);
+y0 = kD*sin(tt)-G;
+plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+tt = 0:pi/3:2*pi;
+x0 = kD*cos(tt)-Gx;
+y0 = kD*sin(tt)-Gy;
+plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+tt = 0:pi/3:2*pi;
+x0 = kD*cos(tt)+Gx;
+y0 = kD*sin(tt)-Gy;
+plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+%额外信息绘制 end
+colormap hot;
+colorbar
+xlabel('kx (1/um)')
+ylabel('ky (1/um)')
+title('k-space(log)')
+xlim([-K_scale K_scale]);
+ylim([-K_scale K_scale]);
+clim([-5 0])
+
+k-space in Lightcone
+figure; %计算k空间                           
+pcolor(kx,ky,(normfEx/max(max(normfE0))));
+shading interp;
+set(gca,'DataAspectRatio',[1 1 1]);
+hold on
+% clim([-6 0]);
+
+%额外信息绘制 start
+%t = 0:pi/3:2*pi;
+%x0 = kD*cos(tt);
+%y0 = kD*sin(tt);
+%plot(x0,y0,'-','Color',[0 176/255 240/255],'LineWidth',1);
+tt=0:0.01:2*pi;
+xt=k0*cos(tt);
+yt=k0*sin(tt);
+plot(xt,yt,'w-')
+tt=0:0.01:2*pi;
+xt=NA*k0*cos(tt);
+yt=NA*k0*sin(tt);
+plot(xt,yt,'w--')
+%额外信息绘制 end
+
+colormap hot;
+colorbar
+xlabel('kx (1/um)')
+ylabel('ky (1/um)')
+title(['k-space (NA=',num2str(NA),')'])
+xlim([-k0*1.5 k0*1.5]);
+ylim([-k0*1.5 k0*1.5]);
+
+
+偏振图
+tic
+delta_theta_deg = 5;
+pol_N=360/delta_theta_deg;
+
+pol_theta=zeros(1,pol_N);
+pol_Esum=zeros(1,pol_N);
+for ii=1:1:pol_N+1
+    pol_theta0=(ii-1)*2*pi/pol_N;
+    pol_E=ffEy*cos(pol_theta0)-ffEx*sin(pol_theta0);
+    pol_Enorm=pol_E.*conj(pol_E);
+    pol_sumE=sum(sum(pol_Enorm));
+    pol_theta(ii)=pol_theta0;
+    pol_Esum(ii)=pol_sumE;
+end
+toc
+index=find(pol_Esum==max(pol_Esum));
+pol_dir=pol_theta(index)*180/pi; 
+figure;             
+p=polarplot(pol_theta,pol_Esum/max(pol_Esum),'r');
+p.LineStyle = ":";
+p.Color = "red";
+p.Marker = "o";
+thetaticks(0:45:315);
+pax=gca;
+pax.ThetaZeroLocation = 'top';
+rticks([0 2])
+title(['Polarization \theta=',num2str(pol_dir(1)),'\circ'])
+
+max(pol_Esum)
+min(pol_Esum)
+polarizaton=(max(pol_Esum)-min(pol_Esum))/abs(max(pol_Esum)+min(pol_Esum))
+
+
+
+r space：滤波后iFFT近场
+figure; %计算实空间                           
+pcolor(x,y,normifE0/max(max(normifE0)));
+shading interp;
+set(gca,'DataAspectRatio',[1 1 1]);
+colormap(hot);
+colorbar
+hold on;
+xlabel('x (um)')
+ylabel('y (um)')
+title(['r-space(|E|^2)-iFFT (NA=',num2str(NA),')'])
+xlim([-R_scale R_scale]);
+ylim([-R_scale R_scale]);
+
+
+Appendix
+Cutline: r-space (y-axis)
+normE0cut_x = zeros(dimE,1);
+normE0cut_y = zeros(dimE,1);
+r0_cutline = (-LyE/2:dy:LyE/2)';
+for ii=1:1:dimE
+    normE0cut_y(ii) = normE0(ii,ceil(dimE/2));
+    normE0cut_x(ii) = normE0(ceil(dimE/2),ii);
+end
+rc0 = zeros(dimE,2);
+rc0(:,1)=r0_cutline;
+rc0(:,2)=normE0cut_y/max(normE0cut_y);
+
+% figure            %截线 
+% plot(rc0(:,1),rc0(:,2),'r','LineWidth',1.5)
+% hold on
+% xlabel('cutline y-axis (um)')
+% xlim([-Ly Ly])
+% legend('Original')
+
+normifEcut = zeros(dimE,1);
+r_cutline = (-LyE/2:dy:LyE/2)';
+for ii=1:1:dimE
+    normifEcut(ii)= normifE0(ii,ceil(dimE/2));
+end
+rc(:,1)=r_cutline;
+rc(:,2)=normifEcut/max(normifEcut);
+
+% figure;             %截线 
+% plot(rc(:,1),rc(:,2),'r','LineWidth',1.5)
+% hold on
+% xlabel('cutline (um)')
+% xlim([-Ly Ly])
+% title(['r-space cutline(y) (|E|^2) (NA=',num2str(NA),')'])
+
+Cutline: k-space
+kx_cutline = (-Lkx/2:Lky/(dimE-1):Lkx/2)';
+ky_cutline = (-Lky/2:Lky/(dimE-1):Lky/2)';
+normfEcut0x=zeros(1,dimE); 
+normfEcut0y=zeros(1,dimE); 
+jj=1;
+for ii = 1:1:dimE
+    normfEcut0y(ii)=normfE0(ii,ceil(dimE/2));
+    normfEcut0x(ii)=normfE0(ceil(dimE/2),ii);
+    if abs(ky_cutline(ii))<=abs(k0)
+            theta(jj)=asin(ky_cutline(ii)/k0)*180/pi;
+            normfEcutx(jj)=normfE0(ceil(dimE/2),ii);
+            normfEcuty(jj)=normfE0(ii,ceil(dimE/2));
+            jj=jj+1;
+    end
+end
+clear ii jj 
+
+
+%使用 min 函数截取最短长度的数据：
+minLength = min(length(kx_cutline), length(ky_cutline));
+kx_cutline = kx_cutline(1:minLength);
+ky_cutline = ky_cutline(1:minLength);
+normfEcut0x = normfEcut0x(1:minLength);
+normfEcut0y = normfEcut0y(1:minLength);
+
+%插入调试代码来打印数组的长度：
+disp(size(kx_cutline));
+disp(size(ky_cutline));
+disp(size(normfEcut0x));
+disp(size(normfEcut0y));
+
+
+
+kc0x(:,1)=kx_cutline; kc0y(:,1)=ky_cutline;
+kc0x(:,2)=normfEcut0x'/max(normfEcut0x);
+kc0y(:,2)=normfEcut0y'/max(normfEcut0y);       %ky-fE
+kcx(:,1)=theta';  kcy(:,1)=theta';
+kcx(:,2)=normfEcutx'/max(normfEcutx);
+kcy(:,2)=normfEcuty'/max(normfEcuty);          %k_theta-fE
+
+figure             %截线 
+plot(ky_cutline,normfEcut0y'/max(normfEcut0y),'r','LineWidth',1.5)
+hold on
+xlabel('ky(1/um)')
+xlim([-k0*NA k0*NA])
+yticks([0 0.5 1])
+title('ky-cutline at kx=0')
+grid on
+
+figure             %截线 
+plot(kx_cutline,normfEcut0x'/max(normfEcut0x),'r','LineWidth',1.5)
+hold on
+xlabel('ky(1/um)')
+xlim([-k0*NA k0*NA])
+yticks([0 0.5 1])
+title('kx-cutline at ky=0')
+grid on
+
+figure             %截线 
+plot(theta,normfEcuty'/max(normfEcuty),'r','LineWidth',1.5)
+hold on
+xlabel('theta(deg)')
+xlim([-10 10])
+ylim([0 1])
+xticks(-10:2:10)
+yticks([0 0.5 1])
+title('ky-cutline:theta-|fE|^2')
+grid on
+
+figure             %截线 
+plot(theta,normfEcutx'/max(normfEcutx),'r','LineWidth',1.5)
+hold on
+xlabel('theta(deg)')
+xlim([-10 10])
+ylim([0 1])
+xticks(-10:2:10)
+yticks([0 0.5 1])
+title('kx-cutline:theta-|fE|^2')
+grid on
+
+曲线拟合: k-fE
+[xData, yData] = prepareCurveData( kc0y(:,1), kc0y(:,2) );
+% 设置 fittype 和选项。
+ft = fittype('gauss1');
+opts = fitoptions( 'Method', 'NonlinearLeastSquares' );
+opts.Display = 'Off';
+% opts.Lower = [-Inf -Inf 0];
+opts.Normalize = 'on';
+opts.StartPoint = [1 0 0.1];
+
+% 对数据进行模型拟合。
+[fitresult, gof] = fit( xData, yData, ft, opts ); fitresult
+% 绘制数据拟合图。
+figure( 'Name', 'theta-fE' );
+h = plot( fitresult, xData, yData );
+legend( h, 'fE vs. k(1/um)', 'k-fE', 'Location', 'NorthEast', 'Interpreter', 'none' );
+% 为坐标区加标签
+xlabel( 'ky(1/um)', 'Interpreter', 'none' );
+ylabel( 'normfEcut', 'Interpreter', 'none' );
+xlim([-0.4 0.4])
+xticks(-0.4:0.1:0.4)
+yticks([0 0.5 1])
+grid on
+
+Radiation 
+figure
+polarplot(kcy(:,1)/180*pi,kcy(:,2),'r','LineWidth',1.5)
+thetalim([-90 90])
+pax=gca;
+pax.ThetaDir = 'clockwise';
+pax.ThetaZeroLocation = 'top';
+title('y-cut')
+
+figure
+polarplot(kcx(:,1)/180*pi,kcx(:,2),'r','LineWidth',1.5)
+thetalim([-90 90])
+pax=gca;
+pax.ThetaDir = 'clockwise';
+pax.ThetaZeroLocation = 'top';
+title('x-cut')
+
+
+
+

@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(scientific-writing)",
+      "Skill(scientific-writing:*)",
+      "Bash(where pdflatex:*)",
+      "Read(//c//**)",
+      "Read(//d//**)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Users/wangs/AppData/Local/Programs/**)",
+      "Read(//c/Users/wangs/AppData/**)",
+      "Bash(pip show:*)",
+      "Bash(python -c \"import subprocess; subprocess.run\\([''''pdflatex'''',''''--version'''']\\)\")",
+      "Bash(python compile_paper.py)",
+      "Bash(pip install:*)",
+      "Bash(python -c \":*)",
+      "Bash(python PolarSingularity/plot_bic_polarization.py)",
+      "Bash(python saddle_surfaces.py)",
+      "Bash(python extract_triangles.py)",
+      "Bash(python3 -c \"import scipy; print\\(scipy.__version__\\)\")",
+      "Bash(python3 -c \"import numpy; print\\(numpy.__version__\\)\")",
+      "Bash(python3 -c \"import matplotlib; print\\(matplotlib.__version__\\)\")",
+      "Bash(python -c \"import numpy; import scipy; import matplotlib; print\\('numpy', numpy.__version__, 'scipy', scipy.__version__, 'matplotlib', matplotlib.__version__\\)\")",
+      "Bash(python -c \"from scipy.signal.windows import taylor; import inspect; print\\(inspect.signature\\(taylor\\)\\)\")",
+      "Bash(python ArrayAntenna/array_pattern_3d.py)",
+      "Bash(python -c ' *)",
+      "Bash(python -u \"ArrayAntenna/array_pattern_3d.py\")",
+      "Bash(python bic_winding.py)"
+    ]
+  }
+}
