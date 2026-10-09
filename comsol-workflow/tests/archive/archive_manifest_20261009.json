@@ -1,0 +1,781 @@
+{
+  "schema_version": 1,
+  "archive_date": "2026-10-09",
+  "original_root": "I:\\codeXproject\\comsol-workflow\\tests",
+  "archive_root": "I:\\codeXproject\\comsol-workflow\\tests\\archive",
+  "original": {
+    "files": {
+      "test_analyze_finite_trend.py": {
+        "bytes": 10596,
+        "mtime_ns": 1785548737102516200,
+        "sha256": "478392315b5ea07f357f40115dd974441301a52e7443f6885271357142c8376b"
+      },
+      "test_analyze_strip_gamma_summary.py": {
+        "bytes": 9292,
+        "mtime_ns": 1785404374264177100,
+        "sha256": "0e939720c7e7d22737afb674d5c8e33f2c4135373e8955c487fa65d6a35f4696"
+      },
+      "test_analyze_strip_gamma_trend.py": {
+        "bytes": 13888,
+        "mtime_ns": 1785404375401209900,
+        "sha256": "5f613c7910c1c5713453a521de49178151f509a286ca654ce894c5a333415dab"
+      },
+      "test_blueprint_comsol_geometry_parity.py": {
+        "bytes": 5099,
+        "mtime_ns": 1785857285279596900,
+        "sha256": "c839cf0994df3ad085d90c29b7e0acabcfa173722f3caae76df9b5e4f6ad25dd"
+      },
+      "test_bulk_cladding_lattice_generation.py": {
+        "bytes": 23411,
+        "mtime_ns": 1784485741447886100,
+        "sha256": "c19facff4713667a4ec2f50b5835f6c137602f305f032e786bc5463bf6a8a21c"
+      },
+      "test_bulk_side_corner_lattice_generation.py": {
+        "bytes": 11334,
+        "mtime_ns": 1784485743316575700,
+        "sha256": "0863943a38b3791608fa9c2a7181e63943eb4bd5f7361e4da27a3f106f35cba5"
+      },
+      "test_c2v_band_model.py": {
+        "bytes": 4046,
+        "mtime_ns": 1787197314976172500,
+        "sha256": "eb742553c13f58af0e2bd092f1fc09597a2c8d839ba2ab283332b04503fb3de3"
+      },
+      "test_cavity_hole_polygon_clipping.py": {
+        "bytes": 13257,
+        "mtime_ns": 1785066753401037800,
+        "sha256": "5ad4cab07e3112cbb69d1d6e1d588bed5723a568b27fdab109eaaa13a39144fb"
+      },
+      "test_cladding_shift_profile.py": {
+        "bytes": 28446,
+        "mtime_ns": 1788849856423036300,
+        "sha256": "199b9965f651f5469c3c33f53716c3e722b72369e742b642e0e4473ec88e661e"
+      },
+      "test_dipolar_angle_filter.py": {
+        "bytes": 1147,
+        "mtime_ns": 1790567016473677100,
+        "sha256": "e925b0e5a76d8026afc013a347a5e3e5014feae3c9c293282edd34f63149d2fd"
+      },
+      "test_dipolar_output_layout.py": {
+        "bytes": 1166,
+        "mtime_ns": 1790240210484286800,
+        "sha256": "ec62f055c81538f7223605e94f4b4b19c4fd92e5ac525ca533fc9650f6dc6af8"
+      },
+      "test_energy_recovery.py": {
+        "bytes": 11711,
+        "mtime_ns": 1784485742413492200,
+        "sha256": "e93b37a19185347729b3d246b38da8ec3e7d793e34fc5d65ff20d022af44b293"
+      },
+      "test_export_finite_field_html.py": {
+        "bytes": 1499,
+        "mtime_ns": 1785205775872364800,
+        "sha256": "38caba80f8d3007d5917dad226c3d5445438e88cd81cf25667acf072296c2e79"
+      },
+      "test_farfield_fft.py": {
+        "bytes": 14249,
+        "mtime_ns": 1785644332512929700,
+        "sha256": "3af13fd492ea9e07c054c6161d356669cc5b48f558878583a5573858213672a1"
+      },
+      "test_field_plotting.py": {
+        "bytes": 6876,
+        "mtime_ns": 1788750246656396800,
+        "sha256": "e5c69ee922de761c1b4670a5e61c63f7f0c226525b5cf9183629f173e0b14d39"
+      },
+      "test_finite_cavity_field_exports.py": {
+        "bytes": 23765,
+        "mtime_ns": 1788765336689644600,
+        "sha256": "31882edd4434a107061f569283dd0e5b9ced9d4a539e5f7c9ee48a289ed32ed4"
+      },
+      "test_finite_flatness_trend.py": {
+        "bytes": 9007,
+        "mtime_ns": 1785558811164623500,
+        "sha256": "e70c04c1429bd970516ed4e7aef5063b763b0b988123f395398055942d9b5c21"
+      },
+      "test_finite_geometry.py": {
+        "bytes": 8559,
+        "mtime_ns": 1788337009425933400,
+        "sha256": "2a63f1ab033ae54fc0383ec5576f8897e3b35652249e9b48f5428639ada46174"
+      },
+      "test_fourier_basis.py": {
+        "bytes": 4465,
+        "mtime_ns": 1784485744282607100,
+        "sha256": "0e3559d0708ea88dce3a89c33bfd820687337f37d2117e99cd49894e45e2881f"
+      },
+      "test_geometry.py": {
+        "bytes": 6824,
+        "mtime_ns": 1784485745197793000,
+        "sha256": "fa8eaac4562baaafafe9dfc362af5a069f12199d8e67db4a51da56e0ce4fd0b5"
+      },
+      "test_lattice_fourier_validity.py": {
+        "bytes": 13646,
+        "mtime_ns": 1785895312617624300,
+        "sha256": "906b7f18df8545861a386ff58af1e3ec0dc8175f6cd686721c6c98526cf91f5e"
+      },
+      "test_lattice_polygon_fourier_utils.py": {
+        "bytes": 10996,
+        "mtime_ns": 1785690577724789900,
+        "sha256": "d4887581a2f9a16dfa139bcc26aa3644bb2ffd65bc3dba0372448179bc12ae8f"
+      },
+      "test_optimize_cladding_p2_d2_alignment.py": {
+        "bytes": 7401,
+        "mtime_ns": 1785473270338676500,
+        "sha256": "61dd0f97a9b04d323757f5e927a1d95b54e7c6bc40acfe7eada5518be2013699"
+      },
+      "test_optimize_finite_quarter_q.py": {
+        "bytes": 4160,
+        "mtime_ns": 1785377232114618300,
+        "sha256": "7a4019d1010b755fdfd53d264441ae1fc76f0b17c50633b15e5410fa05d66473"
+      },
+      "test_parameter_config.py": {
+        "bytes": 6988,
+        "mtime_ns": 1788849856426036500,
+        "sha256": "81cd2e65084abf0fffbd989b4e063f45ab9196b066298094242e352564bede9b"
+      },
+      "test_run_band_pair.py": {
+        "bytes": 88925,
+        "mtime_ns": 1788337841855392300,
+        "sha256": "81d7017e15a7394b415442c1aa715b41edba0c9cda185f5cc69a66eb49449e13"
+      },
+      "test_run_band_pair_model_reuse.py": {
+        "bytes": 9359,
+        "mtime_ns": 1787071071879272500,
+        "sha256": "8a2a2cebdf8429eb634b12914f4ff5721f8c271f052fd2ece3d81375d6493a38"
+      },
+      "test_run_band_solo.py": {
+        "bytes": 5219,
+        "mtime_ns": 1788849856425038600,
+        "sha256": "e3cca859259ea0220fa83f6f4d3f232b774d3416880d901c6ef106f47445d617"
+      },
+      "test_run_finite_farfield.py": {
+        "bytes": 4300,
+        "mtime_ns": 1785690767794465000,
+        "sha256": "015193ecbfa97fc2aede00d173903bcf285076cb15582f9125fcd173140075a5"
+      },
+      "test_run_finite_quarter_four_modes.py": {
+        "bytes": 19204,
+        "mtime_ns": 1788789165604243000,
+        "sha256": "094a637be0ade409ff360286f86900d1858f2bf93ab65732deedda72b9282bc4"
+      },
+      "test_run_strip_bulk_rotation.py": {
+        "bytes": 6155,
+        "mtime_ns": 1784489786039847900,
+        "sha256": "f6fc9105d3cbaea4b07bf63eae055a0591f3bd8578abd960287957207d4bb0aa"
+      },
+      "test_run_strip_hexagon_boundary.py": {
+        "bytes": 1578,
+        "mtime_ns": 1784480268833631400,
+        "sha256": "5a8586a9c767a35555ce0d140e4530a68739fb82c0b155fe4f59d895e236ddfb"
+      },
+      "test_run_strip_output_layout.py": {
+        "bytes": 12651,
+        "mtime_ns": 1785479727779576200,
+        "sha256": "fa9e38123a678ded4c4a5ba51a01b044fb138df20846acb697a64e0aa477535a"
+      },
+      "test_run_strip_shift_scan.py": {
+        "bytes": 26551,
+        "mtime_ns": 1788332692558236600,
+        "sha256": "e246fdc93d95901921d6d0738060278325dc69d322ae165def3aed308e2b7342"
+      },
+      "test_run_unit_cell_2d.py": {
+        "bytes": 10920,
+        "mtime_ns": 1788849856425038600,
+        "sha256": "a05d696e47a1418718b6c51389ad1ec9f4dfe8f530a966ba35fb60d106180937"
+      },
+      "test_run_unit_cell_2d_zeta_scan.py": {
+        "bytes": 4010,
+        "mtime_ns": 1787680489757895400,
+        "sha256": "ca2e95fcf895876662a1c95814f77a2f7e4308d37710ca04de75eb5fa86aada4"
+      },
+      "test_s4_boundary.py": {
+        "bytes": 32333,
+        "mtime_ns": 1789632520891879400,
+        "sha256": "ffac05ca299480304927634221d28afca50141f45c9ebbdc0f0522880b57aa34"
+      },
+      "test_s4_c6v_decomposition.py": {
+        "bytes": 4811,
+        "mtime_ns": 1789633541874301900,
+        "sha256": "70d8542502bde0b2a3702c0f0dd880a3f0c9be4f35d64d94e46e668b2db67a49"
+      },
+      "test_s4_dual_validation.py": {
+        "bytes": 13451,
+        "mtime_ns": 1790740338108814900,
+        "sha256": "637fadbcf9e5901cd6b4ac66b44fc358182dd9f6de61afcb15ad61e4113569cd"
+      },
+      "test_s4_full_refined_scan.py": {
+        "bytes": 3299,
+        "mtime_ns": 1790758990940873200,
+        "sha256": "5cc6dcb84efe0d99e20e18ff041f9abf1b2588f99de4c96a48ac53272756b3dd"
+      },
+      "test_s4_local_fields.py": {
+        "bytes": 2520,
+        "mtime_ns": 1789670866924874400,
+        "sha256": "b8bd7702bff937aef458b0585add856b4fcd3b41d51b01b4b98d7460757925f3"
+      },
+      "test_s4_mesh_convergence.py": {
+        "bytes": 3272,
+        "mtime_ns": 1790765590822082300,
+        "sha256": "2d8bb84448565f9a013bae0e919b65fe130f75fe2f1afe5b64ed79f0d4f1de5e"
+      },
+      "test_s4_px_mesh_test.py": {
+        "bytes": 1228,
+        "mtime_ns": 1790654209538242700,
+        "sha256": "01191614ebe994a7d469fa1940f11d2222738fac074f8a5e3f276fbb7761305a"
+      },
+      "test_s4_session_paths.py": {
+        "bytes": 2322,
+        "mtime_ns": 1789628834687073000,
+        "sha256": "87cc098da8ca0eb9eb2b27073f6e5c66ff31127d3b5eec07fae5645a7b9bc904"
+      },
+      "test_s4_signed_indicator.py": {
+        "bytes": 880,
+        "mtime_ns": 1789723599046685300,
+        "sha256": "9df1aa5ecce1507486cde7222efb91438de0a854b991948250427ca81d673c79"
+      },
+      "test_s5_bloch_validation.py": {
+        "bytes": 10826,
+        "mtime_ns": 1789971617415995100,
+        "sha256": "029af71c70fe1b80d2faa24a80ce005d7f3279c12f95a5b03c3a21730d114d06"
+      },
+      "test_s5_cavity_plot_contract.py": {
+        "bytes": 2558,
+        "mtime_ns": 1789971753349310400,
+        "sha256": "d5ee3e65c94a87310b5a9b7addb89d9f13f3fff954b460228e93305509fbfc7d"
+      },
+      "test_s5_cladding_plot_scale.py": {
+        "bytes": 1090,
+        "mtime_ns": 1790650578487621600,
+        "sha256": "51273c89cdf39d9855d05b37986d9001aeb14610d68c7cd106aeea018cfe309a"
+      },
+      "test_s5_gamma_mechanism.py": {
+        "bytes": 621,
+        "mtime_ns": 1789966878758319200,
+        "sha256": "4a80032e364223baba8d73284ddff23e696f3719c3245e5e1b2f088ec750e2a0"
+      },
+      "test_s5_gamma_origin.py": {
+        "bytes": 7505,
+        "mtime_ns": 1791422257484101200,
+        "sha256": "5218452dcb7981091a3e8a143dce422a6c357ff5f582453167d510ca01d12e1d"
+      },
+      "test_s5_output_layout.py": {
+        "bytes": 1798,
+        "mtime_ns": 1790563431054449000,
+        "sha256": "d69184debafcf9676abda23877a58e71ace810dda43cd2a5998e8dce4ba73c1e"
+      },
+      "test_simulation_config_geometry.py": {
+        "bytes": 5084,
+        "mtime_ns": 1788417735920615100,
+        "sha256": "a186d1c57be208e9c1d53c725ee0afdcebfc72fff19acc288e2c81ca9899c997"
+      },
+      "test_simulation_plotting.py": {
+        "bytes": 9092,
+        "mtime_ns": 1784485751014026700,
+        "sha256": "852b823c9f8973c0a7d4fa49cabf7376142404004ed43a6e2c6e80a690612d1f"
+      },
+      "test_simulation_progress_log.py": {
+        "bytes": 10262,
+        "mtime_ns": 1784485749957242800,
+        "sha256": "21a8cca7d06d862668243a77951da1cb578bd7f59addb2d386251d7ca0ceade4"
+      },
+      "test_simulation_spatial.py": {
+        "bytes": 14531,
+        "mtime_ns": 1784485751976114800,
+        "sha256": "4066a2c12c230ea7cbbbb8948cf0320d33008d42320552543217cf4cfaf816d8"
+      },
+      "test_simulation_utils_field_export_options.py": {
+        "bytes": 4505,
+        "mtime_ns": 1788750148959984800,
+        "sha256": "ab4dc5093ebe1e584f8703cd094bf1bc50d8883ef02bf40db687af6a539dadbf"
+      },
+      "test_simulation_utils_grid_interpolation.py": {
+        "bytes": 3071,
+        "mtime_ns": 1784485748076084600,
+        "sha256": "c742d5a1b422d5203ebcb6c7eeb826098729e3d4848246612e0d15cf8b3cdde7"
+      },
+      "test_simulation_utils_multilayer.py": {
+        "bytes": 15764,
+        "mtime_ns": 1788705988743266000,
+        "sha256": "e5e3788b9a60bbcc6289285702e0616bb2240cc71c55ba431e5f6780cb3dc9d0"
+      },
+      "test_simulation_utils_spatial_comsol.py": {
+        "bytes": 24877,
+        "mtime_ns": 1784485752968122900,
+        "sha256": "4ac25a3f4e10702a64a3312d373b5cd5a40604d5ce297d40853c01c0001ff7ed"
+      },
+      "test_strip_1d_fourier_quotient.py": {
+        "bytes": 11775,
+        "mtime_ns": 1784485753960947400,
+        "sha256": "61091c023d5a09859406224d62b7d884d39a48e1a197a6511f2371a1c4362612"
+      },
+      "test_theory_band_fitting.py": {
+        "bytes": 3184,
+        "mtime_ns": 1787076115988985300,
+        "sha256": "40db83df52564be4f82c85b1922ac7b1c271382642f307441f6000862ba516e5"
+      },
+      "test_theory_fit_workflow.py": {
+        "bytes": 3722,
+        "mtime_ns": 1787197768937928500,
+        "sha256": "43cf0a0d544ff01d1d231b2cf7914b78803e288c44f90668694584c92db60750"
+      },
+      "test_unit_cell_2d_analysis.py": {
+        "bytes": 30985,
+        "mtime_ns": 1788339058827880300,
+        "sha256": "8d80aedb3cead7cde1f434aa573c2e5eac597f6d29f3423e63871f96d49be7d4"
+      },
+      "test_unit_cell_2d_valley_refinement.py": {
+        "bytes": 26050,
+        "mtime_ns": 1787680644209348600,
+        "sha256": "1d861887addd5080963ba01e271cb649ea99fa17ceb9791f4ed40ee9c6963b4c"
+      },
+      "test_update_finite_field_plots.py": {
+        "bytes": 3056,
+        "mtime_ns": 1785150128238758800,
+        "sha256": "6ff4b8cfb9d607dc54aa13cd71d59cbfe267006f18a4a18db0c415863ab19880"
+      },
+      "test_workflow_integration.py": {
+        "bytes": 11766,
+        "mtime_ns": 1791533677147968600,
+        "sha256": "6334b87c93bbdc3b15447be67ea14de3c047dee067af17488aafa554c81ae103"
+      },
+      ".out/test_design_invalid.png": {
+        "bytes": 293808,
+        "mtime_ns": 1791533731467083600,
+        "sha256": "743ce77f1866f76a20a0ebc18593cfd986c34672391daa91f11de25a26471be3"
+      },
+      ".out/test_design_invalid_annotated.png": {
+        "bytes": 407726,
+        "mtime_ns": 1791533732094686100,
+        "sha256": "b8a6de3f9eb6948eac6e378b61b21038442e5cd5f2691169577de80e3e112118"
+      },
+      ".out/test_design_valid.png": {
+        "bytes": 273043,
+        "mtime_ns": 1791533729893782800,
+        "sha256": "8eb9b4788e01d79c3a279bc7696d0f365f3218e6fc1c8bb1dfbd49b1bf1f41c2"
+      },
+      ".out/test_design_valid_annotated.png": {
+        "bytes": 378254,
+        "mtime_ns": 1791533730922864100,
+        "sha256": "22e763e1b0c07de28e28273d39d6b7afdb1ba2cfe5228c23b020a85038c1ee38"
+      },
+      "__pycache__/test_analyze_finite_trend.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 46388,
+        "mtime_ns": 1791530863505678900,
+        "sha256": "7708b01afa8c50fdbe9eddf3bde44891adcddbfe2bd81e04556a7902a3230fab"
+      },
+      "__pycache__/test_analyze_strip_gamma_summary.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 34511,
+        "mtime_ns": 1791530865130941600,
+        "sha256": "d465f60b223ae6749740ac6cea1b5c789601d966d3c72c09fe654a8e9981b7ab"
+      },
+      "__pycache__/test_analyze_strip_gamma_trend.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 57250,
+        "mtime_ns": 1791530865383260300,
+        "sha256": "f3e813b323d77e27ab5a0d801dbbc3f771976d37aa890b854f78fed7884d261a"
+      },
+      "__pycache__/test_blueprint_comsol_geometry_parity.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 8892,
+        "mtime_ns": 1791530865399780500,
+        "sha256": "eafb4504a124db3817e1146c86540473061874cc2ff170e0f013fa3122381777"
+      },
+      "__pycache__/test_bulk_cladding_lattice_generation.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 43331,
+        "mtime_ns": 1791530866483427900,
+        "sha256": "0afbdf2140695f96be698424dd1b5f5000515cd24c1a8cd9d192fa33103fb89c"
+      },
+      "__pycache__/test_bulk_side_corner_lattice_generation.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 30748,
+        "mtime_ns": 1791530866523431800,
+        "sha256": "d2caecd0941eafa69783a88da1a6123361469102d48944a7ae91e0d6dcc47c95"
+      },
+      "__pycache__/test_c2v_band_model.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 34917,
+        "mtime_ns": 1791530866576643300,
+        "sha256": "b3ade78009f29f324eb6b5531f1cf6156133dfece5e5292313fe121a50fa920d"
+      },
+      "__pycache__/test_cavity_hole_polygon_clipping.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 21378,
+        "mtime_ns": 1791530866620560000,
+        "sha256": "650947a12e30652c0cc7664a4a7fc762a9a8d4b0a675d92fb514bf6c6abe7e73"
+      },
+      "__pycache__/test_cladding_shift_profile.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 133023,
+        "mtime_ns": 1788849894547633700,
+        "sha256": "d35197c77d4159fc31520566f2f9abdc6db21af081c79d85edb621d465f0823b"
+      },
+      "__pycache__/test_dipolar_angle_filter.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 4770,
+        "mtime_ns": 1791530867520882100,
+        "sha256": "33e63348daddf710653c623a1dba7c6c001ce2b651ac1795f2d9383099519e4d"
+      },
+      "__pycache__/test_dipolar_output_layout.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 5736,
+        "mtime_ns": 1791530867547275800,
+        "sha256": "b9823e9f498ab1353ce1652ac37e41bc60d6ebe6ec699af0f9b96f89ade11210"
+      },
+      "__pycache__/test_energy_recovery.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 61854,
+        "mtime_ns": 1791530867689998200,
+        "sha256": "2b7a08e89b298dd3bc9a816bae37c78800633081b139a78761aa894b1e6c8da0"
+      },
+      "__pycache__/test_export_finite_field_html.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 8925,
+        "mtime_ns": 1791530867704898900,
+        "sha256": "f0d7ed5d1dde7aa1994f31028c6f5b14590fd5e54291a100f15e65afddd7c5f7"
+      },
+      "__pycache__/test_farfield_fft.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 88605,
+        "mtime_ns": 1791530867824588300,
+        "sha256": "ad671693ce8945937f50ec6279d39f0b12b192992f2f4dced3af21977a762a1f"
+      },
+      "__pycache__/test_field_plotting.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 50326,
+        "mtime_ns": 1791530867890674800,
+        "sha256": "659fa6c1835417d098efece36e52000b5652e02aca8535f13386470371c6c4e1"
+      },
+      "__pycache__/test_finite_cavity_field_exports.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 95913,
+        "mtime_ns": 1788789136684627600,
+        "sha256": "0779ecb8a2872ad5138a6abecb56b40142b06924881954ff1697e8e36c3920ec"
+      },
+      "__pycache__/test_finite_flatness_trend.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 52703,
+        "mtime_ns": 1791530867966336500,
+        "sha256": "38643a79f1460ac81079d62a5b6d7e91053adb7a5b60c6f05585dad141f6d74f"
+      },
+      "__pycache__/test_finite_geometry.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 45055,
+        "mtime_ns": 1791530868000067500,
+        "sha256": "6e461a4a3c96766f3ff39dc8004160fe4d5510edb020c540a8f62300ab341b60"
+      },
+      "__pycache__/test_fourier_basis.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 6308,
+        "mtime_ns": 1791530868007067900,
+        "sha256": "b2b6721623f574c85775d05e71f9cf64ea7c0fd2052135431f3d20f75440ecfc"
+      },
+      "__pycache__/test_geometry.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 11253,
+        "mtime_ns": 1791530868012067900,
+        "sha256": "c3f50036c0961b57ce050cbbbd6b36031addac24a70896f82daa4908eecbaa49"
+      },
+      "__pycache__/test_lattice_fourier_validity.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 32544,
+        "mtime_ns": 1791530868031067300,
+        "sha256": "48eee916a2fffa825a5a7fb971513f31c2f4fd89ece5c3d9a8ab29c8fad728ee"
+      },
+      "__pycache__/test_lattice_polygon_fourier_utils.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 58585,
+        "mtime_ns": 1791530868065568800,
+        "sha256": "1bde75c45396b6728e582938b3b4f8b07f7be26bb2ecbff168321c3c77d685a7"
+      },
+      "__pycache__/test_optimize_cladding_p2_d2_alignment.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 30030,
+        "mtime_ns": 1791530868084800200,
+        "sha256": "281d8e0dc06c5137a338648e99662df8955f28fbbf2cecc45e9f45d99c289e6f"
+      },
+      "__pycache__/test_optimize_finite_quarter_q.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 18276,
+        "mtime_ns": 1788849894717183400,
+        "sha256": "a8f74bd4a555a01e9674ca3acf99f9eb9245ca6bf8f2b9e85e056956587d5d37"
+      },
+      "__pycache__/test_parameter_config.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 21834,
+        "mtime_ns": 1791530868118238200,
+        "sha256": "3a395c9249c6bf0750052cefb9ea3aa9cdd994c000e80d9884b66402a6162c4a"
+      },
+      "__pycache__/test_run_band_pair.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 396981,
+        "mtime_ns": 1788849893192575000,
+        "sha256": "a1f5e5cca2af45e17fb3baf61c046b23ec9e66a46b7fedfdd7284d517db8249b"
+      },
+      "__pycache__/test_run_band_pair_model_reuse.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 42224,
+        "mtime_ns": 1788849894439821300,
+        "sha256": "8cee0ad96310068f7cdf7f286bb72307d77c8be87f38343392e8d99407cb6815"
+      },
+      "__pycache__/test_run_band_solo.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 24168,
+        "mtime_ns": 1788849894463820300,
+        "sha256": "4a39817e80ee4c72e33756bff40db5ba7a5ea1d43b62be4967a99b0fab613fd3"
+      },
+      "__pycache__/test_run_finite_farfield.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 26299,
+        "mtime_ns": 1791530868346596300,
+        "sha256": "46fec97acdea70875eb381b2c7ece1f83263aefaa5bd088b95603cdcfec28755"
+      },
+      "__pycache__/test_run_finite_quarter_four_modes.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 62206,
+        "mtime_ns": 1788789189221067400,
+        "sha256": "c89ff100815db5a51e5dcc4c52baf6fa65f30c58c1db08e8a3e91d55d968ec0d"
+      },
+      "__pycache__/test_run_strip_bulk_rotation.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 18436,
+        "mtime_ns": 1788849894792185200,
+        "sha256": "5d5cd258e0a34dad2768b2f1e9e3836079c5749bdf143189fd71712833148940"
+      },
+      "__pycache__/test_run_strip_hexagon_boundary.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 7665,
+        "mtime_ns": 1791530868399266400,
+        "sha256": "81adab8b304e92f45cdd5c2184b220bc674a35c45c3eea5c1f8c8e37d8840bb1"
+      },
+      "__pycache__/test_run_strip_output_layout.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 57120,
+        "mtime_ns": 1788849894776186600,
+        "sha256": "2071a062d42f025826c8b12708350413ff01bc895da0f28e6c9e09ebe1a1f471"
+      },
+      "__pycache__/test_run_strip_shift_scan.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 75588,
+        "mtime_ns": 1791530868781500700,
+        "sha256": "76fb149d2321a20302c42eab97850dd5e5c184986ce55359fc54aaa9f2310605"
+      },
+      "__pycache__/test_run_unit_cell_2d.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 66905,
+        "mtime_ns": 1788849894687180400,
+        "sha256": "9128ef339df92b282ca14ec60a9e06fdaa71db3c78beebd848b8e995f096925e"
+      },
+      "__pycache__/test_run_unit_cell_2d_zeta_scan.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 17626,
+        "mtime_ns": 1788849894704183200,
+        "sha256": "9a0f0c243e74db6b7b573dea9afbf46d22ccd46a699609b08c4a6f8aa24128b5"
+      },
+      "__pycache__/test_s4_boundary.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 184069,
+        "mtime_ns": 1791530869085696800,
+        "sha256": "991ce42633c50edbd96d4dfc62f24a8b79012ab1369875009fffd2f2ca42af09"
+      },
+      "__pycache__/test_s4_boundary.cpython-314-pytest-9.1.1.pyc.25788": {
+        "bytes": 110849,
+        "mtime_ns": 1789578776444869300,
+        "sha256": "aa6d36ab0fbdade58789fada21685d50633ace72f2776b8e714d7e5d38b75379"
+      },
+      "__pycache__/test_s4_boundary.cpython-314-pytest-9.1.1.pyc.26744": {
+        "bytes": 73184,
+        "mtime_ns": 1789560038092926800,
+        "sha256": "4bc2c01afb2b04f1562b53d8d7213b61f3125d7ef6d33ea2cc5406c500abbd04"
+      },
+      "__pycache__/test_s4_boundary.cpython-314-pytest-9.1.1.pyc.9832": {
+        "bytes": 73184,
+        "mtime_ns": 1789560026750930300,
+        "sha256": "4bc2c01afb2b04f1562b53d8d7213b61f3125d7ef6d33ea2cc5406c500abbd04"
+      },
+      "__pycache__/test_s4_boundary.cpython-314.pyc": {
+        "bytes": 43457,
+        "mtime_ns": 1789566416307717100,
+        "sha256": "7b45197983b83782de07a17cc587eef72215a0cecbb00097189b0a29cd19113d"
+      },
+      "__pycache__/test_s4_c6v_decomposition.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 26672,
+        "mtime_ns": 1791530869128361300,
+        "sha256": "35fa753b695b33beb00087d1c26af3087925efc48f9c1bcb9b83fbdf8d657ed8"
+      },
+      "__pycache__/test_s4_dual_validation.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 78417,
+        "mtime_ns": 1791530869208087300,
+        "sha256": "5d4844a54309a8613b8a9e3f2897ec3ea9b6d8f37da5f79563fdad86e64f9462"
+      },
+      "__pycache__/test_s4_full_refined_scan.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 15636,
+        "mtime_ns": 1791530869239089600,
+        "sha256": "e877df2bb167781271bf8765ce5156a00f6a186a7d17e9b49070d220e38118ef"
+      },
+      "__pycache__/test_s4_local_fields.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 7041,
+        "mtime_ns": 1791530869269722200,
+        "sha256": "ac39b948623a2e5c139edb4e99d6ca3d8148272f3c46f7a6e8291d1cb3aed671"
+      },
+      "__pycache__/test_s4_mesh_convergence.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 13410,
+        "mtime_ns": 1791530869277720900,
+        "sha256": "9ed50825064d9e5dbc11468f2d349d0ba0ba5ea90a533afa75092ccee2765eaf"
+      },
+      "__pycache__/test_s4_px_mesh_test.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 3460,
+        "mtime_ns": 1791530869281537800,
+        "sha256": "3fe02c2edb54e11b0ab371dfea0d377d03897087a68eee30b2018bbfc02772c2"
+      },
+      "__pycache__/test_s4_session_paths.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 10801,
+        "mtime_ns": 1791530869288535600,
+        "sha256": "005c701a7121d3cc59c609e4a085707966e6a7f9701d8344801cf4126369eb2f"
+      },
+      "__pycache__/test_s4_signed_indicator.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 6894,
+        "mtime_ns": 1791530869293137900,
+        "sha256": "83dd0f9f9f8078eaa7c4f419364ba4ab4642fae6885910cd7edb83b7062317c1"
+      },
+      "__pycache__/test_s5_bloch_validation.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 25633,
+        "mtime_ns": 1791530869306235100,
+        "sha256": "46b1cf066ab1afded22d1e110c0f93ce26cb4fe4e001463f6c12f52d09ccb881"
+      },
+      "__pycache__/test_s5_bloch_validation.cpython-314.pyc": {
+        "bytes": 22370,
+        "mtime_ns": 1789972107151363400,
+        "sha256": "969029b8541ea54b06f271d8f4fc047502fb3eafeafa05a33fd946153aa6c1fd"
+      },
+      "__pycache__/test_s5_cavity_plot_contract.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 10781,
+        "mtime_ns": 1791530869321941800,
+        "sha256": "2cbd870aa4267a7ac7c6da0ab8f0e99b58331846f0bbd9e8b8945f0aababbf8f"
+      },
+      "__pycache__/test_s5_cavity_plot_contract.cpython-314.pyc": {
+        "bytes": 6476,
+        "mtime_ns": 1789972107153362400,
+        "sha256": "68d841c85311a0d1ad6f7bf0402c84ae8d89b89ff623b80ccdb88d93026666d3"
+      },
+      "__pycache__/test_s5_cladding_plot_scale.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 9192,
+        "mtime_ns": 1791530869345035800,
+        "sha256": "f8b9cfe17ebd7567e3fc9491946ed9f79e2aa6289c35c33a51a744669bc7e6e6"
+      },
+      "__pycache__/test_s5_cladding_plot_scale.cpython-314.pyc": {
+        "bytes": 3424,
+        "mtime_ns": 1790650620355257800,
+        "sha256": "ea12ebf609c7607a3c3dc9574d104a5cdd95a08338f21d31d7ae99df8028637c"
+      },
+      "__pycache__/test_s5_gamma_mechanism.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 1626,
+        "mtime_ns": 1791530869353040100,
+        "sha256": "22d8b378af3a272e5377dd6ab7b05243b43a80e90d9cbadfd53640cad0d8eeac"
+      },
+      "__pycache__/test_s5_gamma_mechanism.cpython-314.pyc": {
+        "bytes": 1480,
+        "mtime_ns": 1789966949719421300,
+        "sha256": "d369350adaaccf68c31c7da457f83103474887f851942718a4796ec0d57f9646"
+      },
+      "__pycache__/test_s5_gamma_origin.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 36498,
+        "mtime_ns": 1791422257944730300,
+        "sha256": "ceeeebe241a54dcc9532eeb6bd136de9016019f58e4f1c1dedeb2a90ddc59d26"
+      },
+      "__pycache__/test_s5_output_layout.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 9488,
+        "mtime_ns": 1791530869402732300,
+        "sha256": "bfb3f553bfb8eb9511b5720f4b8eb8d7bf60e184a1db257615122919109db029"
+      },
+      "__pycache__/test_simulation_config_geometry.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 20822,
+        "mtime_ns": 1791530869431732600,
+        "sha256": "4b6abb7a7b5d2e3f74044692c09615acaf25750d01c09d5b679c25f34fdd9d99"
+      },
+      "__pycache__/test_simulation_progress_log.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 41104,
+        "mtime_ns": 1791530869482864500,
+        "sha256": "4f258faedaf9e446609f6e9568fbd9c3824a4ae082f28b3d12ec6e95dbe51a05"
+      },
+      "__pycache__/test_simulation_utils_field_export_options.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 17757,
+        "mtime_ns": 1791530869510165200,
+        "sha256": "b3fc7f0358548ede774d5b3c6162f965fdf64f77e50586e367f9de3bf2b097ed"
+      },
+      "__pycache__/test_simulation_utils_grid_interpolation.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 14016,
+        "mtime_ns": 1791530869533288200,
+        "sha256": "49c305871d4f16073493d81642b8a71da936b3a45bd02a08308717637cd41cc4"
+      },
+      "__pycache__/test_simulation_utils_multilayer.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 74485,
+        "mtime_ns": 1791530869619675900,
+        "sha256": "1be2beb2d4b9beab8a23aeb5a56a0ddd8e2676ac7ad1ac03e782adbf92e1ae09"
+      },
+      "__pycache__/test_strip_1d_fourier_quotient.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 39336,
+        "mtime_ns": 1791530869656335300,
+        "sha256": "9a2f4a0c913df645da029bc79e3a7428e22bf23ced6723e85edbc99a5f39073c"
+      },
+      "__pycache__/test_theory_band_fitting.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 16967,
+        "mtime_ns": 1791530869682371000,
+        "sha256": "5705581c3c524985ffa9a22c081a260e12d8d5ebe451addc18c2f5c94740018d"
+      },
+      "__pycache__/test_theory_fit_workflow.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 15792,
+        "mtime_ns": 1788849894726181500,
+        "sha256": "0cd0f8b46f31f31db73136a07cf41945f27b8da02d9fffd31372a297c9983098"
+      },
+      "__pycache__/test_unit_cell_2d_analysis.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 178117,
+        "mtime_ns": 1791530869920677200,
+        "sha256": "1b57ef7018fdcf36b3197cf219eedf278368b4d71fa0dfaa6037abe5234ee568"
+      },
+      "__pycache__/test_unit_cell_2d_valley_refinement.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 77749,
+        "mtime_ns": 1791530869970430600,
+        "sha256": "7480c189643467dde9fdf76a44069f5cbc095bd3d851d3a4e972c5eb806ea160"
+      },
+      "__pycache__/test_update_finite_field_plots.cpython-314-pytest-9.1.1.pyc": {
+        "bytes": 11371,
+        "mtime_ns": 1791530870066152800,
+        "sha256": "41c2e30a464d4b8b6651e8479ade364d5562da8e2921acb42414aad6f8e9fcda"
+      }
+    },
+    "links": {}
+  },
+  "path_adaptations": {
+    "test_bulk_cladding_lattice_generation.py": {
+      "before_sha256": "c19facff4713667a4ec2f50b5835f6c137602f305f032e786bc5463bf6a8a21c",
+      "after_sha256": "6c9cacb64151dfa04684dd1e2256999d49255af55e62039c7a28f0ae19876e23"
+    },
+    "test_bulk_side_corner_lattice_generation.py": {
+      "before_sha256": "0863943a38b3791608fa9c2a7181e63943eb4bd5f7361e4da27a3f106f35cba5",
+      "after_sha256": "67196f60d2d67f591c4312ff6977cf32cf60bd2c87feb8750d2ebf75b21b8215"
+    },
+    "test_cavity_hole_polygon_clipping.py": {
+      "before_sha256": "5ad4cab07e3112cbb69d1d6e1d588bed5723a568b27fdab109eaaa13a39144fb",
+      "after_sha256": "5587fff6c3bcbe774836f7fb7f59df6255d861e470f95f8e2887c772c2742b0f"
+    },
+    "test_geometry.py": {
+      "before_sha256": "fa8eaac4562baaafafe9dfc362af5a069f12199d8e67db4a51da56e0ce4fd0b5",
+      "after_sha256": "d291b6da15e88365b189d8bdf6970692c66ea22156f19d025b74e35e2c2e8e29"
+    },
+    "test_lattice_polygon_fourier_utils.py": {
+      "before_sha256": "d4887581a2f9a16dfa139bcc26aa3644bb2ffd65bc3dba0372448179bc12ae8f",
+      "after_sha256": "ee38e8b55ff7e5a4ae8df277872db244f02e1e0d5b7c25742addc73831862308"
+    },
+    "test_optimize_cladding_p2_d2_alignment.py": {
+      "before_sha256": "61dd0f97a9b04d323757f5e927a1d95b54e7c6bc40acfe7eada5518be2013699",
+      "after_sha256": "cf99988e681239f0cd31b275a54f887e537e515d28f9d5640eca09c6367ff6f7"
+    },
+    "test_run_band_pair.py": {
+      "before_sha256": "81d7017e15a7394b415442c1aa715b41edba0c9cda185f5cc69a66eb49449e13",
+      "after_sha256": "7ab266243a52e99a16a29b6097bc57543b96063273f7321a82863edf5e39f0cf"
+    },
+    "test_run_band_pair_model_reuse.py": {
+      "before_sha256": "8a2a2cebdf8429eb634b12914f4ff5721f8c271f052fd2ece3d81375d6493a38",
+      "after_sha256": "de26eccc41ac86274b34c21835658cc15e4fd7f72ee633d9d95160caad83d1cd"
+    },
+    "test_run_band_solo.py": {
+      "before_sha256": "e3cca859259ea0220fa83f6f4d3f232b774d3416880d901c6ef106f47445d617",
+      "after_sha256": "89dac6e105c237f9005d3a917c137b3f6d2f033db25083ed7ebbe9122d1354cc"
+    },
+    "test_run_strip_hexagon_boundary.py": {
+      "before_sha256": "5a8586a9c767a35555ce0d140e4530a68739fb82c0b155fe4f59d895e236ddfb",
+      "after_sha256": "1197d367ca58c232d96fd716622ad6a2b574049e95049db204461015bd36ec5a"
+    },
+    "test_run_strip_shift_scan.py": {
+      "before_sha256": "e246fdc93d95901921d6d0738060278325dc69d322ae165def3aed308e2b7342",
+      "after_sha256": "451616f7b344c34a63c122696efbeae59aa7c471682d68a8bcd96e3ad16faf05"
+    },
+    "test_simulation_config_geometry.py": {
+      "before_sha256": "a186d1c57be208e9c1d53c725ee0afdcebfc72fff19acc288e2c81ca9899c997",
+      "after_sha256": "65b32a7a8fd753858fe60fd1970452f365a950094003a1ace958cd8045025dec"
+    },
+    "test_simulation_plotting.py": {
+      "before_sha256": "852b823c9f8973c0a7d4fa49cabf7376142404004ed43a6e2c6e80a690612d1f",
+      "after_sha256": "6b039e647ba7c68b6dd01445070f4d535f5005b83c84acaf732a47a532a80c21"
+    },
+    "test_simulation_spatial.py": {
+      "before_sha256": "4066a2c12c230ea7cbbbb8948cf0320d33008d42320552543217cf4cfaf816d8",
+      "after_sha256": "a85fc9b84ced11d4da9a0c514725da1f3e434c0c7ad8e2a99c02e7d9d18ddb3c"
+    },
+    "test_simulation_utils_spatial_comsol.py": {
+      "before_sha256": "4ac25a3f4e10702a64a3312d373b5cd5a40604d5ce297d40853c01c0001ff7ed",
+      "after_sha256": "357e731c1fee2c01e3c1d458cc5ff9c79cc247d4d0c8d61bf48e7c9c86ebfc8c"
+    },
+    "test_strip_1d_fourier_quotient.py": {
+      "before_sha256": "61091c023d5a09859406224d62b7d884d39a48e1a197a6511f2371a1c4362612",
+      "after_sha256": "493f510f3bb6e7cc1558ed92610dda61ea43a91727fce6c2bd7c517e0e0227ec"
+    },
+    "test_theory_fit_workflow.py": {
+      "before_sha256": "43cf0a0d544ff01d1d231b2cf7914b78803e288c44f90668694584c92db60750",
+      "after_sha256": "2f6f61c6bf70b2908cc25a0eed4e5d06a71d860f6c40c0b4731ffd0fdd14920c"
+    }
+  }
+}

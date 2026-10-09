@@ -1,0 +1,67 @@
+{
+  "updated": [
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_py.png",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_py.svg"
+  ],
+  "unchanged_files": 43,
+  "Ey_panel_pixels_unchanged": true,
+  "limits": {
+    "boundary_color": [
+      -1500.0,
+      1500.0
+    ],
+    "bars": [
+      -1500.0,
+      1500.0
+    ],
+    "field": [
+      -8000.0,
+      8000.0
+    ]
+  },
+  "protected_sha256": {
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\00_model\\comsol_progress.log": "47c6fba62b118ade0fde12ad6845a3dff50b619d4c804cfa0b7c8a1885be9a1f",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\00_model\\s4_gamma.mph": "b4a06d9054295740188583bdaf1f13770fa31eb9a39bb8fb0ae40d9b4443241b",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\air_radiation.csv": "bc7f602ade5ed5b7dd701553ecc8004641840b22614b550121e9a8a122a23528",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\area_comparison.csv": "7cfb837a88a9c1f05811e3fed82adfa51b1dedb4cdec08ba1cf88b8a0e555ad3",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\area_field_z0.npz": "1935f0ea354e6d3ebd5201cf303c9e423db1815a87690b73b3c5b032489e15ff",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\edge_geometry.csv": "2d5ec69a8d5d83542aafce4461d0b6e667bcebcb3c438945f9cb40593a8c760c",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\edge_integrals.csv": "89d95a283d4893c6da494af2c5f046362a30391f21272246efcdb2f07617865f",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\eigenfrequencies.csv": "74d20c31723bcea9f50935d4c713878d617af7b67b33b1db3cc5486ce27b5a98",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\group_totals.csv": "7de8603e8376eb982de53ec6031315b501636aad4868ec11345737b37976e308",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\interface_traces.csv": "2e17c0c12ef172f9070b6c64805d9b94c2604733d3a950581d18717fb2b8a01b",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\mode_identification.csv": "36173fecf6aaad0e8943abf4fe7d119453e8c29b5284cc7d6bdd252f892da982",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_audit.json": "6cd30319aec1a687f932c443ba3e5415101ac213387be108a87a459fc687ee91",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_balance_sensitivity.csv": "8f45422308f125343b482efa72dab9d2b411abf483701d87f26e89729fc266cd",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_diagnostic_py.png": "70025f3105be85a374d08a648e93d962e315476b42985f6605ed46f92aede4ba",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_diagnostic_py.svg": "8374bca876931e3e5a58a972b0ba82bd9f7ba3f8f0068d5e385746ab054d2c57",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_local_derivatives.csv": "e900baf95c3ead283400e3cde5b7b373ca928c0de82ddd72a65d7ae1550f7ffc",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_local_samples.csv": "b7598ca79d1c5b5ab3afdc7a8f9863309a2758a2ccca60c84a4920b6b00d5e6e",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_area.csv": "9f6264ae7f8b002cd1db7ca30feac50ec10ab5d6a94c4b6715ce0d8c707c4e14",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_balance.csv": "2badc7195468bbba23e2d34a1f5f933d3e0349baa2b6bf99c422b142a572be7e",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_edges.csv": "766c8af9e1a8651b6e0822e979230d25eb79b0640407c8768e8c9f9da6f7aa4f",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_lagrange.csv": "dde97d541c2a32ed102581eda7781300d54375f7cf63d2a0a10b5a028afa3ea2",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_thickness_fd.csv": "b5ba8eb78f6fa4731266ee050577fb9c1e05cddbca00457af30ccd4fcb3902f4",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_thickness_samples.csv": "c40957e33da6631c8683c9c557b81c71c42f70cb50a7c2bf32d7da59bf324d09",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_periodic_pairs.csv": "7ecff25458f380e5f9fdacf3b9c6ddf9ab5aa9b03c606e3a8a358eda496b1d58",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_quadrature.csv": "de0ac165cd5978d080c0705ccf13fbab29473ad24c6b332a7adc7d19fac0564b",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_report.md": "e7ebcd0ec9088ae5862fc3fbee7f1f304b1777a71c367db7c5e600a94c134ae0",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_thickness_fd.csv": "09b8051a981a8cadf39036edc4c000b8badd49a2d50f9ee35fb628fce4500098",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_area_comparison.png": "c4ceeac80bb0ecb1ed3fb9aabd36b2271762bb16d006b18693362cb98c5e1a24",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_area_comparison.svg": "1ca792008fbe06ce8faeaf074f847c707bc7be403d71801b1972555e20560a2f",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_py_Ex_reference.png": "3f054495db8467e404ba2a4008d87abce0ed2fefac5a520f8dd5da579dc148bd",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_py_Ex_reference.svg": "ec03d84b6d3103d697606ca779efa3e21846f0018d10c8ade29b53a884b60f16",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_group_contributions.png": "acbfa4e2bd16ce93a214919cce5b9bcd315cad9cbd83d5892ef59699f027e328",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_group_contributions.svg": "9967e61cc9024a09b06bbe8caf5e4c46a2a00f01b8d88f9777ef84b5c7fadc26",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_validation_py.png": "26c858f58ebf857d64822d7b7415c9c263ead023b725edf0f6f9f16e06c29e19",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_validation_py.svg": "8f21d7295df36c857345bd0de40d679f357b158dea13d346257e465120a68338",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\99_config\\parameter.json": "356746d50f486a7a0e1e604efd30bbc812062566afab4cd90c29e9c7e8947d08",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\99_config\\realized_geometry.json": "170884565d0e79deef3b1d7cfba06938520ba5c1b56949e83f6c2366f766277e",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\99_config\\s4_postprocess.json": "76fd4e5e86a1e48464189dc7f8d7b027108bdba8bd9a17c87f24cc8b9deb6238",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\99_config\\s4_summary.json": "1f3502f6c0ddb7d12454b82cd96f43732cb11f46f911c2ad71df0471ded0ad3e",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\eigenmodes\\00_Hz_center.parquet": "34ec332b1d738bfd02ab00e17b0aa99cf5af568d1b89745499b4e7bcd8b8fafd",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\eigenmodes\\01_Hz_center.parquet": "e94f6f54c87b59a8f150514e4398aed95fe89cc8d35e96826dce03fe8da9a26a",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\eigenmodes\\02_Hz_center.parquet": "9760f093e6eb70c09403584462839060be66fbef480514edca2a1dc989178655",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\eigenmodes\\03_Hz_center.parquet": "7a17a02f2afc26aea5f30a2459b27d9a4708eb8c5cc6c8b5df2db1fefa6f752c"
+  }
+}

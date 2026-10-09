@@ -1,0 +1,31 @@
+{
+  "case_id": "case000_eta0.96_zeta1.156_mesh5",
+  "b0_nm": 245.0,
+  "eta": 0.96,
+  "zeta": 1.156,
+  "mesh": 5,
+  "snapshot": "case000_eta0.96_zeta1.156_mesh5/99_config/parameter.json",
+  "snapshot_sha256": "356746d50f486a7a0e1e604efd30bbc812062566afab4cd90c29e9c7e8947d08",
+  "mode_idx": 1,
+  "frequency_thz": 198.38683823113473,
+  "p_weight": 0.9932096263655111,
+  "px_weight_internal": 0.9990900654821446,
+  "py_weight_internal": 1.8481024444268957e-05,
+  "odd_x_error": 0.01679563400997816,
+  "even_y_error": 0.022087419281306527,
+  "overlap_previous": null,
+  "identity_max_error": 0.0007651173761508719,
+  "area_quadrature_change": 0.0007344993677198719,
+  "normalization_factor_re": 1.4270577140383672e-10,
+  "normalization_factor_im": 6.33365895683907e-06,
+  "all_trace_domains_distinct": true,
+  "air_height_relative_error": 0.07118102991970568,
+  "scientific_acceptance": "pending",
+  "identity_gate": true,
+  "limitations": [
+    "Mesh convergence and physical zero location not established by one case",
+    "Air-height relative error is ill-conditioned near a radiation zero",
+    "Frozen-field and length-only approximations require a separate comparison"
+  ],
+  "status": "computed_pending_review"
+}

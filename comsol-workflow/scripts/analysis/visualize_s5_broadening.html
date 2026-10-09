@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S5 · 展宽与 K=0 复振幅</title>
+<style>
+:root{color-scheme:light;--ink:#183247;--muted:#586876;--line:#dce3e7;--blue:#3477b5;--orange:#ce6a36;--teal:#299782}
+*{box-sizing:border-box}body{margin:0;background:#f5f7f8;color:var(--ink);font:15px/1.7 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1180px;margin:auto;padding:38px 28px 60px}h1{font-size:32px;font-weight:650;letter-spacing:-.7px;margin:6px 0 12px}h2{font-size:21px;margin:0 0 12px}p{margin:8px 0 16px}.eyebrow{font-size:12px;letter-spacing:2px;color:#6c7d87}.lead{max-width:850px;color:var(--muted)}section{background:white;border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:26px}.badge{display:inline-block;border-radius:4px;padding:2px 8px;font-size:12px;color:#81562a;background:#fff2df;vertical-align:middle;margin-left:8px}.real{background:#e6f4ee;color:#22674e}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;background:#f7f9fa;border-radius:8px;padding:18px;margin:18px 0}label{display:block;font-size:13px}output{float:right;font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--blue);margin:16px 0 0}.actions{display:flex;flex-wrap:wrap;gap:10px}button,.download{font:inherit;font-size:13px;background:#fff;border:1px solid #cbd7df;border-radius:6px;padding:7px 13px;color:var(--ink);cursor:pointer;text-decoration:none}button:hover,.download:hover{background:#edf4f8}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #3477b5;outline-offset:3px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:22px}.panel{min-width:0}.panel h3{font-size:15px;margin:0 0 8px;font-weight:600}.plot{width:100%;height:280px;display:block}.hint{font-size:12px;color:var(--muted);margin:8px 0 0}.metric{display:flex;gap:24px;flex-wrap:wrap;border-top:1px solid var(--line);padding:18px 0 0;margin:20px 0 0}.metric b{display:block;font-size:23px;font-variant-numeric:tabular-nums}.metric span{font-size:12px;color:var(--muted)}table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums;margin:18px 0}th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}th{font-weight:550;color:var(--muted)}tr:last-child{font-weight:650}code{font-size:13px}details{font-size:13px;color:var(--muted);margin:16px 0}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.6 ui-monospace,monospace;background:#f5f7f8;padding:14px;border-radius:5px}.status{color:#537064;font-size:12px}img{width:100%;height:auto}a{color:#246399}.note{border-left:3px solid #aabcc7;padding:0 0 0 14px;color:var(--muted);font-size:13px}.formula{font-family:ui-monospace,monospace;background:#f7f9fa;padding:12px 16px;border-radius:7px;font-size:13px;overflow-wrap:anywhere}.table-wrap{overflow:auto}@media(max-width:720px){main{padding:24px 14px}section{padding:18px}.controls,.grid{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}h1{font-size:26px}.plot{height:270px}th,td{padding:7px 6px}}
+</style>
+<main>
+<div class="eyebrow">S5 / FINITE WINDOW · COMPLEX AMPLITUDE</div>
+<h1>展宽之后，K=0 处如何相加？</h1>
+<p class="lead">先拖动相位观察同一出射方向上的复振幅，再看真实 mode19 的空气面结果。所有可比较曲线共用归一化；强度由复振幅求和后取模平方。</p>
+<section>
+<h2>1 · 从有限窗口到复平面 <span class="badge">可调示意 · 单偏振</span></h2>
+<p>给定三个载波 k<sub>n</sub>=2πn/L（n=−1, 0, +1），统一乘以一个有限窗口 w(x)。它们的展宽包络在连续的出射波矢 K 上叠加。</p>
+<div class="formula">w(x) = 1 − t/2 + (t/2) cos(2πx/L), |x| ≤ L/2；区域外为 0<br>e<sub>n</sub>(K) = A<sub>n</sub> W(K−k<sub>n</sub>) / W(0)　　I(K) = |Σ e<sub>n</sub>(K)|²</div>
+<div class="controls">
+<label for="taper">窗口收边 t <output id="taperOut"></output><input id="taper" type="range" min="0" max="1" step=".01" value="1"></label>
+<label for="amplitude">两侧载波幅度 <output id="amplitudeOut"></output><input id="amplitude" type="range" min="0" max="1.5" step=".01" value="1"></label>
+<label for="leftPhase">n=−1 相位 <output id="leftPhaseOut"></output><input id="leftPhase" type="range" min="-180" max="180" step="1" value="60"></label>
+<label for="rightPhase">n=+1 相位 <output id="rightPhaseOut"></output><input id="rightPhase" type="range" min="-180" max="180" step="1" value="-60"></label>
+</div>
+<div class="actions"><button data-preset="rectangle">矩形窗：侧分量在中心为零</button><button data-preset="add">同相增强</button><button data-preset="cancel">反相抵消</button><button data-preset="reset">恢复默认</button></div>
+<div class="grid">
+<div class="panel"><h3>A · 实空间窗口</h3><canvas class="plot" id="window" role="img" aria-label="有限空间窗口的振幅曲线"></canvas><p class="hint">t=0 为矩形窗；t=1 为有限支撑的 Hann 窗。中央载波幅度固定为 1，相位固定为 0。</p></div>
+<div class="panel"><h3>B · 各分量的展宽强度</h3><canvas class="plot" id="components" role="img" aria-label="三个载波加窗后的频谱强度"></canvas><p class="hint"><span style="color:#3477b5">■ n=−1</span>　<span style="color:#ce6a36">■ n=0</span>　<span style="color:#299782">■ n=+1</span>　虚线为 K=0。</p></div>
+<div class="panel"><h3>C · 相干强度与逐项强度之和</h3><canvas class="plot" id="intensity" role="img" aria-label="相干叠加强度和忽略干涉项的强度之和"></canvas><p class="hint">深色实线：|Σe|²。灰色虚线：Σ|e|²。只改变相位时，B 不变，C 可以明显改变。</p></div>
+<div class="panel"><h3>D · K=0 的复振幅：首尾相接</h3><canvas class="plot" id="phasors" role="img" aria-label="K等于零时各分量的复振幅首尾相接图"></canvas><p class="hint">箭头按 n=−1 → 0 → +1 相接；黑点是总和。复平面保持等比例。</p></div>
+</div>
+<div class="metric"><div><span>K=0 相干强度</span><b id="coherentZero"></b></div><div><span>K=0 逐项强度之和</span><b id="incoherentZero"></b></div><div><span>干涉项</span><b id="crossZero"></b></div></div>
+<div class="table-wrap"><table><thead><tr><th>K=0 分量</th><th>Re</th><th>Im</th><th>模长</th><th>相位 / °</th></tr></thead><tbody id="toyTable"></tbody></table></div>
+<p class="note">这是指定载波经过一次加窗的示意，未使用 mode19 的 Bloch 系数。加 Hann 窗后的载波一般不再正交；不能把这里的窗口再乘到已有有限 DFT 上，作为独立的“第二次展宽”。示意中没有拟合有限腔的传递因子。</p>
+<details><summary>查看解析核与归一化</summary><p>令 s=KL/(2π)，sinc(s)=sin(πs)/(πs)。W(K)/W(0)=[(1−t/2)sinc(s)+(t/4){sinc(s−1)+sinc(s+1)}]/(1−t/2)。同一窗口面积 W(0) 同时用于所有分量；这会移除不同窗口之间的整体面积因子，便于观察形状和相干效应。</p><p>矩形窗在整数 n≠0 处 W(−k<sub>n</sub>)=0；Hann 窗在 n=±1 处 W(−k<sub>n</sub>)/W(0)=1/2。</p></details>
+<a class="download" href="01_broadening_illustration.pdf">默认示意图 PDF</a> <a class="download" href="01_broadening_illustration.png">默认示意图 PNG</a>
+</section>
+<section>
+<h2>2 · mode19 在 K=0 的复振幅 <span class="badge real">已有空气面数据</span></h2>
+<p id="realLead"></p>
+<div class="formula">C<sub>i</sub>(0) = ∫ E<sub>i</sub>(x,y,z₀) dx dy ≈ Δx Δy Σ E<sub>i</sub>　　显示值 = C<sub>i</sub> / C<sub>y</sub>(0)</div>
+<p class="hint">同一个复数因子用于 Ex、Ey、Ez 及所有象限；同时选择 Ey(0) 为相位零点、模长为 1。近零分量的相位不作物理解读。</p>
+<img src="02_mode19_normal_phasors.png" alt="真实 mode19 空气面在 K=0 的 Ex 象限贡献相消、Ey 象限贡献相加">
+<div class="table-wrap"><table><thead><tr><th>空间分区</th><th>Ex / Cy(0)</th><th>Ey / Cy(0)</th></tr></thead><tbody id="realTable"></tbody></table></div>
+<p class="note">Q1=(+x,+y)，Q2=(−x,+y)，Q3=(−x,−y)，Q4=(+x,−y)。轴线样本均分。这些是<strong>空间象限贡献</strong>，不是内部 k 点贡献。源数据已由四分之一解镜像生成，因此 Ex 相消不是独立全结构验证。这里显示空气面角谱，尚不包含辐射距离/传播系数校准或独立远场验证。</p>
+<details><summary>原始复振幅、来源与检查</summary><pre id="provenance"></pre></details>
+<div class="actions"><a class="download" href="02_mode19_normal_phasors.pdf">真实数据图 PDF</a><a class="download" href="normal_contributions.csv">全部复振幅 CSV</a><a class="download" href="summary.json">来源与检查 JSON</a></div>
+</section>
+<p class="status" id="checkStatus" aria-live="polite">正在检查可视化数值…</p>
+</main>
+<script>
+const DATA=__S5_DATA__;
+const colors=['#3477b5','#ce6a36','#299782'];
+const ids=['taper','amplitude','leftPhase','rightPhase'];
+const sinc=x=>Math.abs(x)<1e-12?1:Math.sin(Math.PI*x)/(Math.PI*x);
+const kernel=(s,t)=>((1-t/2)*sinc(s)+t/4*(sinc(s-1)+sinc(s+1)))/(1-t/2);
+const add=(a,b)=>[a[0]+b[0],a[1]+b[1]], norm=z=>z[0]*z[0]+z[1]*z[1];
+const sum=zs=>zs.reduce(add,[0,0]);
+function parts(s,t,amp,pl,pr){return [-1,0,1].map((n,i)=>{let phase=[pl,0,pr][i]*Math.PI/180,a=(i===1?1:amp)*kernel(s-n,t);return [a*Math.cos(phase),a*Math.sin(phase)]})}
+const fmt=x=>Math.abs(x)<5e-13?'0.0000':x.toFixed(4);
+const complexText=z=>`${fmt(z[0])} ${z[1]<-5e-13?'−':'+'} ${fmt(Math.abs(z[1]))}i`;
+function frame(id,xlim,ylim,xlabel,ylabel,equal=false){
+ const canvas=document.getElementById(id),w=canvas.clientWidth,h=canvas.clientHeight,dpr=window.devicePixelRatio||1;
+ canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);const c=canvas.getContext('2d');c.scale(dpr,dpr);
+ let left=54,top=20,pw=w-70,ph=h-68;
+ if(equal){let u=Math.min(pw/(xlim[1]-xlim[0]),ph/(ylim[1]-ylim[0]));left+=(pw-u*(xlim[1]-xlim[0]))/2;top+=(ph-u*(ylim[1]-ylim[0]))/2;pw=u*(xlim[1]-xlim[0]);ph=u*(ylim[1]-ylim[0])}
+ const X=x=>left+(x-xlim[0])/(xlim[1]-xlim[0])*pw,Y=y=>top+ph-(y-ylim[0])/(ylim[1]-ylim[0])*ph;
+ c.font='11px system-ui';c.strokeStyle='#d5dfe5';c.fillStyle='#637785';c.lineWidth=1;
+ for(let i=0;i<=4;i++){const x=xlim[0]+i*(xlim[1]-xlim[0])/4,y=ylim[0]+i*(ylim[1]-ylim[0])/4;c.beginPath();c.moveTo(X(x),top+ph);c.lineTo(X(x),top+ph-5);c.stroke();c.textAlign='center';c.fillText(x.toFixed(1),X(x),top+ph+18);c.beginPath();c.moveTo(left,Y(y));c.lineTo(left+5,Y(y));c.stroke();c.textAlign='right';c.fillText(y.toFixed(1),left-8,Y(y)+4)}
+ c.beginPath();c.moveTo(left,top);c.lineTo(left,top+ph);c.lineTo(left+pw,top+ph);c.stroke();c.textAlign='center';c.fillText(xlabel,left+pw/2,h-5);c.save();c.translate(13,top+ph/2);c.rotate(-Math.PI/2);c.fillText(ylabel,0,0);c.restore();
+ return {c,X,Y,left,top,pw,ph};
+}
+function line(f,xs,ys,color,dashed=false,width=1.8){let {c,X,Y}=f;c.save();c.beginPath();c.rect(f.left,f.top,f.pw,f.ph);c.clip();c.strokeStyle=color;c.lineWidth=width;c.setLineDash(dashed?[5,4]:[]);c.beginPath();xs.forEach((x,i)=>i?c.lineTo(X(x),Y(ys[i])):c.moveTo(X(x),Y(ys[i])));c.stroke();c.restore()}
+function arrow(f,start,end,color,label){const {c,X,Y}=f,dx=X(end[0])-X(start[0]),dy=Y(end[1])-Y(start[1]);if(Math.hypot(dx,dy)<1e-7)return;const a=Math.atan2(dy,dx);c.strokeStyle=color;c.fillStyle=color;c.lineWidth=2.4;c.beginPath();c.moveTo(X(start[0]),Y(start[1]));c.lineTo(X(end[0]),Y(end[1]));c.stroke();c.beginPath();c.moveTo(X(end[0]),Y(end[1]));c.lineTo(X(end[0])-9*Math.cos(a-.4),Y(end[1])-9*Math.sin(a-.4));c.lineTo(X(end[0])-9*Math.cos(a+.4),Y(end[1])-9*Math.sin(a+.4));c.closePath();c.fill();c.font='12px system-ui';c.textAlign='center';c.fillText(label,(X(start[0])+X(end[0]))/2,(Y(start[1])+Y(end[1]))/2-10)}
+function redraw(){
+ const [t,amp,pl,pr]=ids.map(id=>Number(document.getElementById(id).value));
+ ids.forEach((id,i)=>document.getElementById(id+'Out').value=[t.toFixed(2),amp.toFixed(2),pl+'°',pr+'°'][i]);
+ const xs=Array.from({length:501},(_,i)=>-.65+1.3*i/500),win=xs.map(x=>Math.abs(x)<=.5?1-t/2+t/2*Math.cos(2*Math.PI*x):0);
+ line(frame('window',[-.65,.65],[-.05,1.1],'x / L','窗口振幅'),xs,win,'#344b62');
+ const ss=Array.from({length:701},(_,i)=>-3.5+7*i/700),e=ss.map(s=>parts(s,t,amp,pl,pr));
+ const ii=[0,1,2].map(j=>e.map(p=>norm(p[j]))),coh=e.map(p=>norm(sum(p))),inc=e.map(p=>p.reduce((v,z)=>v+norm(z),0));
+ let f=frame('components',[-3.5,3.5],[0,Math.max(1,...ii.flat())*1.12],'s = KL / (2π)','分量强度');
+ ii.forEach((p,j)=>line(f,ss,p,colors[j]));line(f,[0,0],[0,Math.max(1,...ii.flat())*1.12],'#88969e',true,.8);
+ f=frame('intensity',[-3.5,3.5],[0,Math.max(...coh,...inc)*1.12],'s = KL / (2π)','强度（共同基准）');line(f,ss,inc,'#969da5',true);line(f,ss,coh,'#183247',false,2.4);
+ const z=parts(0,t,amp,pl,pr),all=sum(z),chain=[[0,0]];z.forEach(v=>chain.push(add(chain[chain.length-1],v)));
+ let xx=chain.map(v=>v[0]),yy=chain.map(v=>v[1]),span=Math.max(.8,Math.max(...xx)-Math.min(...xx),Math.max(...yy)-Math.min(...yy)),cx=(Math.max(...xx)+Math.min(...xx))/2,cy=(Math.max(...yy)+Math.min(...yy))/2;
+ f=frame('phasors',[cx-.72*span,cx+.72*span],[cy-.72*span,cy+.72*span],'Re e(0)','Im e(0)',true);line(f,[cx-span,cx+span],[0,0],'#c4cdd3',false,.7);line(f,[0,0],[cy-span,cy+span],'#c4cdd3',false,.7);z.forEach((v,i)=>arrow(f,chain[i],chain[i+1],colors[i],`n=${i-1}`));f.c.fillStyle='#183247';f.c.beginPath();f.c.arc(f.X(all[0]),f.Y(all[1]),4,0,2*Math.PI);f.c.fill();
+ const iz=norm(all),is=z.reduce((v,a)=>v+norm(a),0);document.getElementById('coherentZero').textContent=fmt(iz);document.getElementById('incoherentZero').textContent=fmt(is);document.getElementById('crossZero').textContent=fmt(iz-is);
+ document.getElementById('toyTable').innerHTML=[...z,all].map((a,i)=>`<tr><td style="color:${colors[i]||'#183247'}">${i===3?'相干总和':`n = ${i-1}`}</td><td>${fmt(a[0])}</td><td>${fmt(a[1])}</td><td>${fmt(Math.sqrt(norm(a)))}</td><td>${norm(a)<1e-24?'未定义':(Math.atan2(a[1],a[0])*180/Math.PI).toFixed(1)}</td></tr>`).join('');
+}
+ids.forEach(id=>document.getElementById(id).addEventListener('input',redraw));
+document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>{const values={rectangle:[0,1,60,-60],add:[1,1,0,0],cancel:[1,1,180,180],reset:[1,1,60,-60]}[button.dataset.preset];ids.forEach((id,i)=>document.getElementById(id).value=values[i]);redraw()}));
+const real=DATA.real;
+document.getElementById('realLead').textContent=`同一 mode19，${real.frequency_thz.toFixed(6)} THz，Q=${real.Q.toFixed(1)}。读取 z=${real.plane_z_um.toFixed(2)} μm 的 ${real.grid_size}×${real.grid_size} 复电场，直接积分精确 K=0。`;
+document.getElementById('realTable').innerHTML=[...real.quadrants_normalized,real.total_normalized].map((r,i)=>`<tr><td>${i===4?'相干总和':`Q${i+1}`}</td><td>${complexText(r[0])}</td><td>${complexText(r[1])}</td></tr>`).join('');
+document.getElementById('provenance').textContent=JSON.stringify({source:real.source,sha256:real.source_sha256,definition:real.definition,raw_Ex_Ey_Ez:real.total_raw,units:real.units,phase:real.phase_convention,abs_Ex_over_Ey:real.abs_Ex_over_Ey,checks:DATA.checks,limitations:real.limitations},null,2);
+function check(){const near=(a,b)=>{if(Math.abs(a-b)>1e-12)throw Error(`kernel check failed: ${a}, ${b}`)};near(kernel(1,0),0);near(kernel(0,1),1);near(kernel(1,1),.5);near(norm(sum(parts(0,1,1,180,180))),0);near(norm(sum(parts(0,1,1,0,0))),4);near(sum(parts(0,1,1,60,-60))[0],1.5);return true}
+check();document.getElementById('checkStatus').textContent='解析窗口核、相位增强/抵消自检通过。真实场：四象限求和与 FFT 中心一致；无 COMSOL 求解。';
+window.addEventListener('resize',redraw);redraw();
+</script>
+</html>

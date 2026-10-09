@@ -1,0 +1,18 @@
+{
+  "comsol_executable": "C:\\Program Files\\COMSOL\\COMSOL63\\Multiphysics\\bin\\win64\\comsol.EXE",
+  "processes_before_start": [
+    {
+      "ProcessId": 28680,
+      "Name": "python.exe",
+      "CommandLine": "\"I:\\codeXproject\\comsol-workflow\\.venv\\Scripts\\python.exe\" -m scripts.run_main.run_s4_boundary run tmp/s4_20260916-gamma-v2"
+    },
+    {
+      "ProcessId": 3620,
+      "Name": "python.exe",
+      "CommandLine": "\"C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe\"  -m scripts.run_main.run_s4_boundary run tmp/s4_20260916-gamma-v2"
+    }
+  ],
+  "license_status": "Local license file; product availability requires COMSOL API checkout",
+  "license": "file/service checked; product checkout checked before model build",
+  "product_checkout": "COMSOL and WAVEOPTICS passed"
+}

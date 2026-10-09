@@ -1,0 +1,8 @@
+# Historical archives preserve their original bytes.
+tmp/archive/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+tests/archive/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# These unchanged historical sources retain their original trailing spaces.
+tests/archive/test_energy_recovery.py whitespace=-blank-at-eol,cr-at-eol
+tests/archive/test_fourier_basis.py whitespace=-blank-at-eol,cr-at-eol
+# Matplotlib SVG snapshots preserve generated formatting.
+tmp/archive/**/*.svg -whitespace

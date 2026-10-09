@@ -1,0 +1,3229 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "source_repository": "https://github.com/jia-yli/comsol-workflow",
+  "source_branch": "raywong/finite-cavity",
+  "source_commit": "1d591a494fe9a090c8de606ab3c3d0731899d6f4",
+  "destination_repository": "https://github.com/raywong0131/RaysLab",
+  "destination_branch": "main",
+  "imported_file_count": 435,
+  "imported_bytes": 9524623,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 536,
+      "sha256": "82082411e95f1e788ba44285dae7461f479f542a8cde5b40cb801a2d748f21b8",
+      "tracked": true
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 4851,
+      "sha256": "3a7cd043e5c1ac4ad49d90ea14c4871f09d98c7fb822908b2b56cbc31f54f5dd",
+      "tracked": true
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "bytes": 69,
+      "sha256": "7190bd304c5d1ed182e4ce0851c37ca30a6e017a0bdcbd5d0830f60e21bbe463",
+      "tracked": true
+    },
+    {
+      "path": ".vscode/settings.json",
+      "bytes": 211,
+      "sha256": "3b6366153e6b8dcc10f741f5e96f5c499ea8aa76602ae4631a461e423c2294fb",
+      "tracked": true
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 15693,
+      "sha256": "772b52a450c0a848d650d062d98854887cd6f7da4bc47e2c2e35251c991634b0",
+      "tracked": true
+    },
+    {
+      "path": "CONTEXT.md",
+      "bytes": 7125,
+      "sha256": "6836282c3096f365a0fa911edfb0921ef4673f0e4c48d6179bf2bba42765a5c4",
+      "tracked": true
+    },
+    {
+      "path": "MEMORY.md",
+      "bytes": 3550,
+      "sha256": "38d7a4eb7e9f0b52f2928f4565437562aad420587649c5253caaae971eea7b19",
+      "tracked": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 14499,
+      "sha256": "b0d61e928b1d6556af9b7b46ce3b3fdec728993001d4e9c4763282082b253da8",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/README.md",
+      "bytes": 9468,
+      "sha256": "bc157dcc245b2e2fc5d50e9f513540e740e0a0ca3866a26d5e3d7471f5ed30fa",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/__init__.py",
+      "bytes": 336,
+      "sha256": "4f9ea095b0388496db17971d06011a56ac126ce9630a6c73cde67b4acba34b03",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/_compat.py",
+      "bytes": 356,
+      "sha256": "4d696d6094d52f9987046c0f31da17beab886ed37044f5e74b0026b5c263cf74",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/band_connector.py",
+      "bytes": 19388,
+      "sha256": "1e0fab8275015249fe084b71aa53eb3bba43846fdf427ac3a9a6c6248a3162fb",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/basis_utils.py",
+      "bytes": 3144,
+      "sha256": "4416b1a38a3388e643d363942937438247a9061b8f20cf5bddb7980d4687d187",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/boundary_integrals.py",
+      "bytes": 10244,
+      "sha256": "6c8e127f46bb05aec5fdc2655f3d5618fa9488e596c9f6cba0f151e3d7aaef0f",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/boundary_plotting.py",
+      "bytes": 27499,
+      "sha256": "bdcba69d82a1f0f877441f2353c96a6b5fb344ca351d55fbecbba125fbe765f2",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/c2v_band_model.py",
+      "bytes": 9587,
+      "sha256": "a027acfb8829e3d10973c55fc622bcbb52dd5188b71edf70e6d79061648ebb7f",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/cladding_shift_profile.py",
+      "bytes": 31808,
+      "sha256": "27af7de1890615f5d2c13fc9595c712186d197ace60dc1fc68db6a2ff99712af",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/dipolar_decomposition.py",
+      "bytes": 2267,
+      "sha256": "0607e9e2842f8aa4a51c42d90a995e09e4ea475ff8e7517edeed08ac274d0d3f",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/dipolar_inputs.py",
+      "bytes": 4260,
+      "sha256": "2bc447f02eb7ec015b0d2541ac3396dc0bbf37820bc052347e7611ad8be3e28c",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/dipolar_lattice_analysis.py",
+      "bytes": 3519,
+      "sha256": "7bf28f35497452c54735c3ca336297491256e14a7e562cdedc78c2e6d11007d3",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/dipolar_radiation.py",
+      "bytes": 6581,
+      "sha256": "f3e0d676f4e10ea08674efe3135e5d7c5571501aacc8c38b7e93d7458f85620c",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/energy_recovery.py",
+      "bytes": 8667,
+      "sha256": "83f8c54519fad4d6f6429b63753e4d288914fb4dfde69d4cf2085db351236bfb",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/farfield_fft.py",
+      "bytes": 31700,
+      "sha256": "3d95571e24d90a2fe9fe87ea03b25e9815ac6018aa7d856db5e4b8227c3b7036",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/field_plotting.py",
+      "bytes": 11942,
+      "sha256": "e79af7107e955560419127ca33d47673c7f448450c2c68d29da9b5db51c2d9b6",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/figure_output.py",
+      "bytes": 623,
+      "sha256": "869d88de4f5253a7f38897430c079238b6d3a7b96cec0a6429fc007eb1bad43e",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/finite_geometry.py",
+      "bytes": 30856,
+      "sha256": "40e39c0f689f862ac4eb1d3f35d452b4dcc1830a9be9bad9b2874f5fbcef1e51",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/finite_geometry_comsol.py",
+      "bytes": 1301,
+      "sha256": "dc06dda25114b95b57942bd57976506b9b130d3416d6f2f48e62254e5d17baca",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/finite_lattice_fourier.py",
+      "bytes": 12483,
+      "sha256": "dcd8c78af94b4a8a7f83367bf5eebb14456e11dc6a964bad6d260bd0478b627b",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/finite_patch_lattice.py",
+      "bytes": 10487,
+      "sha256": "0f24805bf3c547d1eb58753e64cb61c07ddc2a7f3a49be67500aec45acb77e4d",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/geometry_utils.py",
+      "bytes": 9681,
+      "sha256": "3b2fe157e7d24985b2dc94a9f965405d3e5692eacdefc910d5d8d87a4a464a03",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/hex_lattice_utils.py",
+      "bytes": 6449,
+      "sha256": "7da23af3045a6ce398b4070f4dc43dc16c76a68eca222f66e07c2623f29c2f2f",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/lattice_fourier_postprocess.py",
+      "bytes": 81551,
+      "sha256": "ab51ae172c94c5b68c9aa5c103a64ea957a07dc5a95a1fa9e30bdb5a3dd7a6c4",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/mesh_constrcution.py",
+      "bytes": 3297,
+      "sha256": "6491d02c8d464584e0cdadaebaedef132d53605d5d108d5fc6cdb562db09d977",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/output_paths.py",
+      "bytes": 3530,
+      "sha256": "ba7655ffa809bd62b5f94a6e9b13e159615ed991e15c6a1866d762be2c9d2653",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/polygon_utils.py",
+      "bytes": 18197,
+      "sha256": "7668ae35b582ce36a27bef6d525862dffebae69e7912efadb357d339055abc73",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/result_io.py",
+      "bytes": 1166,
+      "sha256": "0c09013457e1cc150e389fd40b44ad97cb4fb4911acd1cc5f7a83c8bec9d220b",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/s4_boundary.py",
+      "bytes": 188,
+      "sha256": "409fe70718f9dffb8ac6f318249365e851dcf516fab245b704f117039e0c6181",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/s4_paths.py",
+      "bytes": 176,
+      "sha256": "bb71f341344f1d0bd68d042be8e485c803258414f36c52c0290d3e5e955f5762",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/s4_plotting.py",
+      "bytes": 186,
+      "sha256": "7d31d81da87706318e3d6d1c1d93a1894f222b607d6756804da68fcabad32c03",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/s5_paths.py",
+      "bytes": 176,
+      "sha256": "bb71f341344f1d0bd68d042be8e485c803258414f36c52c0290d3e5e955f5762",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/simulation_config_geometry.py",
+      "bytes": 10194,
+      "sha256": "2f56118354558817e00d86a1cadd29f39a47b7a272b2a28a7250c28bd38885fe",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/simulation_spatial/__init__.py",
+      "bytes": 187,
+      "sha256": "ad03249f72db7923b05e135272aca1acb6bd35b007dfdef8c79419ceb3e5be4b",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/simulation_spatial/hexagon_unit_cell.py",
+      "bytes": 31751,
+      "sha256": "65ffaba3fb7a7a499f2ad5b10584243bc14140f783e24a6801d4b5bd7cab8a4b",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/simulation_spatial/rectangle_finite_size.py",
+      "bytes": 26275,
+      "sha256": "db33f0928705f27bd9b407b279b699fe4e17473b14308fe093c5738a287ddde7",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/simulation_spatial/square_unit_cell.py",
+      "bytes": 26778,
+      "sha256": "5d31b7d162ff9df6e9005b47033b9bd9629375b296be4cb571777f84793f9867",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/simulation_utils.py",
+      "bytes": 67286,
+      "sha256": "bcc7858c32749251b32f45cb28c97f1dcc01a875383b2fd25677a8f49d0d49f3",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/theory_band_fitting.py",
+      "bytes": 13924,
+      "sha256": "89c3e96fb7cd09dba37f6a0692ac2644badf4829b2ab0db17a4792a9d561ad12",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/unit_cell_2d_analysis.py",
+      "bytes": 64854,
+      "sha256": "10a4821b9d4934de8a3e0cc80de49a7236db56f6fb5fa1e89c400c1e7215925a",
+      "tracked": true
+    },
+    {
+      "path": "comsol_workflow/unit_cell_2d_valley_refinement.py",
+      "bytes": 45734,
+      "sha256": "dd7c413401aec5e5f711fb86851a88f702739aa911fce0ba5753435cd910111b",
+      "tracked": true
+    },
+    {
+      "path": "docs/SI_thoery.md",
+      "bytes": 68973,
+      "sha256": "fbe4a5f3161f89677e4817625c449de7e905d5cb0be72b568411b8f5c3d9078c",
+      "tracked": true
+    },
+    {
+      "path": "docs/SI_thoery_v2.md",
+      "bytes": 55413,
+      "sha256": "66e66075dd7bebf7805e5f5e88a5f35b488bb3f9ec42458ee2c75a7bb6cdb010",
+      "tracked": true
+    },
+    {
+      "path": "docs/agent-git.md",
+      "bytes": 2305,
+      "sha256": "8c0ac0f4a17f69e70ed2c0246dc689193515f9f15b5ae617385270415bd5af10",
+      "tracked": true
+    },
+    {
+      "path": "docs/agent-plotting.md",
+      "bytes": 10990,
+      "sha256": "0d6191ac255cc511a3b5dba9bb5dbd154bd8b2822ac3f8e3504f97f37e1931fa",
+      "tracked": true
+    },
+    {
+      "path": "docs/agent-simulation.md",
+      "bytes": 23062,
+      "sha256": "bed751e2d9a109e4bc3b3c9e2a286af9ec93acd2b1ec07725102bb54a4c334a6",
+      "tracked": true
+    },
+    {
+      "path": "docs/agent-unit-cell-2d.md",
+      "bytes": 14757,
+      "sha256": "07a0f963fa2811dc06664980ed040198e2e168b600efbc81e4d40e0cc4e4ad88",
+      "tracked": true
+    },
+    {
+      "path": "docs/agents/domain.md",
+      "bytes": 1710,
+      "sha256": "291bb2e4846f006ded07e55b65ca918b9c2f2253029f984c3894c502ed7e9b5f",
+      "tracked": true
+    },
+    {
+      "path": "docs/agents/issue-tracker.md",
+      "bytes": 3590,
+      "sha256": "2b2ff4ac37064647dbc4dd32d48d61975c6b93c80ebb825552c621ce7eb7bbbb",
+      "tracked": true
+    },
+    {
+      "path": "docs/agents/triage-labels.md",
+      "bytes": 1254,
+      "sha256": "eafc571b3fba19e8a11c4400c7ff4e61d5c7d4412bba0c9f67cda23c23fe75da",
+      "tracked": true
+    },
+    {
+      "path": "docs/finite_lattice_fourier_bases.md",
+      "bytes": 21439,
+      "sha256": "b3eeaadb7c98aaa025bf2166cb13cbea201bc819747b3d12ae92b733c1e8d2c2",
+      "tracked": true
+    },
+    {
+      "path": "docs/finite_phc_mode_bloch_decomposition.md",
+      "bytes": 33420,
+      "sha256": "22d310291b7e0a94693b13c9dbd90f72a419589b89c765dded2a1471b7965592",
+      "tracked": true
+    },
+    {
+      "path": "docs/fourier_basis.md",
+      "bytes": 13088,
+      "sha256": "000a5500c74e23e0fc97fef82194127a4d5123bce04e3aa4ca73c094ee70b2a5",
+      "tracked": true
+    },
+    {
+      "path": "docs/inner_product_decomposition.md",
+      "bytes": 10785,
+      "sha256": "7ded12801b52502c496411ca2d64c775f672601d9234c94da00a4e9c39e9b829",
+      "tracked": true
+    },
+    {
+      "path": "docs/inner_product_decomposition_complex.md",
+      "bytes": 12413,
+      "sha256": "191d8ca9943b25430d137a2f1a86d1a553b0d385657e1e3e780ba3cd00981f52",
+      "tracked": true
+    },
+    {
+      "path": "docs/parameters.md",
+      "bytes": 5204,
+      "sha256": "dfcc0561cee54f05d945980155efdd06000d4b86d4eea2fb1b0e457c066c9cef",
+      "tracked": true
+    },
+    {
+      "path": "docs/parametrization_box.md",
+      "bytes": 10649,
+      "sha256": "cffbb4861448ff1b8238972903a8e1313af2b8601e7bdbcdf727f1534e47846b",
+      "tracked": true
+    },
+    {
+      "path": "docs/parametrization_vanilla.md",
+      "bytes": 4201,
+      "sha256": "eb8a9e9938d09c8c42ade546d30e0060315289ebd9d48712bffb7a86a8bd62a8",
+      "tracked": true
+    },
+    {
+      "path": "docs/s4-boundary.md",
+      "bytes": 22242,
+      "sha256": "d70ca77332045783967a369b71534c4f7e3dc6ce3061c4b18b1c225bb5a7b27f",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/handoff_20260831_comsol_workflow_blueprints.md",
+      "bytes": 8174,
+      "sha256": "91c01c9358fe654ab0c4474728f0ebb0d1067edd4981817251617f522feef344",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/handoff_20260901_comsol_control.md",
+      "bytes": 22973,
+      "sha256": "7f35adc0c99092389fbe2f9d9c4ea24463ade6756d3d6e869f5523ab43097cd3",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260724.md",
+      "bytes": 15935,
+      "sha256": "35bc104404a793d5d958f4f8802e41e8e0b63ae53a616d6f96d2e6e5c9d31153",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260725_finite_trend.md",
+      "bytes": 15343,
+      "sha256": "e71a3deffa83a5b78de40564eb3aab5bb367d56d56ddec7d19dd92d87be8b6f3",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260726_cladding_doublet_alignment.md",
+      "bytes": 7463,
+      "sha256": "a8fb8ad66eaad6efe455da4672411f6e727e2195ac39ea0ca8dacd519985c2d3",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260726_finite_flatness_trend.md",
+      "bytes": 6375,
+      "sha256": "0b31449a6fd813bdb7148f2001afc8c56b42062330270ff8be2f75f03079846a",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260726_unit_cell_output_layout.md",
+      "bytes": 4889,
+      "sha256": "7ae3ccf06ad9ab69ad0ab0516dac9522bf11d9f65e57d32cf8d82e7985f4a1e8",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260727_cladding_shift_profile.md",
+      "bytes": 18656,
+      "sha256": "f3b31dab099b247458d0d4f9b571c81f25214261a568cf18ef787a4a8ca91dbd",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260727_field_export_styling.md",
+      "bytes": 5024,
+      "sha256": "0997fcec6fef45ed2857dc3461f3e4eccc2785504c0fd7981882eafd581144d7",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260727_finite_geometry_figures.md",
+      "bytes": 5739,
+      "sha256": "6d7a6e81d9d22d06ae71146b72cc0723906d0948da5c6fc04987d296cc2af520",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260729_cladding_p2_d2_alignment.md",
+      "bytes": 6494,
+      "sha256": "c57a40b6992871d5ee1528050699d1b395849019b0eae1b94a768c5ac1493efa",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260729_finite_quarter_q_optimization.md",
+      "bytes": 5381,
+      "sha256": "ab3143355bace153e1112269487f2e598247912bd13d63a6decfb708e8ed44d2",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260729_hex_spiral_indices.md",
+      "bytes": 9630,
+      "sha256": "73a8e10230bfd3bd2682c67d88f6eafa513e8552627b0123e31bdef182ed8f0f",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260729_unit_cell_band_v2_model_reuse.md",
+      "bytes": 9977,
+      "sha256": "4e7fd99e451dab7deaf36dbd53ae4b7c48347ca0250042a1af06400b76e2e7c9",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260730_cladding_doublet_alignment_cav1156.md",
+      "bytes": 4289,
+      "sha256": "43386c88c89c9cf1495f456b09b359b630b899fbea06b1e056cbbdbc4df14f5f",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260730_strip_1d_output_layout.md",
+      "bytes": 9233,
+      "sha256": "9a2cdbd820625d6595937c6f9bd362d1f92a271c885372001d6766eeb62733c3",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260730_unit_cell_band_v2_replacement.md",
+      "bytes": 3954,
+      "sha256": "db3b9e3e72498a5d7e6a8a3127b14f979a2b9adc07e51024fb355a705ad7bd12",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260730_unit_cell_eigenmode_count.md",
+      "bytes": 6701,
+      "sha256": "a37da4b1b4558297ee6df2e39d60ef622b8446ef9dd50ab9f33d237fd0ddc71f",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260731_finite_directional_cladding_shift.md",
+      "bytes": 6968,
+      "sha256": "ac9a4aafa8e7f915a1917f11b1065311ea70ccecac0a7656e10a8e111c5dd622",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260731_finite_ellipse_cladding_shift.md",
+      "bytes": 6921,
+      "sha256": "c37cccbcd75efd4d2aa108cf1f25ec0499b0780f1ad6cdba3d3f2b7f5dc377d4",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260801_finite_directional_trend.md",
+      "bytes": 8392,
+      "sha256": "be6ed27b014dbb9eb02865bf9394b72471cdd5a0a4d132508b1ef4f6330d8c09",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260801_finite_unit_cell_intensity_standard_output.md",
+      "bytes": 2882,
+      "sha256": "8488796af804d3dbebd59b9710d952e0418a0c0ec27bfbc8024544e43572cdef",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260801_shared_cladding_shift_scan_ratio.md",
+      "bytes": 6274,
+      "sha256": "6766a6bbe95cad4014278ff5bcd7ec9c51f7aa120aff66f8c01991f4f43db740",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260802_finite_fundamental_mode_filter.md",
+      "bytes": 5346,
+      "sha256": "3b3ae67a7dabcd4101ed21b71817a9560c392dc40bd68e3b7b1c75972aeeeea4",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260802_finite_nearest_frequency_single_mode.md",
+      "bytes": 2666,
+      "sha256": "d5417c1d0510e4b80b2b76efdb90bfe6d15404a0eae8eafb4640438883564c86",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260803_finite_geometry_hex_square.md",
+      "bytes": 33028,
+      "sha256": "9ecc0ecfa1be253938751f94d191c35250f2a9ae0b1d475569d965ef9528275e",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260804_blueprint_dxf_export.md",
+      "bytes": 43640,
+      "sha256": "139dc28a7a23e2893221ad71aeef97666ca3968efafa11f0b4ce6a81854c85c6",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260804_finite_quarter_four_modes.md",
+      "bytes": 13373,
+      "sha256": "f45d3882f926d5a226128395919cfcda95e3a90ee8bed8e08a9bd8e2b80eaa42",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260818_unit_cell_band_pair_solo.md",
+      "bytes": 4126,
+      "sha256": "3fdad2128f90182d9170629af44de728c3893295bcafa58181ca216cd6283c98",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260819_theory_simulation_parameter_fit.md",
+      "bytes": 29133,
+      "sha256": "32cac7b15262eb930f1120c1e158227321708543d4fd11b8b996285ede7d35b8",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260821_unit_cell_2D.md",
+      "bytes": 57158,
+      "sha256": "458bcb5184715b2c4f0cfacf2dbc448dd13be03fadd85e5339a5a5453420e07a",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260822_unit_cell_2D_zeta_scan.md",
+      "bytes": 4875,
+      "sha256": "ee95809cc83602c1212ce42fe30d3cb1229c89e455a4f5f3e640df5959d86f49",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260825_unit_cell_2D_comsol_valley_refinement.md",
+      "bytes": 34501,
+      "sha256": "8306728c3317c8138610ab4b1c7193d2ab900f617805c28502ff1920b779f8bd",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260826_unit_cell_2D_C2v_quarter.md",
+      "bytes": 23402,
+      "sha256": "2d35256b56938dafacfa2df73a13d2d261524f6bcf94b20d4a6ef446f9757d1b",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260827_blueprint_outer_windows_parameter_label.md",
+      "bytes": 7600,
+      "sha256": "58ebdecc43279aa45e6a8901d67386648b6c3917126e758f9fc3cb1c676ba420",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260827_blueprints_SEM_air_hole_correction.md",
+      "bytes": 4628,
+      "sha256": "4bbff6a0c8ba1a0c0f335d3134ebddaa93b792f45dc38e01a655628e27a56746",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260827_blueprints_dxf_parameter_filename.md",
+      "bytes": 3416,
+      "sha256": "c5306880fe2445ad32f67c829edd0b5fab0fb512e8d668e14b08f1a642aab660",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260827_blueprints_project_restructure.md",
+      "bytes": 5654,
+      "sha256": "3bbc8a97cc4d2b324c1bd37247a333d20cb6d595573062f78e6a890922a19890",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260827_blueprints_workflow_flatten.md",
+      "bytes": 2129,
+      "sha256": "d6091fe6bb7c3f0da7073f79bc77cc8735d91bee6c19579434f15126edf5a9a1",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260827_blueprints_workflow_function_groups.md",
+      "bytes": 2505,
+      "sha256": "b85141d79f11791492759e739bb8dec4398e9d7e6ba27a019aba563412407f5c",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260828_blueprints_SEM_correction_apply.md",
+      "bytes": 3591,
+      "sha256": "2f490aaa03be03275b4e796f7b222a75a32ad0df7c7b8b2f9a582352eca67eef",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260828_blueprints_global_hole_shrink_outer_window_dimensions.md",
+      "bytes": 24049,
+      "sha256": "326c4519f09ec9a5d78aa066b339d01dd405246e67812ca7a86d867275ed75ce",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260828_blueprints_hex_ring_windows_v2.md",
+      "bytes": 8019,
+      "sha256": "24e38f793efe8439c25e2552bba30a5a796ba3eef6a9df3eabac510b0cff0266",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260828_blueprints_preview_three_positions_correction_function.md",
+      "bytes": 13174,
+      "sha256": "7436a8c039a1b92a11a6b1b088f85b17b6adcc1983dc759505b6b48820926dd8",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260828_blueprints_radial_preview_strip.md",
+      "bytes": 3308,
+      "sha256": "88b01f1cb0a025f5d02c303f10865c1774978856f6eab4511cccedf219b4917b",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260901_blueprints_dxf_geometry_override.md",
+      "bytes": 9907,
+      "sha256": "6bdf55b8e2384fc3a17e2d23c632942a70356c0984b4fdd1ce48a99a2cfff9f6",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260901_finite_quarter_schedule.md",
+      "bytes": 2547,
+      "sha256": "2c1714c60d02d1488947580225a568e864d3f412b2e4773dfd4aceaf3643fd61",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260902_codebase_simplification_audit.md",
+      "bytes": 36553,
+      "sha256": "8bda91e9c949e97d7d2a17788c0cc48be6e2ee03b815db9a0238190f6f8b2a3b",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260902_finite_layer_and_outer_window_semantics.md",
+      "bytes": 6257,
+      "sha256": "415219b89e5795babf0e519fbb9a8cabea8b3e1ff4f6b53eee229ee1b26061a9",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260903_blueprints_simulation_config_to_dxf.md",
+      "bytes": 5983,
+      "sha256": "fd33306c291cb07cbdfde445898c3bc7cb60601cba5eb7c21223a4b59c102017",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260903_simulation_config_geometry_reader.md",
+      "bytes": 3586,
+      "sha256": "20bdcf542a571bc22feb1144e4c1a12684604783ce102143206c884e43abe0a6",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260904_finite_quarter_all_modes.md",
+      "bytes": 26901,
+      "sha256": "4d8cc2c6116e775326c495664c984df1658168c97b13ad930bd7a4545181bac1",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260907_astra_instructions.md",
+      "bytes": 9853,
+      "sha256": "7aa0c742f205b2e8c192dd72ab487bdc009e4ea9b8f79fb426fcf48246b4cd7d",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260907_finite_quarter_result_merge.md",
+      "bytes": 4810,
+      "sha256": "988847128c72de024988060c30228b5251997292d9f6e11bad9dd2a327137244",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260907_hz_colorbar.md",
+      "bytes": 1899,
+      "sha256": "36dc9db87927c423c3c417fc8bf09fc2180200b56b6ac550831213df60380520",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260907_project_cleanup.md",
+      "bytes": 7590,
+      "sha256": "063d7d1de815f3705d746334bcc010ce05d7e81cea5fe5ac8e1439260a7f6a94",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260908_parameter_layout.md",
+      "bytes": 3282,
+      "sha256": "a8a4cc7990b88922a5d09ce068f78eccd5758ce27b92743b6bbec1b7c8e555ce",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260908_py_fundamental_band_fq.md",
+      "bytes": 3996,
+      "sha256": "400be0343c4fd39ae94dc0c376c4f4501bcd597f8d243b0a3f13f36cfacfe9fc",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260916_s4-boundary.md",
+      "bytes": 33943,
+      "sha256": "2f577dc86bc9e708b567af73c17d39a1562f8971f202dbff01660ffd9e3f1bb0",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260917_s31_validation.md",
+      "bytes": 11952,
+      "sha256": "46be25427b99fde39cc7b1c1771abdaf198c793b6cbc05223b233bef45571f21",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260917_s4_c6v_symmetry.md",
+      "bytes": 3225,
+      "sha256": "dc71f3f5ebd6fc43033b2f87a9ad76b52cb72448852bffb05657b40128a77770",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260917_s4_control_figures.md",
+      "bytes": 4739,
+      "sha256": "4cc447a8cf870f9e4bb98738fbd1adcadb6cb506ef5e9aa24e997320079ab8d3",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260917_s4_output_layout.md",
+      "bytes": 2807,
+      "sha256": "788e1883bae03bc7aceb48536beae43ccc39e39712d4c932234a055ebeeaad38",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_cached_zeta_plot.md",
+      "bytes": 2821,
+      "sha256": "a4e511b96e1f686aacb2280dfbcb7f1c45d33557ec91a8f730b483bac1b2929d",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_ey_area_scan.md",
+      "bytes": 1877,
+      "sha256": "fe23dc92e6e51e8b0c90f63ee36f1de4c3380b02afda43984a2bd8ca28ad35f9",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_local_fields.md",
+      "bytes": 6476,
+      "sha256": "c8d360f712698d2119cb804f89b9f273831c021f99047f316450c637c63c2b90",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_mesh_convergence.md",
+      "bytes": 8212,
+      "sha256": "c1e16c804ac84f834452b6208cf4312d7259e21f09dd834379c912767d7b1051",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_signed_scan.md",
+      "bytes": 1909,
+      "sha256": "cb26550f9533f8fdd10a4d3bca8e495e767f480b9c269e11bcd70007d6b780a3",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_surface_zeta.md",
+      "bytes": 2942,
+      "sha256": "f92c44f411aebe5f776df7b61b1d7a886f1c79bb2303b61b01ab07504d61187c",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_surface_zeta1_compare.md",
+      "bytes": 1973,
+      "sha256": "47e5309fda0a09aa02a280bb4d7657c4b5ab555019054a009b5c6802102256df",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260918_s4_three_way_comparison.md",
+      "bytes": 2216,
+      "sha256": "7cf88cc2392c6f0812b83b4fbdf4e994745e3c1d5abc26a1bd3be4b65a701ac0",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260920_finite_quarter_consolidation.md",
+      "bytes": 4460,
+      "sha256": "0a44886422a565ea80b2bd5ca852141c9a6b9308f92792f60449e9936db279cf",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260920_finite_quarter_overview_mode_analysis.md",
+      "bytes": 3796,
+      "sha256": "1d8eaf6921d43d7d80853a9d1095abeb8bd2ba48fd118e086418f749b42896aa",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260920_s5_broadening_visualization.md",
+      "bytes": 12307,
+      "sha256": "42cd3e7c6455ea853b77cec2e468906c3fc530e7672bc1c6e8b93323f3797d97",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260921_dipolar_singularity_analysis.md",
+      "bytes": 44357,
+      "sha256": "d4735ea70848d45de22f67062a2341301e73365c28d5bfbb3e4325897831a6ac",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260921_s5_bloch_radiation_validation.md",
+      "bytes": 10757,
+      "sha256": "4a785cbc6b438e811237051bd20645d7577f028947b218f945570eb0ca91e914",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260921_s5_cavity_only.md",
+      "bytes": 3188,
+      "sha256": "491f1373c037b40581d9c0751b24632f40b4d980141dc2dc802e8381f4f8ba7e",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260921_s5_gamma_mechanism_visualization.md",
+      "bytes": 3104,
+      "sha256": "750b890def4eddd3f3f628db27e8dd7e48c3b2567f3d93961fe5f9ac98e03baa",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260928_dipolar_angle_filter.md",
+      "bytes": 3738,
+      "sha256": "484ab84948cc85045f4367983f4487fd39ef30eed06d74717cf25ff96d6a18d3",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260928_s4_boundary_validation_four_figures.md",
+      "bytes": 33213,
+      "sha256": "9d76cc49bb446094bb68a8ed93056d6b7d91b8b52e95ef38de9cf7a9559c188a",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260928_s4_results_consolidation.md",
+      "bytes": 2246,
+      "sha256": "29a10bbc14375cf1e0b77703b3e9f83fd9f7bedeb4c167ce00384ee60fbcfcc9",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260928_s5_gamma_cladding_scattering.md",
+      "bytes": 23960,
+      "sha256": "3c104ce79656357a46e40d38932edee3fc9a680c90288ca7b9585348bdb2e08a",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260928_s5_output_layout.md",
+      "bytes": 1847,
+      "sha256": "2bcc927c83bd83df3e5bf884a1388bbb6560ed264d5543a93574aac7aad59160",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260929_s4_full_refined_scan.md",
+      "bytes": 2757,
+      "sha256": "c0cc7ad8f8da04f79ea099f6d68c3a0b93f786f9918b7731f19360a21f59e7f9",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260929_s4_overview_flat.md",
+      "bytes": 1838,
+      "sha256": "bb0f30891ee75d1e5a5a3c77c86a8d5c7fb8eed29ba7fa1a4456baa60a8cea67",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260929_s4_px_mesh_test.md",
+      "bytes": 3072,
+      "sha256": "3e3ada6f299b5b89c798c293388729db7178ded5f10183d9405854783504fcda",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20260930_s4_peak_resampling.md",
+      "bytes": 6101,
+      "sha256": "369ec48879a137446fecb26928f023dd805126fe2d42a664cb0be71519c63bcc",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20261006_s5_gamma_origin.md",
+      "bytes": 17547,
+      "sha256": "d47c41e6aba3af89df8e8c486b196bd5ec2ba7be38111a19d9cf9f7560b42211",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20261009_s5_cap_z1p5.md",
+      "bytes": 1681,
+      "sha256": "46eb0e06926663c5b3aba65fb9a1c61e3a66a8461479eba3fe58aca38ec4e8cd",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20261009_staging_cleanup.md",
+      "bytes": 5440,
+      "sha256": "9b906cc27afa9901b56aafcc3681c45e2412335c03ac8e803bb9be1e9908f64e",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20261009_staging_workflow.md",
+      "bytes": 6634,
+      "sha256": "de00276efefb446816b2492d2c90288c5fba35e6c6fcf42c5fb4201720e1c81e",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan-execute_20261009_workflow_integration.md",
+      "bytes": 19624,
+      "sha256": "3730c5552ba3ce53e8d075984e4341b52df7b8e776b5eeee5c88a481cfd8eb74",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/plan_execute_20260724_finite_output_layout.md",
+      "bytes": 9916,
+      "sha256": "15ee9acff134f860a9d54d15e50971549741abc034842c3f49106363080a328d",
+      "tracked": true
+    },
+    {
+      "path": "docs/spec/staging_cleanup_inventory_20261009.json",
+      "bytes": 136363,
+      "sha256": "bc5ad755bbaef71984d0618b8a567637127815a18504d28d78833092048b5b76",
+      "tracked": true
+    },
+    {
+      "path": "docs/staging_cleanup.md",
+      "bytes": 8818,
+      "sha256": "d9887ab3d99f6a1893e7979539bc276893a53b5f9b94ae23abdd276fc00e9735",
+      "tracked": true
+    },
+    {
+      "path": "docs/unit_cell_2d_b4_nodal_line_reconstruction.md",
+      "bytes": 4224,
+      "sha256": "d2c44645ee56790741fff0b3ddaf4b90bac11318ca694fa45c231053e021c3e5",
+      "tracked": true
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 2113,
+      "sha256": "048e822afb9d0601183b7a1fbbb0009f73dadaaf30d86d0b4e36a5266411cd0a",
+      "tracked": true
+    },
+    {
+      "path": "scripts/README.md",
+      "bytes": 13407,
+      "sha256": "f0f9fcd61481914c2e03b375a95c900390c08127994db14c6c0e9119bd186e45",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/__init__.py",
+      "bytes": 65,
+      "sha256": "096352f7e30e083af49109e943d2439426944edafd7d63f4f77d5f72dfb55bac",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/_gamma_trend_common.py",
+      "bytes": 5802,
+      "sha256": "6437d2a90557c0dd7736d97d775cff6cd4298bc71ca4589a723d690b865abd25",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_cell_radiation.py",
+      "bytes": 36642,
+      "sha256": "d7e3ba393722f1a1e9d4af8d1287e7666258da4f68ce82938c38927693d14659",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_cladding_scattering.py",
+      "bytes": 32542,
+      "sha256": "fe359df3678ba7a5eaad1b634a0e9cdfd13d7974ac6d172c2a8c888cfa38abce",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_complete.py",
+      "bytes": 101978,
+      "sha256": "ee9778540a21ec4ff9c8ecaab5c8bd8e632c37b84d3f68679a7217cc5e6dde6b",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_gamma_origin.py",
+      "bytes": 27079,
+      "sha256": "db924cc41e8ba3c9962e56108941d7ab7fcea9d1eb6a224e8548c89468afdf7c",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_sector_interference.py",
+      "bytes": 31113,
+      "sha256": "81bbd27f128d133c84503a8a0edbae619733186d4467097843b1a334160a1bee",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_singularity.py",
+      "bytes": 33705,
+      "sha256": "8a5fda378389bfd22acbc74076d8c1082c33ba0eec1002701474965362964140",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_spatial_filter.py",
+      "bytes": 17811,
+      "sha256": "89961279e01e2c9968bb85ff505f90266e2b5b4ab5ce2696461218f26dc18e02",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_dipolar_unitcell_synthesis.py",
+      "bytes": 22524,
+      "sha256": "3144fa55850bf4d21247b71bc9509f8df0d1857b548ea290215abff0eb3ab2a4",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_integrated_finite_quarter_modes.py",
+      "bytes": 15514,
+      "sha256": "bdbab49b6583622f003a435d47fe2dffc0a2ab1ef15a0c834d2741cdbdbe4354",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_s5_cladding_scattering.py",
+      "bytes": 363,
+      "sha256": "4eab9b4273f99b0be1f4ff930ae8b2548fc0751645d9fe4cdd81081ad09de32c",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/analyze_s5_gamma_origin.py",
+      "bytes": 349,
+      "sha256": "60c33a220f3d74752cc7faf05016a3bcd892e119888c5bfccf8766573f6963f6",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/audit_dipolar_cell_quadrature.py",
+      "bytes": 14785,
+      "sha256": "38f232f257eac1da97fea79946661a956d0b0581ffe51143ad4c14cfbd65de24",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/audit_s31_boundary.py",
+      "bytes": 31489,
+      "sha256": "722b9c844c6fa90574ddb317e9fc627c9726c8a5b0b73aeacfe2376931dffd44",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/compare_boundary_ey_hz.py",
+      "bytes": 17297,
+      "sha256": "f6ba94bb6cf464de54559cc1cf52131a39a29f8f90734b75f44ee9d247512162",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/compare_s4_ey_hz_boundary.py",
+      "bytes": 337,
+      "sha256": "c81c91c0baa4fec438c34aa8da5bddd6e468e1bcfa580e385e8823610df08241",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/consolidate_finite_quarter_runs.py",
+      "bytes": 8211,
+      "sha256": "e2276ea92c06c68af79d22e828a7c6fc61623e61f6e3ca77e9432c923734a1e8",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/decompose_boundary_c6v.py",
+      "bytes": 22971,
+      "sha256": "4fd25a74c7d7b7ae3e323adcea8fe829cdc57c3e10d23ad3b7be38f1a7f1e646",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/decompose_s4_c6v.py",
+      "bytes": 337,
+      "sha256": "7716b5acedd96b31681cf1dfa8c4cc8010ccdb0c49bf7c578ffc3fb083ca92c9",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/export_boundary_ey_area_scan.py",
+      "bytes": 13917,
+      "sha256": "650a33ae177d7c79488ac936da4233df304da729ef6d5693f7a12e7fd7e7d17f",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/export_finite_field_html.py",
+      "bytes": 1530,
+      "sha256": "cf94506d5a556293da8b649251955f3d93e75995acbf7d31ba31fd7068cc2d1f",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/export_finite_field_svg.py",
+      "bytes": 6729,
+      "sha256": "e4f2a0725a4648af6163515d76a4dd0dc2cd8057f470c96cc1c513c9026c3c28",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/export_s4_ey_area_scan.py",
+      "bytes": 349,
+      "sha256": "4d566266d132c89bd53a417d23a1846d81c82c9e877dbb8381e50656315153bc",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/finite_flatness_trend.py",
+      "bytes": 32384,
+      "sha256": "54ec24fe76e482fc77eb9309e2e5a46f22276a5fb32e4e1be5259b54bb2c1e74",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/finite_trend.py",
+      "bytes": 33022,
+      "sha256": "f892c00ed479a75dac456e5a586b85c7fd4866dafd0cd79ca91004025aaa1c63",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/fit_theory_band_parameters.py",
+      "bytes": 28996,
+      "sha256": "07a376102901950cad78b2c75bd6ad809c21e42ea1a89014231d5344dd4d6a4a",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/merge_finite_quarter_results.py",
+      "bytes": 8014,
+      "sha256": "23efd58b11a2eb454f80eca964384d8f91cda692082130cd97d6ac5cd609293e",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/migrate_strip_output_layout_v3.py",
+      "bytes": 20869,
+      "sha256": "6bd50e397a27ed4c31e9fc6dda9932991a9e6a8be6089f67863f9c18dbb840de",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_boundary_analysis.py",
+      "bytes": 874,
+      "sha256": "5e64b93dd94da8248e8038057610b0a51dbdee0d21e10778334ef385ef8b0d22",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_boundary_cached_zeta.py",
+      "bytes": 13037,
+      "sha256": "91a1ec852c3fa432f2ac0b1b3c1e9147a3374f4d1cb4117d5711afec66a2d346",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_boundary_control.py",
+      "bytes": 28498,
+      "sha256": "1df9a6c4f3c8b6a2a6244bce9286e022bd8f14c1c706786dd524d40a050460e2",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_boundary_dual_validation.py",
+      "bytes": 46771,
+      "sha256": "092b93ef989b67f694ed8eef1e37c2f475dc685552ddacad2ee6f11890b34a9d",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_boundary_signed_scan.py",
+      "bytes": 8475,
+      "sha256": "a3621e920651755eb4225fa59fe2e30ce0a599e387ad29aa0f7aed6709580474",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_dipolar_angle_filter.py",
+      "bytes": 16842,
+      "sha256": "d958ddf9779fb1179f4a6c411adaf33863f58453719233abd4cd08dfd15fbf4c",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_dipolar_gamma_mechanism.py",
+      "bytes": 23281,
+      "sha256": "e3b815e45418cd8058f46288bdaac75011b2eaa5d8c488306c3e88f2a534eef6",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_dipolar_volume_radiation.py",
+      "bytes": 22268,
+      "sha256": "7b1c0cd4b642ac3030e69de43fadfcf47f552b91bd8d417e06ecb764aca1e785",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_py_fundamental_band_fq.py",
+      "bytes": 11818,
+      "sha256": "b44930eefd13fd94598b453dac78eb2f962ba0f6bd43b8552bd34c58f3765c82",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_s4_boundary.py",
+      "bytes": 337,
+      "sha256": "31558df1320c2e6966611b96577d5130d742127190467d7fe567903241b2524e",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_s4_cached_zeta.py",
+      "bytes": 343,
+      "sha256": "b2140208337f6dae97e8f163dc0f15c77c1e4b6b64bc2347d3d00f6476d3f935",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_s4_control.py",
+      "bytes": 335,
+      "sha256": "281a2e376b1e82911981d877c2ee1c2a28e3cfd14bd0272c2a7f8641477f0e9c",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_s4_dual_validation.py",
+      "bytes": 351,
+      "sha256": "d8ef2ec520bc71d538d5a820dcfa46a0250a9f771810dbab397b5aa094f5afa2",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_s4_signed_scan.py",
+      "bytes": 343,
+      "sha256": "156056525ce57c9cb30031b596683a53e041f6e5915413eb7e8e70c0fef6dbb9",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_s5_gamma_mechanism.py",
+      "bytes": 349,
+      "sha256": "6d5a95f220abcfc8d2b863c7ae05cfd41265dad6da2f6730ae2f4e8cd4cb2926",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/plot_s5_volume_radiation.py",
+      "bytes": 351,
+      "sha256": "a98e45c9ef7ac7def01cce4efda5c96d2544d7777e2e0de5633bf250860012e3",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/prepare_dipolar_gamma_origin.py",
+      "bytes": 7251,
+      "sha256": "083032878c1769fd953d7fec3a5ea0adffb6f9b2eac139a88e155864a0a75960",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/prepare_s5_gamma_origin.py",
+      "bytes": 349,
+      "sha256": "2913ba3e4d28e5e54398e2184ff36e0f0f2ce962e57bdcbb32bd3cd7086961a4",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/recover_finite_quarter_selected_mode.py",
+      "bytes": 25472,
+      "sha256": "008922c19a184daf67e0b09d4d2ef1ff2f0cc166c978d93014fef3cc6e54799f",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/reprocess_boundary_analysis.py",
+      "bytes": 10230,
+      "sha256": "13b43ac1019071f0eb5ac494e595102d23ab4b9b6d57e193beaca1c28e728ef0",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/reprocess_s4_boundary.py",
+      "bytes": 347,
+      "sha256": "ee14c55976922d658c96d4899697ddc9aee55f7efd5daf9ac2ef4336916cdeaa",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/srip1d_trend.py",
+      "bytes": 15681,
+      "sha256": "61a7f329f0211d12854b9532dd9b23976b63eaf7d92fe03ec87275157f63463f",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/unit_cell_2D.py",
+      "bytes": 2211,
+      "sha256": "4f4f616abdee8e95ffaaffc119ddd6bb5520f7f3d1192b81fd74721ce75e03f8",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/unit_cell_2D_valley_refine.py",
+      "bytes": 5864,
+      "sha256": "9e57e5f3146c067e896af2c01b9b404945c896d49ebc78db813cb3679cca4ff3",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/update_finite_field_plots.py",
+      "bytes": 10839,
+      "sha256": "19c4a5cc94347d568d3e233a52b1e270630a31680bfa07de5b3c2a68a347a66f",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/validate_boundary_local_fields.py",
+      "bytes": 22945,
+      "sha256": "0997cbdeef75d8f662917e6b76ab5cfa10fc18e37f9a9e5c2fc17e643f41d69d",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/validate_dipolar_bloch_radiation.py",
+      "bytes": 19302,
+      "sha256": "fc92e4b972b18ee959cdd3ad99c43872635b1234eae64d9d40a03b4546b6c97c",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/validate_s4_local_fields.py",
+      "bytes": 353,
+      "sha256": "921f227a8e6f02bfb05994894c06199c1d8035524744172d5656d91bce016da3",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/validate_s5_bloch_radiation.py",
+      "bytes": 357,
+      "sha256": "66b8da917a28dd5c4e25c457a05c88ff3691ec6878d9104d9863141afc8536c0",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/visualize_dipolar_broadening.py",
+      "bytes": 14809,
+      "sha256": "e2bbec8f609bb7997e3ed1e3e6ca8c00e09fb513e0eae3ff02db5ad8b8a253e7",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/visualize_dipolar_broadening_2d.py",
+      "bytes": 40253,
+      "sha256": "2703ddae54c1c584d6a165eae9f6ecd6e0070f058ea8b6427d362c559c6d33a3",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/visualize_s5_broadening.html",
+      "bytes": 15962,
+      "sha256": "5a6af3c1a0ab612281c993c61c6add00353665c24b8c1ca347d572ff8037f929",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/visualize_s5_broadening.py",
+      "bytes": 349,
+      "sha256": "0cd3aa9ed0f8501963e8ab24da695bffaed7e4c05ea68c13a550355be1c77271",
+      "tracked": true
+    },
+    {
+      "path": "scripts/analysis/visualize_s5_broadening_2d.py",
+      "bytes": 355,
+      "sha256": "34fa8f8c00bf48256bfd238ecfaca2346487b7449032bf8d88fabb3dc91abb95",
+      "tracked": true
+    },
+    {
+      "path": "scripts/check_offline.py",
+      "bytes": 2488,
+      "sha256": "6468772c3d2413a5d202e32e3f6f41bc4261e9b61a5d6078f4eaa3e7282184f2",
+      "tracked": true
+    },
+    {
+      "path": "scripts/parameter.json",
+      "bytes": 2039,
+      "sha256": "42ee84d1dca03ddc708d45ed33579b58714c2d693f15a3a1502a091d221ba728",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/__init__.py",
+      "bytes": 77,
+      "sha256": "8a4795eed5de6b865088b5702d0eb68ccaa70733750bfb8036385637b4cba377",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/export_dipolar_cap_height.py",
+      "bytes": 7344,
+      "sha256": "43a1fd448d97cbf05177eff2f647bfbf7292b27944b4952f05dca4bcb5e21069",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/export_dipolar_gamma_boundary.py",
+      "bytes": 15265,
+      "sha256": "ab3df600c04fe51752d916717d60b65e6063194ef990c590397a7e73419945a1",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/export_dipolar_unitcell_air.py",
+      "bytes": 3318,
+      "sha256": "0ad688faa863949fb5d96400593c490e9452517c36b8d2496f7dcb8a906a924c",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/parameter_config.py",
+      "bytes": 35799,
+      "sha256": "13d540d20c871b145f7b6518fefd36f22c03aab502e964a9a798aa6522eefd72",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_band_pair.py",
+      "bytes": 52071,
+      "sha256": "a43abc330cf7ef44850f6ab3eebb86ab6dfcabfce2e012beaddc9e72ea39f3d8",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_band_solo.py",
+      "bytes": 4672,
+      "sha256": "85492c4061a4c911957f54d185f730d445ab3a294d4c4c15317268138cb58fdb",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_boundary_analysis.py",
+      "bytes": 43670,
+      "sha256": "7c292da7fd5431df0dd69dcc757ecb157f47aafc8040ff81e4e77615fb8d7741",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_boundary_surface_control.py",
+      "bytes": 14056,
+      "sha256": "f79b78e56fa5f5b26956cb2b44fc94a0c9b9f30532cd5b8002079899dcd6735e",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_dipolar_boundary_replay.py",
+      "bytes": 17082,
+      "sha256": "db90c4f000aae8c6cb3e22c4ee621f2e87ab23dd101370f540539ca394ce2d71",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_dipolar_cladding_scattering.py",
+      "bytes": 23602,
+      "sha256": "d899a1c46ac0b97147dc9d873afdcbe82663d8d75e5afbb7f9df91604c9c2efc",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_dipolar_data_completion.py",
+      "bytes": 34589,
+      "sha256": "09995e7cacbb94071791e4fc384dce6652e42a380702406a29dfef077066c743",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_dipolar_mesh_radiation.py",
+      "bytes": 8334,
+      "sha256": "8c6c22213d833abc850ac2658d84037b4d10aefd0acd899bde8ea048bf7374c4",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_dipolar_periodic_reference.py",
+      "bytes": 13251,
+      "sha256": "83d4eb8c23a872c2848f221f841cd7af234e5ee1ad0e719ec24fcae1a1bbfcaa",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_dipolar_volume_export.py",
+      "bytes": 15220,
+      "sha256": "48199f95821ff45310161fb21455bf35ff231c7efa929c9de9be425e655cff8d",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_finite.py",
+      "bytes": 111995,
+      "sha256": "d97c23d3ac1e9fe769dc78aea50eaff0f4a5c09bef79ae165b7da0dc81e98b58",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_finite_quarter.py",
+      "bytes": 36744,
+      "sha256": "06b40ead41c5f7df1b2048810bd6429a5a3fc9b3abd336766381feadbd3d6b11",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_finite_quarter_all_symmetries.py",
+      "bytes": 56012,
+      "sha256": "18b94466175833150ada1956b7b0fbbcf6d46f92ed17cb3f000970b3283c4df0",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_finite_quarter_four_modes.py",
+      "bytes": 359,
+      "sha256": "0cf264f6fb227ef1b67f5549b3dfbb88b50eb34b9fd4508c9a31a101172b68e3",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s4_boundary.py",
+      "bytes": 335,
+      "sha256": "23603ade20ea78f2f8db205d17d0d9d9df96f68a5ca83e40d6bbbf4631adb665",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s4_mesh_convergence.py",
+      "bytes": 353,
+      "sha256": "d650a1df109196206c8514803c35535aab95c03dfb794a54571944d8150e8994",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s4_surface_control.py",
+      "bytes": 349,
+      "sha256": "782f06cdfd5258a6b08e9bc59c3a40aacac16896d2c09b90a5986c99e24abdb8",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s4_surface_zeta.py",
+      "bytes": 355,
+      "sha256": "14e154481b9415e77bddaf7e8735c01f036ae8ea6251d5c476fd5e86caf90570",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s5_cap_height.py",
+      "bytes": 343,
+      "sha256": "65ea45396311f312bd0069bc3e74e97a27015323cc21d264e2c26b1cca13dd7b",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s5_cladding_scattering.py",
+      "bytes": 355,
+      "sha256": "ea502cd2b8b1596e5ff2aca41a2107d26620cb1ca0cea7b033d6166eb09e349e",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s5_gamma_origin.py",
+      "bytes": 351,
+      "sha256": "b03f07d93fe76a8ff4b59b957710af266730ec29d885896cf992d73126e0cfe2",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s5_gamma_replay.py",
+      "bytes": 347,
+      "sha256": "81874df412d43c802acbc9b1a040b0dd0b732d2c8f8eba44b5183fee6d86f4a2",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s5_mesh_radiation.py",
+      "bytes": 345,
+      "sha256": "b4a67366262245ee391b7414aeaabfab1dbb5b691aa205bb5d69363b7489dce7",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s5_periodic_reference.py",
+      "bytes": 353,
+      "sha256": "43be4882f56cdacc03ed23f337de16b720cb23ea803056f395e1f9aa25343cc1",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_s5_volume_export.py",
+      "bytes": 343,
+      "sha256": "61d0d3ac8c34cfd8a4542991ecfc3f4e86a4aff6439dcf2d309d249e8628a6c6",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_strip_1d.py",
+      "bytes": 83885,
+      "sha256": "e569373e1a8a5816839b18d0c302051f9f86b9b2696ed37139d1da6b083a8f64",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_main/run_unit_cell_2d.py",
+      "bytes": 30691,
+      "sha256": "0917e7e2e53b4af9c4c8ee593ee0f7d74e400c25ec42a5f95a3d1893f80d6c61",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/__init__.py",
+      "bytes": 65,
+      "sha256": "30352db1806bf2a4dbaadf04701473bc627f1510f84ac2b157441596743b1582",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/cladding_bandgap_alignment.py",
+      "bytes": 27957,
+      "sha256": "de8bf3d178767f3b807138058dd6d8bd2cf93997b61ac811511b989c637d1678",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/collect_theory_fit_bands.py",
+      "bytes": 8065,
+      "sha256": "94772f79338607f5df40887b2e2b5fdf49f2103c0e8f823fc879b392a328c333",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/optimize_cavity_cladding_cells.py",
+      "bytes": 33589,
+      "sha256": "3a8f79c4f588e841e8eff2976635834ccef2ae3d6ed5a7abb6ede4faca9e575e",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/optimize_cladding_doublet_alignment.py",
+      "bytes": 20600,
+      "sha256": "026e64584757614bda22ffe754b438478dbf1d5785f0113991c2f5e2008611ec",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/optimize_cladding_p2_d2_alignment.py",
+      "bytes": 22997,
+      "sha256": "0c0ada40ea329947df2a307a4f9e885e0be2c4190efc328181ad93409b2c4d32",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/optimize_finite_quarter_q.py",
+      "bytes": 33568,
+      "sha256": "1191fc8c2de5944db22b68fcfb7a76cc74bbb3b2dec1dc47640ea88eaff52b95",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_boundary_dual_validation.py",
+      "bytes": 24493,
+      "sha256": "b2132ef001f4d583d03e43b8cf9c7c06ae31eca2dba82095a2531b9435492919",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_boundary_full_refined_scan.py",
+      "bytes": 17678,
+      "sha256": "f27e1c9bc0e68908cef81ebfa1d1320ca4ff6dbc1f6f9034215699d94dda9b08",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_boundary_mesh_convergence.py",
+      "bytes": 38053,
+      "sha256": "cf3e3eb86f3b8520ad35f2bd730cdd89f80cf2b70fa6e514af09abc3562bc629",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_boundary_peak_resampling.py",
+      "bytes": 6167,
+      "sha256": "2a7de693c84271720b0c4f27ad0d98c27a4ad3a32e69cc1919df3049dc3c5014",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_boundary_px_mesh_test.py",
+      "bytes": 14456,
+      "sha256": "e795365818718204f989a95e64c8433902382554badd26178974fb9b1089d0c4",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_boundary_surface_signed_scan.py",
+      "bytes": 13451,
+      "sha256": "e0a19f484bed0367ce10fc911d00350dedef2b5c65f011b5a058f9532f77adf0",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_boundary_surface_zeta_scan.py",
+      "bytes": 13744,
+      "sha256": "49f0b0ba056d77f4ebe3ba6d9901d236a9594cbf3b0da45a71e517f0fc8a25ac",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_s4_dual_validation.py",
+      "bytes": 351,
+      "sha256": "082455bbe79e111f4c75537d6d715d565b4215b362bde973d1cc25780183fc90",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_s4_full_refined_scan.py",
+      "bytes": 355,
+      "sha256": "fd38c8d5b4dbf3c74f66cf4728c00b16aa052b9a5d6464191eb18fc6b7ef08c7",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_s4_peak_resampling.py",
+      "bytes": 351,
+      "sha256": "d886826f066473654809cc9b4ce1fd455a9490362b3e7abdb74ddf3f7c4e027f",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_s4_px_mesh_test.py",
+      "bytes": 345,
+      "sha256": "13f8dd69718d1c607ba84c65ff1b67b3d8129078531e45942900eeae5e248730",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_s4_surface_s_scan.py",
+      "bytes": 359,
+      "sha256": "d44a6c8681c52f4ab07dd8870bee610952b19f76f70c273c85c47b05e4a8323a",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/run_unit_cell_2d_zeta_scan.py",
+      "bytes": 10359,
+      "sha256": "8d5025855e3b7b88b4cc25cb7ad102a15db6460191281d2679d2f9dfffc63486",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/scan_unit_cell_p2_gamma.py",
+      "bytes": 19049,
+      "sha256": "edb1a94bf78b7cd0d97db603f55df952d676c889fc30c65d7f863d0b10543fe6",
+      "tracked": true
+    },
+    {
+      "path": "scripts/run_sweep/unit_cell_2d_valley_solver.py",
+      "bytes": 63008,
+      "sha256": "22aa695fa62911a036fb17fe5135146fe15d746d02c2567e8986bbb6fe41402e",
+      "tracked": true
+    },
+    {
+      "path": "scripts/theory_band_fit.json",
+      "bytes": 971,
+      "sha256": "112856963441b0b307cba9137052a09eb5c2db8ad1442d4a333fd50146eb78bb",
+      "tracked": true
+    },
+    {
+      "path": "scripts/workflow_cli.py",
+      "bytes": 3609,
+      "sha256": "e4dcfd7f9c0b5ea8d177566488547610a4c73a4ea4f244c5e5e1760ab0ee7577",
+      "tracked": true
+    },
+    {
+      "path": "tests/README.md",
+      "bytes": 2376,
+      "sha256": "d9488d4cf5323964f7e4d3dd9392591b7faf22006326cd949880dda437117472",
+      "tracked": true
+    },
+    {
+      "path": "tests/__init__.py",
+      "bytes": 72,
+      "sha256": "6e0ff3a07482a0be347ded0bf4dd75f2dedf65e11e5437724240016649fb9add",
+      "tracked": true
+    },
+    {
+      "path": "tests/_paths.py",
+      "bytes": 406,
+      "sha256": "de53295a38f396be5c8d5619bcb3ad91ce72d7b4f6c19a062f2c81056b8ca378",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/archive_manifest_20261009.json",
+      "bytes": 35555,
+      "sha256": "8b933548a398cfa1c554d3aabab19d3912ab3931a826938c38833edb0ea42bf4",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_analyze_finite_trend.py",
+      "bytes": 10596,
+      "sha256": "478392315b5ea07f357f40115dd974441301a52e7443f6885271357142c8376b",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_analyze_strip_gamma_summary.py",
+      "bytes": 9292,
+      "sha256": "0e939720c7e7d22737afb674d5c8e33f2c4135373e8955c487fa65d6a35f4696",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_analyze_strip_gamma_trend.py",
+      "bytes": 13888,
+      "sha256": "5f613c7910c1c5713453a521de49178151f509a286ca654ce894c5a333415dab",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_blueprint_comsol_geometry_parity.py",
+      "bytes": 5099,
+      "sha256": "c839cf0994df3ad085d90c29b7e0acabcfa173722f3caae76df9b5e4f6ad25dd",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_bulk_cladding_lattice_generation.py",
+      "bytes": 22785,
+      "sha256": "6c9cacb64151dfa04684dd1e2256999d49255af55e62039c7a28f0ae19876e23",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_bulk_side_corner_lattice_generation.py",
+      "bytes": 11031,
+      "sha256": "67196f60d2d67f591c4312ff6977cf32cf60bd2c87feb8750d2ebf75b21b8215",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_c2v_band_model.py",
+      "bytes": 4046,
+      "sha256": "eb742553c13f58af0e2bd092f1fc09597a2c8d839ba2ab283332b04503fb3de3",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_cavity_hole_polygon_clipping.py",
+      "bytes": 12917,
+      "sha256": "5587fff6c3bcbe774836f7fb7f59df6255d861e470f95f8e2887c772c2742b0f",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_cladding_shift_profile.py",
+      "bytes": 28446,
+      "sha256": "199b9965f651f5469c3c33f53716c3e722b72369e742b642e0e4473ec88e661e",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_dipolar_angle_filter.py",
+      "bytes": 1147,
+      "sha256": "e925b0e5a76d8026afc013a347a5e3e5014feae3c9c293282edd34f63149d2fd",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_dipolar_output_layout.py",
+      "bytes": 1166,
+      "sha256": "ec62f055c81538f7223605e94f4b4b19c4fd92e5ac525ca533fc9650f6dc6af8",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_energy_recovery.py",
+      "bytes": 11711,
+      "sha256": "e93b37a19185347729b3d246b38da8ec3e7d793e34fc5d65ff20d022af44b293",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_export_finite_field_html.py",
+      "bytes": 1499,
+      "sha256": "38caba80f8d3007d5917dad226c3d5445438e88cd81cf25667acf072296c2e79",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_farfield_fft.py",
+      "bytes": 14249,
+      "sha256": "3af13fd492ea9e07c054c6161d356669cc5b48f558878583a5573858213672a1",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_field_plotting.py",
+      "bytes": 6876,
+      "sha256": "e5c69ee922de761c1b4670a5e61c63f7f0c226525b5cf9183629f173e0b14d39",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_finite_cavity_field_exports.py",
+      "bytes": 23765,
+      "sha256": "31882edd4434a107061f569283dd0e5b9ced9d4a539e5f7c9ee48a289ed32ed4",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_finite_flatness_trend.py",
+      "bytes": 9007,
+      "sha256": "e70c04c1429bd970516ed4e7aef5063b763b0b988123f395398055942d9b5c21",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_finite_geometry.py",
+      "bytes": 8559,
+      "sha256": "2a63f1ab033ae54fc0383ec5576f8897e3b35652249e9b48f5428639ada46174",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_fourier_basis.py",
+      "bytes": 4465,
+      "sha256": "0e3559d0708ea88dce3a89c33bfd820687337f37d2117e99cd49894e45e2881f",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_geometry.py",
+      "bytes": 6566,
+      "sha256": "d9689b986009ebff8033f451513d4999d016ccfae1a0586f0c9b42b563cf4e20",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_lattice_fourier_validity.py",
+      "bytes": 13646,
+      "sha256": "906b7f18df8545861a386ff58af1e3ec0dc8175f6cd686721c6c98526cf91f5e",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_lattice_polygon_fourier_utils.py",
+      "bytes": 10920,
+      "sha256": "ee38e8b55ff7e5a4ae8df277872db244f02e1e0d5b7c25742addc73831862308",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_optimize_cladding_p2_d2_alignment.py",
+      "bytes": 7401,
+      "sha256": "cf99988e681239f0cd31b275a54f887e537e515d28f9d5640eca09c6367ff6f7",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_optimize_finite_quarter_q.py",
+      "bytes": 4160,
+      "sha256": "7a4019d1010b755fdfd53d264441ae1fc76f0b17c50633b15e5410fa05d66473",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_parameter_config.py",
+      "bytes": 6988,
+      "sha256": "81cd2e65084abf0fffbd989b4e063f45ab9196b066298094242e352564bede9b",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_band_pair.py",
+      "bytes": 88156,
+      "sha256": "7ab266243a52e99a16a29b6097bc57543b96063273f7321a82863edf5e39f0cf",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_band_pair_model_reuse.py",
+      "bytes": 9359,
+      "sha256": "de26eccc41ac86274b34c21835658cc15e4fd7f72ee633d9d95160caad83d1cd",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_band_solo.py",
+      "bytes": 5219,
+      "sha256": "89dac6e105c237f9005d3a917c137b3f6d2f033db25083ed7ebbe9122d1354cc",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_finite_farfield.py",
+      "bytes": 4300,
+      "sha256": "015193ecbfa97fc2aede00d173903bcf285076cb15582f9125fcd173140075a5",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_finite_quarter_four_modes.py",
+      "bytes": 19204,
+      "sha256": "094a637be0ade409ff360286f86900d1858f2bf93ab65732deedda72b9282bc4",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_strip_bulk_rotation.py",
+      "bytes": 6155,
+      "sha256": "f6fc9105d3cbaea4b07bf63eae055a0591f3bd8578abd960287957207d4bb0aa",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_strip_hexagon_boundary.py",
+      "bytes": 1515,
+      "sha256": "1197d367ca58c232d96fd716622ad6a2b574049e95049db204461015bd36ec5a",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_strip_output_layout.py",
+      "bytes": 12651,
+      "sha256": "fa9e38123a678ded4c4a5ba51a01b044fb138df20846acb697a64e0aa477535a",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_strip_shift_scan.py",
+      "bytes": 26488,
+      "sha256": "451616f7b344c34a63c122696efbeae59aa7c471682d68a8bcd96e3ad16faf05",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_unit_cell_2d.py",
+      "bytes": 10920,
+      "sha256": "a05d696e47a1418718b6c51389ad1ec9f4dfe8f530a966ba35fb60d106180937",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_run_unit_cell_2d_zeta_scan.py",
+      "bytes": 4010,
+      "sha256": "ca2e95fcf895876662a1c95814f77a2f7e4308d37710ca04de75eb5fa86aada4",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_boundary.py",
+      "bytes": 32333,
+      "sha256": "ffac05ca299480304927634221d28afca50141f45c9ebbdc0f0522880b57aa34",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_c6v_decomposition.py",
+      "bytes": 4811,
+      "sha256": "70d8542502bde0b2a3702c0f0dd880a3f0c9be4f35d64d94e46e668b2db67a49",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_dual_validation.py",
+      "bytes": 13451,
+      "sha256": "637fadbcf9e5901cd6b4ac66b44fc358182dd9f6de61afcb15ad61e4113569cd",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_full_refined_scan.py",
+      "bytes": 3299,
+      "sha256": "5cc6dcb84efe0d99e20e18ff041f9abf1b2588f99de4c96a48ac53272756b3dd",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_local_fields.py",
+      "bytes": 2520,
+      "sha256": "b8bd7702bff937aef458b0585add856b4fcd3b41d51b01b4b98d7460757925f3",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_mesh_convergence.py",
+      "bytes": 3272,
+      "sha256": "2d8bb84448565f9a013bae0e919b65fe130f75fe2f1afe5b64ed79f0d4f1de5e",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_px_mesh_test.py",
+      "bytes": 1228,
+      "sha256": "01191614ebe994a7d469fa1940f11d2222738fac074f8a5e3f276fbb7761305a",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_session_paths.py",
+      "bytes": 2322,
+      "sha256": "87cc098da8ca0eb9eb2b27073f6e5c66ff31127d3b5eec07fae5645a7b9bc904",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s4_signed_indicator.py",
+      "bytes": 880,
+      "sha256": "9df1aa5ecce1507486cde7222efb91438de0a854b991948250427ca81d673c79",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s5_bloch_validation.py",
+      "bytes": 10826,
+      "sha256": "029af71c70fe1b80d2faa24a80ce005d7f3279c12f95a5b03c3a21730d114d06",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s5_cavity_plot_contract.py",
+      "bytes": 2558,
+      "sha256": "d5ee3e65c94a87310b5a9b7addb89d9f13f3fff954b460228e93305509fbfc7d",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s5_cladding_plot_scale.py",
+      "bytes": 1090,
+      "sha256": "51273c89cdf39d9855d05b37986d9001aeb14610d68c7cd106aeea018cfe309a",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s5_gamma_mechanism.py",
+      "bytes": 621,
+      "sha256": "4a80032e364223baba8d73284ddff23e696f3719c3245e5e1b2f088ec750e2a0",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s5_gamma_origin.py",
+      "bytes": 7505,
+      "sha256": "5218452dcb7981091a3e8a143dce422a6c357ff5f582453167d510ca01d12e1d",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_s5_output_layout.py",
+      "bytes": 1798,
+      "sha256": "d69184debafcf9676abda23877a58e71ace810dda43cd2a5998e8dce4ba73c1e",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_config_geometry.py",
+      "bytes": 5084,
+      "sha256": "65b32a7a8fd753858fe60fd1970452f365a950094003a1ace958cd8045025dec",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_plotting.py",
+      "bytes": 8835,
+      "sha256": "6b039e647ba7c68b6dd01445070f4d535f5005b83c84acaf732a47a532a80c21",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_progress_log.py",
+      "bytes": 10262,
+      "sha256": "21a8cca7d06d862668243a77951da1cb578bd7f59addb2d386251d7ca0ceade4",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_spatial.py",
+      "bytes": 14188,
+      "sha256": "a85fc9b84ced11d4da9a0c514725da1f3e434c0c7ad8e2a99c02e7d9d18ddb3c",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_utils_field_export_options.py",
+      "bytes": 4505,
+      "sha256": "ab4dc5093ebe1e584f8703cd094bf1bc50d8883ef02bf40db687af6a539dadbf",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_utils_grid_interpolation.py",
+      "bytes": 3071,
+      "sha256": "c742d5a1b422d5203ebcb6c7eeb826098729e3d4848246612e0d15cf8b3cdde7",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_utils_multilayer.py",
+      "bytes": 15764,
+      "sha256": "e5e3788b9a60bbcc6289285702e0616bb2240cc71c55ba431e5f6780cb3dc9d0",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_simulation_utils_spatial_comsol.py",
+      "bytes": 24211,
+      "sha256": "357e731c1fee2c01e3c1d458cc5ff9c79cc247d4d0c8d61bf48e7c9c86ebfc8c",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_strip_1d_fourier_quotient.py",
+      "bytes": 11486,
+      "sha256": "493f510f3bb6e7cc1558ed92610dda61ea43a91727fce6c2bd7c517e0e0227ec",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_theory_band_fitting.py",
+      "bytes": 3184,
+      "sha256": "40db83df52564be4f82c85b1922ac7b1c271382642f307441f6000862ba516e5",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_theory_fit_workflow.py",
+      "bytes": 3722,
+      "sha256": "2f6f61c6bf70b2908cc25a0eed4e5d06a71d860f6c40c0b4731ffd0fdd14920c",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_unit_cell_2d_analysis.py",
+      "bytes": 30985,
+      "sha256": "8d80aedb3cead7cde1f434aa573c2e5eac597f6d29f3423e63871f96d49be7d4",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_unit_cell_2d_valley_refinement.py",
+      "bytes": 26050,
+      "sha256": "1d861887addd5080963ba01e271cb649ea99fa17ceb9791f4ed40ee9c6963b4c",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_update_finite_field_plots.py",
+      "bytes": 3056,
+      "sha256": "6ff4b8cfb9d607dc54aa13cd71d59cbfe267006f18a4a18db0c415863ab19880",
+      "tracked": true
+    },
+    {
+      "path": "tests/archive/test_workflow_integration.py",
+      "bytes": 11766,
+      "sha256": "6334b87c93bbdc3b15447be67ea14de3c047dee067af17488aafa554c81ae103",
+      "tracked": true
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 1561,
+      "sha256": "4f54cafa1bf09b315160cbf1e5be5577e4e939d58a1d60b9bc9f2ea1f19db441",
+      "tracked": true
+    },
+    {
+      "path": "tests/workflow/checks/test_staging_workflow.py",
+      "bytes": 913,
+      "sha256": "cf171015073f5f355ca85a3045ef9c7a08361010f84ab543e583456a0a3066ef",
+      "tracked": true
+    },
+    {
+      "path": "tmp/README.md",
+      "bytes": 1732,
+      "sha256": "5651a1ad208dc883e2c1f7799c1d4e81b2d5b4353fec09b3565246dc7d82e0ac",
+      "tracked": true
+    },
+    {
+      "path": "tmp/__init__.py",
+      "bytes": 77,
+      "sha256": "38a9bc3943036987064b9e18b5bb3cac064749e1ac96ed1ad08f1d1cf3ed4e8b",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/archive_manifest_20261009.json",
+      "bytes": 38972,
+      "sha256": "bdd39706e63a0f3fe980a754439d7df81645b44be368696166da0f083fbe3bff",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/probe01/audit.json",
+      "bytes": 3470,
+      "sha256": "83910b5c2be4f42226637757c1e165d3249fc0abf93ac2752db58152e1067983",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/probe02/audit.json",
+      "bytes": 9663,
+      "sha256": "83859a92ab1f424b1b7109f8ebccdb83feaf6dcc34a64dc20794e22877e41dd8",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run03/audit.json",
+      "bytes": 9994,
+      "sha256": "7d7f1b8b2fc9919c43f6cd402aa95b7bdcf2599b274bb899e7a759c54ab07426",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/audit.json",
+      "bytes": 8500,
+      "sha256": "32d9a01f919a24d21d4f50984ed916f4e2fae12f6952f4971b0f62e0ebdaaa73",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/balance_sensitivity.csv",
+      "bytes": 2718,
+      "sha256": "429bd06dc946d62391c6761f31454745c87e0b973207ed4fa515c47e13feff7f",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/diagnostic_py.png",
+      "bytes": 374187,
+      "sha256": "31bdc250a0cde45e74228fe733e4449f750f73a30181acfffa0a750a95c137a9",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/diagnostic_py.svg",
+      "bytes": 60346,
+      "sha256": "69e8d7fcd6918ca322041c95959632901f83d4fe179a598e91829882429d892d",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/local_derivatives.csv",
+      "bytes": 5483,
+      "sha256": "a9779748048da266b7c3ed06bebb0a18376fe91c7a3a9c5e1aa5056b64ab5857",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/native_thickness_fd.csv",
+      "bytes": 600,
+      "sha256": "6c8e4f12394ad1ded52a853dc63ace0a266d918dc64e2f9de06e72d9d7be49a7",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/native_thickness_samples.csv",
+      "bytes": 991,
+      "sha256": "3ef1e1042126120e4a3319ceff9b559e35438c17db5aecd1acffffc8cbf03a40",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run04/report.md",
+      "bytes": 3171,
+      "sha256": "f59286a50dbe45388b87c2958174b69c399f9af51a7c8d29bf465a5e4e899257",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run05/audit.json",
+      "bytes": 9540,
+      "sha256": "9afe864e10ed53df7bcb2b661f90aed3132ab42c167dc9a0e3f974372bd8987a",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/run05/diagnostic_py.svg",
+      "bytes": 60346,
+      "sha256": "a9a3a6907af4b7e33e36692efdd9a538b5543c686eab3911c3bbc1c4aed0bfc3",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_audit/verification.json",
+      "bytes": 4070,
+      "sha256": "5f6c705c640837c3025cf29fb0cef2098e3a310fa21efadd1554c070b23349a0",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s31_diagnostic/validation.json",
+      "bytes": 3784,
+      "sha256": "96f567bd789a2f05c522198bae0f3ae0225d48f1000c35c68de6c7e5256fb8cf",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/99_config/geometry_preflight.json",
+      "bytes": 881,
+      "sha256": "92acc67d44c9c83c29fbacf540bf946730ac7e1fe3afddb036a39b2e8ef6ee3e",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/99_config/parameter_source.json",
+      "bytes": 2039,
+      "sha256": "42ee84d1dca03ddc708d45ed33579b58714c2d693f15a3a1502a091d221ba728",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/99_config/preflight.json",
+      "bytes": 865,
+      "sha256": "bf21b93c9dbf2e91ad6030b1f288aa7b8f20961ed09c78285cf644f710e6f3a6",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/99_config/prepared_identity.json",
+      "bytes": 95,
+      "sha256": "daec565c4004bff16c53666afd75fb893d5cc087189722c7a147eb78ff2bdf52",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/99_config/s4_manifest.json",
+      "bytes": 3116,
+      "sha256": "e66a2e06728589a9a4f661947d1fb27e441f7be68284abd47ea02a3f876b3202",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/case000_eta0.96_zeta1.156_mesh5/99_config/parameter.json",
+      "bytes": 2130,
+      "sha256": "356746d50f486a7a0e1e604efd30bbc812062566afab4cd90c29e9c7e8947d08",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/completion_audit.json",
+      "bytes": 216,
+      "sha256": "ecf3e8d6c32eaabb1d4780c20950df6104e671ad7f36f812fa1be25ac6f4f8ed",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/edge_geometry.csv",
+      "bytes": 2725,
+      "sha256": "2c5beeb17ed65b0853323d1c1d7cfea8c89151df1f65cf6c4f032f00d0046d52",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/review.py",
+      "bytes": 4110,
+      "sha256": "0cd4e22eb79bf3c683b0a75066c91c78b6cbdb93840e63b1bbfde0bbc021b887",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-gamma-v2/scientific_review.json",
+      "bytes": 2436,
+      "sha256": "b210584f0c513b356a751b6ec26a0f6f90c71dbab79accd2a2a0e55ebaf7fb5f",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-mesh-review/99_config/parameter_source.json",
+      "bytes": 2039,
+      "sha256": "42ee84d1dca03ddc708d45ed33579b58714c2d693f15a3a1502a091d221ba728",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-mesh-review/99_config/prepared_identity.json",
+      "bytes": 95,
+      "sha256": "b8ad74b1f11f01313f642d1f31bc63032ff302f73bc3896599f1cbdc55747540",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-mesh-review/99_config/s4_manifest.json",
+      "bytes": 3445,
+      "sha256": "6eb133346d58eb91e923499529eef99f587c865b40c672bd2127453f4ae04c91",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-mesh-review/case000_eta0.96_zeta1.156_mesh4/99_config/parameter.json",
+      "bytes": 2130,
+      "sha256": "1d80296929d5d5dc47bef5a476251cccfb039637f690ac7cdd63404566e98f75",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260916-mesh-review/case001_eta0.96_zeta1.156_mesh3/99_config/parameter.json",
+      "bytes": 2130,
+      "sha256": "49b750061a23d8a825f7e004a597061348672d91eee1b762ad181c6c86440f84",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260917-c6v-eta095-zeta1-v1/99_config/parameter_source.json",
+      "bytes": 2130,
+      "sha256": "356746d50f486a7a0e1e604efd30bbc812062566afab4cd90c29e9c7e8947d08",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260917-c6v-eta095-zeta1-v1/99_config/prepared_identity.json",
+      "bytes": 95,
+      "sha256": "9ce9ade1c5c971229c9d36f636701669ae96ac02a087d33ce98af8c18d7f3b42",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260917-c6v-eta095-zeta1-v1/99_config/s4_manifest.json",
+      "bytes": 3529,
+      "sha256": "74ed90f091465fb6269367fa77d3ddb00795f6d449afbf0ab4c138a7ffdc2456",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_20260917-c6v-eta095-zeta1-v1/case000_eta0.95_zeta1_mesh5/99_config/parameter.json",
+      "bytes": 2128,
+      "sha256": "efbc1a4a489424b3c413e8f0760d062df5ce21a8c0b032a349c1989f2f75526e",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_area_norm/validation.json",
+      "bytes": 6515,
+      "sha256": "e7d37882dd99d17da90543426e53a2093f36200ab3f47e7a30a043446e1366f9",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_area_panel/before.json",
+      "bytes": 6565,
+      "sha256": "2c7c00912eff5c85eaf49871b3d1be8365db6e44c5b073988e8ceb54428c3f66",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_area_panel/validation.json",
+      "bytes": 981,
+      "sha256": "1d7beff39ae7982dd380aaa6240d10325ec6f0a4874479c505cc199c2e518f15",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_display_scale/verification.json",
+      "bytes": 10757,
+      "sha256": "b3befb75bcc91f8bbb8c305417780d28d4f4dc7b68cb6af72662c866f128474b",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_edges_magnitude/validation.json",
+      "bytes": 6025,
+      "sha256": "cd626c35b3d2f45664904a657a52953c4de279e9a61c38258d5a0c6733699207",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_edges_signed/validation.json",
+      "bytes": 6078,
+      "sha256": "bc6ae07f10e428ca41d25a2966ef11f041906592649162eeef403eb053b236e2",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_equation_layout/verification.json",
+      "bytes": 10893,
+      "sha256": "99755bbfd645a2c1ee0e35694765a78716f79ea217cc18f2172330a0b8ed82e8",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_layout43/validation.json",
+      "bytes": 6523,
+      "sha256": "5e76028804ef6c83f3896e6dd9192fdef2a5bddcf2c7976482386957bd0eb797",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/audit.json",
+      "bytes": 7385,
+      "sha256": "7ed9a4e651b58ec8513eda2465778a4a058b44331d0c2e6a9525f456d1c8654f",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/99_config/execution.json",
+      "bytes": 1447,
+      "sha256": "e95ae81de6239846b9ce52d08a5f4a119eaf1dc6e9aa33beb84edb102ceedc98",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/acceptance.md",
+      "bytes": 1231,
+      "sha256": "6d4bd5b52c90df9b6596569d92db59a70db5677fbc00324f88663fcc9ea4570b",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/air_radiation.csv",
+      "bytes": 463,
+      "sha256": "d517fd40dbb2030ce08b9f9239c2a458e83c60bc615585b35471ee5de9122226",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/area_comparison.csv",
+      "bytes": 4131,
+      "sha256": "7d65de47769eeffe0d8569faa0441809ef7b2e68542a04f72424960d172066aa",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/edge_geometry.csv",
+      "bytes": 2761,
+      "sha256": "2d5ec69a8d5d83542aafce4461d0b6e667bcebcb3c438945f9cb40593a8c760c",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/edge_integrals.csv",
+      "bytes": 26353,
+      "sha256": "59116a61aa7e7436ac253e01804086721bf08104d99ea79b2c8858b774d076d7",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/group_totals.csv",
+      "bytes": 2188,
+      "sha256": "ae8e6560bb5c97b48bccb3a8924a56fd121b1f347ad0d990ce49d9a0be6ecc06",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/interface_traces.csv",
+      "bytes": 6004,
+      "sha256": "7f5942dd185969849bb26bc5dde90c56a3667747a0c03f84093bf44c5690e611",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/mode_identification.csv",
+      "bytes": 617,
+      "sha256": "539304276ca5b2c8691cb3c0f75b5710d7edf837e5736c7d364c40942c24aef5",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/s4_edges_qx.png",
+      "bytes": 671214,
+      "sha256": "2198dc5cfc327935cd8455f509af7c5ada4220219df913b9c2e176fb8f79ef77",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/s4_edges_qx.svg",
+      "bytes": 244434,
+      "sha256": "4f105cdd28ff92c71e279b3e2412a4a528cbc446ec69b14a85aa4b26db3ff51e",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/s4_edges_qy.png",
+      "bytes": 677423,
+      "sha256": "b9dedde5281101a61421b1821ba6b94d2f28a6af5e3c6e24447ad4bf7cf22f26",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/s4_edges_qy.svg",
+      "bytes": 239956,
+      "sha256": "6b4ebea942ff94a31e2219b84c44584e199e692d565a0e8b3b19534be9707c46",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/s4_group_contributions.png",
+      "bytes": 419985,
+      "sha256": "0b8d67867672927fce5ac351e6fb62732abc0da8937b99b9c1398c42352bdbe2",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/01_results/s4_group_contributions.svg",
+      "bytes": 76590,
+      "sha256": "d0f8f04bc7ab51ec16dbc805a12530ce2b90c3609f72d33313ce95b29142f6f6",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case000_eta0.96_zeta1.156_mesh5/99_config/s4_summary.json",
+      "bytes": 1247,
+      "sha256": "55732644821df42ff5193759d283e06ad72d3010bbfa58d12bbb58dca9b38558",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/case_table.csv",
+      "bytes": 800,
+      "sha256": "a29dac08b3461285b3265e1653b6fbaf3fa5d1221cdd4cb0661fabd39e87d486",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T134326Z_a0b38a/backup/frozen_field_predictions.csv",
+      "bytes": 2677,
+      "sha256": "7ea0d529f3b801b6775d940698f47a8f92e992056a31168296d204daa3562777",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_postprocess_20260916T172653Z_bfc821/audit.json",
+      "bytes": 3633,
+      "sha256": "71a856783ca45db861a22ee1944ff72380d0c08b8825f50c1a6e3c17c5d9292b",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_py_label/validation.json",
+      "bytes": 734,
+      "sha256": "42a31603e2a0551cd8d37c5e1758e7f8277173b01e9a95ac41fc7964fd4437f8",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_py_names/backup/s4_edges_qx.png",
+      "bytes": 458731,
+      "sha256": "dde66efc297016b505e3c44bf1c9da31cbca0f87ce5ce8ca2fa987e035768b97",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_py_names/backup/s4_edges_qx.svg",
+      "bytes": 169216,
+      "sha256": "e0fd2828861dd763af4ccee2b66eab9e239f52733820cba0b64d5cca74c44d0c",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_py_names/backup/s4_edges_qy.png",
+      "bytes": 460634,
+      "sha256": "67ed18fbfb501bc851173f27fd1a9ab3555aab29cd410a4ad7d7db200a7db9f6",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_py_names/backup/s4_edges_qy.svg",
+      "bytes": 169565,
+      "sha256": "a78c0a29b7c48e4c6ee9a898c0da521fa9f4b91517c08dfc7a66fac0cc34d372",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_py_names/legacy_figures.json",
+      "bytes": 1788,
+      "sha256": "2f6b18ab748535009d74ffe464b72174e12267c5a2eaa49e83f3388593548232",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_py_names/validation.json",
+      "bytes": 6938,
+      "sha256": "8eb3792a7f3b7a1033f1bfd8ea0de159a71bdb0de178ea0b42c17195aebb744e",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_run_logs_fix/verification.json",
+      "bytes": 14279,
+      "sha256": "b0a42ddd0dc0328f2414a30d1be7c4df716bd6a185d11188bcfe4ed9a23b83bb",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_z0_update/final_checks.json",
+      "bytes": 627,
+      "sha256": "ae956d84481b990cb5961a8f687975259b2f3e97315a8e26a7899824926a2eb3",
+      "tracked": true
+    },
+    {
+      "path": "tmp/archive/s4_z0_update/interface_probe.json",
+      "bytes": 5489,
+      "sha256": "0ab49da3181c134bac9d5518a7e09f16b966fca1efb2bb6e6d6bca82186476b6",
+      "tracked": true
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 178777,
+      "sha256": "14a86f8b93d4b04044f16c38016705c1e01026029759820f46ee000e87a8dc88",
+      "tracked": true
+    },
+    {
+      "path": "results/finite_cavity_reference_results/finite_cavity_xy_fourier26_bulk5_cladding6_wide_bounds_mma_move0p01_eval0031/quarter_simulation_config.json",
+      "bytes": 179388,
+      "sha256": "23b24255c5768bf64f84f9523a41bf83148a9bd30cc4c124e73e0657d856a515",
+      "tracked": false,
+      "ignored": true,
+      "purpose": "Required read-only real geometry fixture for test_simulation_config_geometry.py; contains configuration and 607 hole polygons, not solved MPH or field data."
+    }
+  ],
+  "hash_basis": "SHA-256 of original source working-tree bytes; manifest excludes itself and the new synchronization spec/report.",
+  "user_confirmed_exclusions": "Historical solved models and scientific results remain local. Synchronize code, documentation, configuration, tests, and existing project archives.",
+  "excluded_result_roots": {
+    "results/": {
+      "files": 4660,
+      "bytes": 29664239604,
+      "mph_models": 118,
+      "exception": "results/finite_cavity_reference_results/finite_cavity_xy_fourier26_bulk5_cladding6_wide_bounds_mma_move0p01_eval0031/quarter_simulation_config.json"
+    },
+    "scripts/.out/": {
+      "files": 59232,
+      "bytes": 192867070946,
+      "mph_models": 212
+    }
+  },
+  "excluded_categories": [
+    {
+      "patterns": [
+        ".git",
+        "**/.git"
+      ],
+      "purpose": "Git metadata and nested repository history; preserve source history separately."
+    },
+    {
+      "patterns": [
+        ".venv/",
+        "venv/",
+        "**/__pycache__/",
+        ".pytest_cache/",
+        "*.egg-info/",
+        ".understand-anything/"
+      ],
+      "purpose": "Local environments, caches, generated package metadata, and generated code-analysis state."
+    },
+    {
+      "patterns": [
+        "tmp/.work/",
+        "tests/.work/",
+        "*.pyc",
+        "*.log",
+        "*.pid",
+        "*.tmp",
+        "*.lock"
+      ],
+      "purpose": "Temporary run products and caches; preserve the dependency lockfile uv.lock."
+    },
+    {
+      "patterns": [
+        ".env",
+        ".envrc",
+        "private keys",
+        "credentials",
+        "tokens"
+      ],
+      "purpose": "Sensitive local authentication material; no such content detected in the imported snapshot."
+    },
+    {
+      "patterns": [
+        "directory symlinks",
+        "junctions"
+      ],
+      "purpose": "Avoid external or duplicate result trees; links not followed."
+    }
+  ],
+  "historical_input_dependencies": {
+    "series_dir": {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5",
+      "source_exists": true,
+      "bytes": null,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "mode_dir": {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/10_overview/symmetry_1_xPEC_yPMC_mode19",
+      "source_exists": true,
+      "bytes": null,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "field_mode_dir": {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/01_results/f197.980_e15_20260903/symmetry_1_xPEC_yPMC/mode19",
+      "source_exists": true,
+      "bytes": null,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "fourier_source": {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/10_overview/symmetry_1_xPEC_yPMC_mode19/13_lattice_fourier_Hz/finite_lattice_fourier_hz.npz",
+      "source_exists": true,
+      "bytes": 65104019,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "source_config_dir": {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/99_config/source_runs/f197.980_e15_20260903/symmetry_1_xPEC_yPMC",
+      "source_exists": true,
+      "bytes": null,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "finite_model": {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/00_model/f197.980_e15_20260903/symmetry_1_xPEC_yPMC/finite_quarter.mph",
+      "source_exists": true,
+      "bytes": 11969864602,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "reference_dir": {
+      "path": "scripts/.out/unit_cell_2D/S5_reference_b245_eta0.96_zeta1.156_mesh5_k19_20260921",
+      "source_exists": true,
+      "bytes": null,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "boundary_case_dir": {
+      "path": "scripts/.out/unit_cell_2D/S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2/case000_eta0.96_zeta1.156_mesh5",
+      "source_exists": false,
+      "bytes": null,
+      "purpose": "Historical saved-data analysis or export input; excluded by user decision."
+    },
+    "boundary_reference_model": {
+      "path": "scripts/.out/unit_cell_2D/S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2/case000_eta0.96_zeta1.156_mesh5/00_model/s4_gamma.mph",
+      "source_exists": false,
+      "bytes": null
+    }
+  },
+  "excluded_files_above_github_git_limit": [
+    {
+      "path": "results/S4_boundary_analysis/00_model/05_mesh_convergence/size_refinement/h0.125/s4_gamma.mph",
+      "bytes": 478071437
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/00_model/finite_mode19_source.mph",
+      "bytes": 11969864602
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/00_model/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/exterior_base.mph",
+      "bytes": 754031767
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/00_model/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/exterior_partition.mph",
+      "bytes": 242836695
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/00_model/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/FULL_solved.mph",
+      "bytes": 1959306925
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/direct_radiative_fields.npz",
+      "bytes": 375661579
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/Fig.10_angle_filtered_surface_EM.npz",
+      "bytes": 326666204
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/Fig4_region_chain.npz",
+      "bytes": 539040323
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/Fig6_unitcell_synthesis.npz",
+      "bytes": 146847959
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_air_1100nm_fine_EH.npz",
+      "bytes": 132492054
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_air_1400nm_fine_EH.npz",
+      "bytes": 120832936
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_air_fine_EH.npz",
+      "bytes": 132684901
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_cavity_EH_o3.npz",
+      "bytes": 319915420
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_cladding_EH_o3.npz",
+      "bytes": 1000981255
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_native_cavity_EH.npz",
+      "bytes": 141575437
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_native_cladding_EH.npz",
+      "bytes": 444258358
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_slab_z0_EH.npz",
+      "bytes": 135585676
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_slab_z0_fine_EH.npz",
+      "bytes": 551482270
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/finite_surface_fine_EH.npz",
+      "bytes": 120813619
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/radiative_fields.npz",
+      "bytes": 1424113517
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/all_cell_cap_EH.npy",
+      "bytes": 328717664
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/all_cell_sides_chart0_EH.npy",
+      "bytes": 841893824
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/all_cell_sides_chart1_EH.npy",
+      "bytes": 1643697344
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/cap_boundary_inputs.npz",
+      "bytes": 582800570
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/cap_Ex_k_decomposition.npz",
+      "bytes": 155926744
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/cap_Ey_k_decomposition.npz",
+      "bytes": 155875521
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/side_boundary_inputs_chart1.npz",
+      "bytes": 160793673
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/volume_Gamma_REST.npz",
+      "bytes": 321291829
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2/trace_tables/cap.txt",
+      "bytes": 265838366
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2_z1p5um_20261009/cap_boundary_inputs.npz",
+      "bytes": 580561118
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2_z1p5um_20261009/cap_Ex_k_decomposition.npz",
+      "bytes": 153846125
+    },
+    {
+      "path": "results/S5_dipolarSingularity_analysis/01_results/03_gamma_origin/DS-20261006T073408Z-s5-gamma-origin-6c7bd2_z1p5um_20261009/cap_Ey_k_decomposition.npz",
+      "bytes": 153881276
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/shiftx0.050_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 567249523
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/shiftx0.050_shifty0.120/00_model/finite_quarter.mph",
+      "bytes": 765100796
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.000_shifty0.000/00_model/finite_quarter.mph",
+      "bytes": 566487772
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.010_shifty0.020/00_model/finite_quarter.mph",
+      "bytes": 566693329
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.020_shifty0.040/00_model/finite_quarter.mph",
+      "bytes": 566811093
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.030_shifty0.060/00_model/finite_quarter.mph",
+      "bytes": 566790130
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.040_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 566978415
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.050_shifty0.050/00_model/finite_quarter.mph",
+      "bytes": 567140106
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.050_shifty0.075/00_model/finite_quarter.mph",
+      "bytes": 566686494
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.050_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 567171257
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.050_shifty0.090/00_model/finite_quarter.mph",
+      "bytes": 567136734
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.050_shifty0.100/00_model/finite_quarter.mph",
+      "bytes": 566661587
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.060_shifty0.120/00_model/finite_quarter.mph",
+      "bytes": 570557720
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/shiftx0.050_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 565039262
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.000_shifty0.000/00_model/finite_quarter.mph",
+      "bytes": 563906571
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.010_shifty0.010/00_model/finite_quarter.mph",
+      "bytes": 563961656
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.020_shifty0.020/00_model/finite_quarter.mph",
+      "bytes": 564368325
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.030_shifty0.030/00_model/finite_quarter.mph",
+      "bytes": 565038742
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.040_shifty0.040/00_model/finite_quarter.mph",
+      "bytes": 564779433
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.050_shifty0.050/00_model/finite_quarter.mph",
+      "bytes": 564805304
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.050_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 565186887
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.060_shifty0.060/00_model/finite_quarter.mph",
+      "bytes": 565088567
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.070_shifty0.070/00_model/finite_quarter.mph",
+      "bytes": 564956441
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.080_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 565365968
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_10-10_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5_ellipse-shift/shiftx0.090_shifty0.090/00_model/finite_quarter.mph",
+      "bytes": 564747938
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_ellipse-shift/shiftx0.050_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 2151239088
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5_square_ellipse-shift/shiftx0.050_shifty0.080/00_model/finite_quarter.mph",
+      "bytes": 2812942127
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/shift0.000/symmetry_1_xPEC_yPMC/00_model/finite_quarter.mph",
+      "bytes": 2136112858
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/shift0.000/symmetry_2_xPMC_yPEC/00_model/finite_quarter.mph",
+      "bytes": 2881085748
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/shiftx0.000_shifty0.000/symmetry_1_xPEC_yPMC/00_model/finite_quarter.mph",
+      "bytes": 8841198343
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/shiftx0.000_shifty0.000/symmetry_2_xPMC_yPEC/00_model/finite_quarter.mph",
+      "bytes": 8841173155
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/shiftx0.000_shifty0.000/symmetry_3_xPEC_yPEC/00_model/finite_quarter.mph",
+      "bytes": 8841231287
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/shiftx0.000_shifty0.000/symmetry_4_xPMC_yPMC/00_model/finite_quarter.mph",
+      "bytes": 8841109448
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_20-20_cav(245-0.96-1.156)_clad(242-0.986-0.917)_mesh5/shift0.000/00_model/finite_quarter.mph",
+      "bytes": 2150283434
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/00_model/f197.980_e15_20260903/symmetry_1_xPEC_yPMC/finite_quarter.mph",
+      "bytes": 11969864602
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/00_model/f197.980_e15_20260903/symmetry_2_xPMC_yPEC/finite_quarter.mph",
+      "bytes": 11969835516
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/00_model/f197.980_e15_20260903/symmetry_3_xPEC_yPEC/finite_quarter.mph",
+      "bytes": 11969909390
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/00_model/f197.980_e15_20260903/symmetry_4_xPMC_yPMC/finite_quarter.mph",
+      "bytes": 11969780209
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/00_model/f202.500_e6_20260908/finite_quarter_all.mph",
+      "bytes": 21117065052
+    },
+    {
+      "path": "scripts/.out/finite_cavity/finite_quarter_all_20-20_cav(245-0.96-1.156)_clad(242-0.98-0.93)_mesh5/00_model/f203.600_e6_20260906_retry1/finite_quarter_all.mph",
+      "bytes": 21117055898
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/00_model/A_mesh_and_source.mph",
+      "bytes": 412299658
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/00_model/A_prepared.mph",
+      "bytes": 412298389
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/00_model/A_solved.mph",
+      "bytes": 1689026926
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/00_model/B_mesh_and_source.mph",
+      "bytes": 392726309
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/00_model/B_solved.mph",
+      "bytes": 1685774883
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/00_model/C_mesh_and_source.mph",
+      "bytes": 186458536
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/00_model/C_solved.mph",
+      "bytes": 1164726033
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/01_results/A_cavity_EH.npz",
+      "bytes": 319887797
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/01_results/B_cavity_EH.npz",
+      "bytes": 318125300
+    },
+    {
+      "path": "scripts/.out/finite_cavity/S5_GammaCladding_c245-0.96-1.156_cl242-0.98-0.93_mesh5_20260928T091834Z/01_results/C_cavity_EH.npz",
+      "bytes": 318550989
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.000/00_model/strip_1d.mph",
+      "bytes": 106527873
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.010/00_model/strip_1d.mph",
+      "bytes": 108036396
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.020/00_model/strip_1d.mph",
+      "bytes": 106552482
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.030/00_model/strip_1d.mph",
+      "bytes": 106313741
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.040/00_model/strip_1d.mph",
+      "bytes": 106520556
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.050/00_model/strip_1d.mph",
+      "bytes": 106008931
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.060/00_model/strip_1d.mph",
+      "bytes": 108380447
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.070/00_model/strip_1d.mph",
+      "bytes": 106740244
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.080/00_model/strip_1d.mph",
+      "bytes": 106462582
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.090/00_model/strip_1d.mph",
+      "bytes": 106408541
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.100/00_model/strip_1d.mph",
+      "bytes": 106372927
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.110/00_model/strip_1d.mph",
+      "bytes": 106307516
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.120/00_model/strip_1d.mph",
+      "bytes": 108192977
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.130/00_model/strip_1d.mph",
+      "bytes": 108304600
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.140/00_model/strip_1d.mph",
+      "bytes": 106475332
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_00/shift0.150/00_model/strip_1d.mph",
+      "bytes": 106492366
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.000/00_model/strip_1d.mph",
+      "bytes": 106709501
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.010/00_model/strip_1d.mph",
+      "bytes": 106437639
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.020/00_model/strip_1d.mph",
+      "bytes": 106578469
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.030/00_model/strip_1d.mph",
+      "bytes": 106667246
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.040/00_model/strip_1d.mph",
+      "bytes": 106830187
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.050/00_model/strip_1d.mph",
+      "bytes": 106635926
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.060/00_model/strip_1d.mph",
+      "bytes": 106523714
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.070/00_model/strip_1d.mph",
+      "bytes": 106628047
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.080/00_model/strip_1d.mph",
+      "bytes": 106598135
+    },
+    {
+      "path": "scripts/.out/strip_1d/strip1d_10-10_cav(245-0.96-1.156)_clad(240.1-0.967-1)_mesh5/cut_60/shift0.090/00_model/strip_1d.mph",
+      "bytes": 106646633
+    }
+  ],
+  "lfs": {
+    "client_version": "3.7.1",
+    "github_repository_endpoint_supported": true,
+    "git_limit_mib": 100,
+    "github_lfs_per_file_limit_gb_by_plan": {
+      "Free": 2,
+      "Pro": 2,
+      "Team": 4,
+      "Enterprise Cloud": 5
+    },
+    "reference": "https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage",
+    "used_for_this_sync": false,
+    "reason": "No selected file exceeds 677423 bytes. Oversized historical outputs are excluded by explicit user decision."
+  },
+  "validation": {
+    "working_tree_sha256_matches": 435,
+    "python_compiled": 230,
+    "json_parsed": 50,
+    "toml_parsed": 1,
+    "secret_findings": 0,
+    "offline_regression": {
+      "core_passed": 587,
+      "scientific_passed": 88,
+      "total_passed": 675,
+      "existing_warnings": 3,
+      "comsol_started": false,
+      "test_imports_copied_project": true,
+      "first_attempt_repairs": "Include required original geometry JSON fixture; use a shorter test temporary path without code changes."
+    },
+    "source_git_unchanged": true,
+    "original_destination_files_preserved": 58,
+    "source_file_hashes_verified": 435,
+    "copied_file_hashes_verified": 435,
+    "snapshot_whitespace_findings": {
+      "original_files": 17,
+      "findings": 126,
+      "crlf_recognized": true,
+      "source_bytes_unchanged": true
+    },
+    "external_dev_dependency": "Existing microfab-blueprints sibling installation required for two geometry parity tests; excluded from the project scope."
+  },
+  "required_ignored_configuration_fixtures": [
+    {
+      "path": "results/finite_cavity_reference_results/finite_cavity_xy_fourier26_bulk5_cladding6_wide_bounds_mma_move0p01_eval0031/quarter_simulation_config.json",
+      "bytes": 179388,
+      "sha256": "23b24255c5768bf64f84f9523a41bf83148a9bd30cc4c124e73e0657d856a515",
+      "tracked": false,
+      "ignored": true,
+      "purpose": "Required read-only real geometry fixture for test_simulation_config_geometry.py; contains configuration and 607 hole polygons, not solved MPH or field data."
+    }
+  ]
+}

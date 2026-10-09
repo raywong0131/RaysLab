@@ -1,0 +1,59 @@
+[project]
+name = "comsol-workflow"
+version = "0.1.0"
+description = "Local Python controller for COMSOL photonic-crystal workflows"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "finufft>=2.5.1",
+    "loguru>=0.7.3",
+    "matplotlib>=3.10.9",
+    "mph>=1.3.1",
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "pyarrow>=24.0.0",
+    "scipy>=1.17.1",
+]
+
+[project.scripts]
+comsol-band-pair = "scripts.run_main.run_band_pair:main"
+comsol-band-solo = "scripts.run_main.run_band_solo:main"
+comsol-unit-cell-2d = "scripts.run_main.run_unit_cell_2d:main"
+comsol-unit-cell-2d-zeta-scan = "scripts.run_sweep.run_unit_cell_2d_zeta_scan:main"
+comsol-unit-cell-2d-valley-refine = "scripts.analysis.unit_cell_2D_valley_refine:main"
+comsol-strip-1d = "scripts.run_main.run_strip_1d:main"
+comsol-finite = "scripts.run_main.run_finite:main"
+comsol-finite-quarter = "scripts.run_main.run_finite_quarter:main"
+comsol-finite-quarter-all = "scripts.run_main.run_finite_quarter_all_symmetries:main"
+comsol-boundary-analysis = "scripts.run_main.run_boundary_analysis:main"
+comsol-boundary-scan = "scripts.workflow_cli:boundary_scan_main"
+comsol-dipolar-analyze = "scripts.workflow_cli:dipolar_analysis_main"
+comsol-dipolar-reference = "scripts.workflow_cli:dipolar_reference_main"
+comsol-dipolar-volume-export = "scripts.workflow_cli:dipolar_volume_main"
+comsol-dipolar-boundary-replay = "scripts.workflow_cli:dipolar_replay_main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["comsol_workflow*", "scripts*"]
+exclude = ["scripts.Archive*"]
+
+[tool.setuptools.package-data]
+scripts = ["parameter.json", "analysis/visualize_s5_broadening.html"]
+
+[dependency-groups]
+dev = [
+    "microfab-blueprints",
+    "pytest>=9.1.1",
+]
+
+[tool.uv.sources]
+microfab-blueprints = { path = "../blueprints", editable = true }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["archive", ".work", "__pycache__"]
+python_files = ["test_*.py"]
+addopts = ["--import-mode=importlib"]

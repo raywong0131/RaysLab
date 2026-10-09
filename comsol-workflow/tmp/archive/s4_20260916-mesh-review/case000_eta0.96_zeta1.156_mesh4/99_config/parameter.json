@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "mesh_size": 4,
+  "cells": {
+    "cavity": {
+      "b0_nm": 245.0,
+      "eta": 0.96,
+      "zeta": 1.156
+    },
+    "cladding": {
+      "b0_nm": 242,
+      "eta": 0.98,
+      "zeta": 0.93
+    }
+  },
+  "structure": {
+    "cavity_layers": 20,
+    "cladding_layers": 20,
+    "center_frequency_thz": 202.5,
+    "center_frequency_source": {
+      "workflow": "scheduled_finite_quarter",
+      "reason": "user-requested_baseline",
+      "frequency_thz": 202.5
+    },
+    "cladding_shift_factors": [
+      0.0
+    ],
+    "cladding_shift_profile": {
+      "kind": "uniform"
+    }
+  },
+  "unit_cell_band": {
+    "eigenmode_count": 10
+  },
+  "unit_cell_2d": {
+    "b0_nm": 245.0,
+    "eta": 0.96,
+    "zeta": 1.156,
+    "eigenmode_pair_count": 2,
+    "q_max_over_G": 0.15,
+    "q_points_per_axis": 25,
+    "isQuarter": 1,
+    "target_bands": [
+      "p2"
+    ],
+    "frequency_tolerance_thz": 7.0,
+    "minimum_overlap": 0.2,
+    "minimum_ambiguity_gap": 0.05,
+    "normalization_kind": "planar_l2",
+    "field_plane": "air",
+    "mask_relative_threshold": 1e-06,
+    "angle_methods": [
+      "real",
+      "imag",
+      "complex-axis",
+      "stokes-axis"
+    ],
+    "analysis_enabled": true,
+    "valley_refinement": {
+      "normal_half_width_over_G": 0.003125,
+      "normal_points_per_round": 3,
+      "anchor_stride": 3,
+      "tangent_half_width_over_G": 0.0125,
+      "tangent_points_per_round": 5,
+      "longitudinal_max_gap_over_G": 0.00625,
+      "refinement_rounds": 2,
+      "refinement_ratio": 4.0,
+      "junction_half_width_over_G": 0.0125,
+      "junction_points_per_axis": 7,
+      "max_edge_recenters": 2,
+      "maximum_new_points": 1000,
+      "display_points_per_axis": 577
+    }
+  },
+  "strip_1d": {
+    "eigenmode_count": 2,
+    "cut_angle_deg": 60.0,
+    "kx": 0.0
+  },
+  "finite_cavity": {
+    "geometry": "hex",
+    "eigenmode_count": 6,
+    "cladding_shift_geometry": {
+      "kind": "groups"
+    },
+    "cladding_y_over_x_shift_ratio": 1.0,
+    "quarter_symmetry_ids": [
+      1
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "source_case": "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5",
+  "source_mph_sha256": "b4a06d9054295740188583bdaf1f13770fa31eb9a39bb8fb0ae40d9b4443241b",
+  "eigensolves": 0,
+  "settings": {
+    "edge_order": 64,
+    "area_order": 8,
+    "area_subdivisions": 2,
+    "trace_offset_over_a": 1e-05,
+    "parity_tolerance": 0.05,
+    "identity_tolerance": 0.001,
+    "p_weight_minimum": 0.5,
+    "mode_frequency_tolerance_thz": 7.0,
+    "minimum_mode_overlap": 0.2,
+    "minimum_ambiguity_gap": 0.05,
+    "coordinate_frame": "existing COMSOL x/y; no axis swap",
+    "target": "manuscript py: Hz odd under x reflection, even under y reflection",
+    "internal_component_expected": "px; verify rather than relabel",
+    "phasor_export": "exp(-i*omega*t); complex E,H,frequency conjugated from COMSOL",
+    "normal": "dielectric_to_air",
+    "normalization": "cell_Hz_RMS_at_z0",
+    "z_nm": [
+      0.0,
+      50.0,
+      100.0
+    ],
+    "primary_z_nm": 0.0,
+    "surface_side": "slab_layer_domains_at_exact_z"
+  },
+  "source_files": {
+    "scripts/run_main/run_s4_boundary.py": "57a2c49bb0613f20598ce8aa40a3fedc9f1e167192088f43f231c7f552b97c4d",
+    "comsol_workflow/s4_boundary.py": "eb0811095cc0e50de462afeb47d2054b723f18f441f18ce853c357c3d824310d",
+    "comsol_workflow/s4_plotting.py": "75aa06cc75547e4999948b559f51fec705d1f8b1c70954699a50ae4420742afd",
+    "scripts/run_main/run_band_pair.py": "a43abc330cf7ef44850f6ab3eebb86ab6dfcabfce2e012beaddc9e72ea39f3d8",
+    "scripts/run_main/parameter_config.py": "13d540d20c871b145f7b6518fefd36f22c03aab502e964a9a798aa6522eefd72",
+    "comsol_workflow/geometry_utils.py": "3b2fe157e7d24985b2dc94a9f965405d3e5692eacdefc910d5d8d87a4a464a03",
+    "comsol_workflow/basis_utils.py": "4416b1a38a3388e643d363942937438247a9061b8f20cf5bddb7980d4687d187",
+    "comsol_workflow/simulation_spatial/hexagon_unit_cell.py": "65ffaba3fb7a7a499f2ad5b10584243bc14140f783e24a6801d4b5bd7cab8a4b"
+  },
+  "status": "published_pending_scientific_review",
+  "preflight": {
+    "comsol_executable": "C:\\Program Files\\COMSOL\\COMSOL63\\Multiphysics\\bin\\win64\\comsol.EXE",
+    "processes_before_start": [
+      {
+        "ProcessId": 14128,
+        "Name": "python.exe",
+        "CommandLine": "\"I:\\codeXproject\\comsol-workflow\\.venv\\Scripts\\python.exe\" -m scripts.analysis.reprocess_s4_boundary scripts/.out/unit_cell_2D/S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2/case000_eta0.96_zeta1.156_mesh5 --replace-results"
+      },
+      {
+        "ProcessId": 12256,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe\"  -m scripts.analysis.reprocess_s4_boundary scripts/.out/unit_cell_2D/S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2/case000_eta0.96_zeta1.156_mesh5 --replace-results"
+      }
+    ],
+    "license_status": "Local license file; product availability requires COMSOL API checkout",
+    "license": "file/service checked; product checkout checked before model build"
+  },
+  "source_mph_unchanged": true,
+  "selected_mode": 1,
+  "sections_nm": [
+    0.0,
+    50.0,
+    100.0
+  ],
+  "replaced_files": [
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\air_radiation.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\area_comparison.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\edge_geometry.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\edge_integrals.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\group_totals.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\interface_traces.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\mode_identification.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_area_comparison.png",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_area_comparison.svg",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qx.png",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qx.svg",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qy.png",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qy.svg",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_group_contributions.png",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_group_contributions.svg",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\99_config\\s4_postprocess.json",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\99_config\\s4_summary.json",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\frozen_field_predictions.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case_table.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\acceptance.md",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\99_config\\execution.json"
+  ]
+}

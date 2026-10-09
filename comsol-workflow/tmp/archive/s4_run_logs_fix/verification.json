@@ -1,0 +1,247 @@
+﻿{
+    "run":  "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2",
+    "moved_files":  [
+                        "case_table.csv",
+                        "frozen_field_predictions.csv",
+                        "acceptance.md"
+                    ],
+    "before_count":  46,
+    "after_count":  46,
+    "before_bytes":  10906047,
+    "after_bytes":  10906044,
+    "report_only_byte_delta":  -3,
+    "all_other_sha256_unchanged":  true,
+    "original_report":  "# S4 execution report\r\n\r\nRun: 20260916-gamma-v2\r\n\r\nComputed cases: 1 / 1.\r\n\r\nScientific acceptance remains pending. A completed solve is not proof of a radiation zero.\r\n\r\nInspect mode_identification.csv, edge_integrals.csv, group_totals.csv, area_comparison.csv,\r\ninterface_traces.csv and air_radiation.csv in each case\u0027s 01_results directory.\r\n\r\nThe 3D correction terms and the outgoing air-plane amplitude are distinct outputs.\r\n\r\nfrozen_field_predictions.csv compares fixed edge means and the fixed spatial Hz field.\r\n\r\nzero_estimates.csv contains complex linear-interpolation diagnostics, not solved zeros.\r\n\r\nMesh convergence and A/B parameter trends still require scientific review.\r\n",
+    "before":  [
+                   {
+                       "path":  "acceptance.md",
+                       "bytes":  690,
+                       "sha256":  "7A64B77E5A16110D39BBFD0437146AE88066D563E21AED0A99F2921E87685258"
+                   },
+                   {
+                       "path":  "case_table.csv",
+                       "bytes":  987,
+                       "sha256":  "D85E8D8E47526B3A7D26767D4F2EF2D0808DC3B7497321F7916404FE9FFF65A7"
+                   },
+                   {
+                       "path":  "frozen_field_predictions.csv",
+                       "bytes":  2705,
+                       "sha256":  "59ACF9024660300C8514476FC77CBA4381BD5F833AACFC222546BAF1CA9BE546"
+                   },
+                   {
+                       "path":  "99_config\\execution.json",
+                       "bytes":  1883,
+                       "sha256":  "D6DEC73F8574C9AED6FAF00C354715ACC1E36809D91B81C959CCDC2E67697283"
+                   },
+                   {
+                       "path":  "99_config\\parameter_source.json",
+                       "bytes":  2039,
+                       "sha256":  "42EE84D1DCA03DDC708D45ED33579B58714C2D693F15A3A1502A091D221BA728"
+                   },
+                   {
+                       "path":  "99_config\\preflight.json",
+                       "bytes":  865,
+                       "sha256":  "BF21B93C9DBF2E91AD6030B1F288AA7B8F20961ED09C78285CF644F710E6F3A6"
+                   },
+                   {
+                       "path":  "99_config\\s4_manifest.json",
+                       "bytes":  3116,
+                       "sha256":  "E66A2E06728589A9A4F661947D1FB27E441F7BE68284ABD47EA02A3F876B3202"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\00_model\\comsol_progress.log",
+                       "bytes":  5679,
+                       "sha256":  "47C6FBA62B118ADE0FDE12AD6845A3DFF50B619D4C804CFA0B7C8A1885BE9A1F"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\00_model\\s4_gamma.mph",
+                       "bytes":  5788115,
+                       "sha256":  "B4A06D9054295740188583BDAF1F13770FA31EB9A39BB8FB0AE40D9B4443241B"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\10_overview\\s31_diagnostic_py.png",
+                       "bytes":  370126,
+                       "sha256":  "70025F3105BE85A374D08A648E93D962E315476B42985F6605ED46F92AEDE4BA"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\10_overview\\s31_diagnostic_py.svg",
+                       "bytes":  61304,
+                       "sha256":  "8374BCA876931E3E5A58A972B0BA82BD9F7BA3F8F0068D5E385746AB054D2C57"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\10_overview\\s4_edges_py.png",
+                       "bytes":  422780,
+                       "sha256":  "89C736169F72001E881FF33F8BA9AC1E608B8294BE6D013255CC4064E64A5BE5"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\10_overview\\s4_edges_py.svg",
+                       "bytes":  184020,
+                       "sha256":  "716CB7AFCEBA51ED54FB5C2DAD49F9AFE5FEB2640BFED9E238BC91B55A6A3EDD"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\air_radiation.csv",
+                       "bytes":  467,
+                       "sha256":  "BC7F602ADE5ED5B7DD701553ECC8004641840B22614B550121E9A8A122A23528"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\area_comparison.csv",
+                       "bytes":  5036,
+                       "sha256":  "7CFB837A88A9C1F05811E3FED82ADFA51B1DEDB4CDEC08BA1CF88B8A0E555AD3"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\area_field_z0.npz",
+                       "bytes":  2409286,
+                       "sha256":  "1935F0EA354E6D3EBD5201CF303C9E423DB1815A87690B73B3C5B032489E15FF"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\edge_geometry.csv",
+                       "bytes":  2761,
+                       "sha256":  "2D5EC69A8D5D83542AAFCE4461D0B6E667BCEBCB3C438945F9CB40593A8C760C"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\edge_integrals.csv",
+                       "bytes":  31167,
+                       "sha256":  "89D95A283D4893C6DA494AF2C5F046362A30391F21272246EFCDB2F07617865F"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\eigenfrequencies.csv",
+                       "bytes":  1521,
+                       "sha256":  "74D20C31723BCEA9F50935D4C713878D617AF7B67B33B1DB3CC5486CE27B5A98"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\group_totals.csv",
+                       "bytes":  2471,
+                       "sha256":  "7DE8603E8376EB982DE53EC6031315B501636AAD4868EC11345737B37976E308"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\interface_traces.csv",
+                       "bytes":  10836,
+                       "sha256":  "2E17C0C12EF172F9070B6C64805D9B94C2604733D3A950581D18717FB2B8A01B"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\mode_identification.csv",
+                       "bytes":  609,
+                       "sha256":  "36173FECF6AAAD0E8943ABF4FE7D119453E8C29B5284CC7D6BDD252F892DA982"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\output_layout.json",
+                       "bytes":  17389,
+                       "sha256":  "8DE6B7AD8B36C6FA06533D5A57C87E6A1F31392630FDE8AB5E9D797448AE1AA6"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\previous_figures.zip",
+                       "bytes":  1196099,
+                       "sha256":  "754E4A36ECF0BA199A1949455CC078E969B5FAB864783449169345776C6C12B5"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_audit.json",
+                       "bytes":  9540,
+                       "sha256":  "6CD30319AEC1A687F932C443BA3E5415101AC213387BE108A87A459FC687EE91"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_balance_sensitivity.csv",
+                       "bytes":  2707,
+                       "sha256":  "8F45422308F125343B482EFA72DAB9D2B411ABF483701D87F26E89729FC266CD"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_local_derivatives.csv",
+                       "bytes":  7841,
+                       "sha256":  "E900BAF95C3EAD283400E3CDE5B7B373CA928C0DE82DDD72A65D7AE1550F7FFC"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_local_samples.csv",
+                       "bytes":  8917,
+                       "sha256":  "B7598CA79D1C5B5AB3AFDC7A8F9863309A2758A2CCCA60C84A4920B6B00D5E6E"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_native_area.csv",
+                       "bytes":  436,
+                       "sha256":  "9F6264AE7F8B002CD1DB7CA30FEAC50EC10AB5D6A94C4B6715CE0D8C707C4E14"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_native_balance.csv",
+                       "bytes":  1407,
+                       "sha256":  "2BADC7195468BBBA23E2D34A1F5F933D3E0349BAA2B6BF99C422B142A572BE7E"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_native_edges.csv",
+                       "bytes":  13344,
+                       "sha256":  "766C8AF9E1A8651B6E0822E979230D25EB79B0640407C8768E8C9F9DA6F7AA4F"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_native_lagrange.csv",
+                       "bytes":  2192,
+                       "sha256":  "DDE97D541C2A32ED102581EDA7781300D54375F7CF63D2A0A10B5A028AFA3EA2"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_native_thickness_fd.csv",
+                       "bytes":  612,
+                       "sha256":  "B5BA8EB78F6FA4731266EE050577FB9C1E05CDDBCA00457AF30CCD4FCB3902F4"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_native_thickness_samples.csv",
+                       "bytes":  989,
+                       "sha256":  "C40957E33DA6631C8683C9C557B81C71C42F70CB50A7C2BF32D7DA59BF324D09"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_periodic_pairs.csv",
+                       "bytes":  935,
+                       "sha256":  "7ECFF25458F380E5F9FDACF3B9C6DDF9AB5AA9B03C606E3A8A358EDA496B1D58"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_quadrature.csv",
+                       "bytes":  467,
+                       "sha256":  "DE0AC165CD5978D080C0705CCF13FBAB29473AD24C6B332A7ADC7D19FAC0564B"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_report.md",
+                       "bytes":  3875,
+                       "sha256":  "E7EBCD0EC9088AE5862FC3FBEE7F1F304B1777A71C367DB7C5E600A94C134AE0"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\s31_thickness_fd.csv",
+                       "bytes":  725,
+                       "sha256":  "09B8051A981A8CADF39036EDC4C000B8BADD49A2D50F9EE35FB628FCE4500098"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\eigenmodes\\00_Hz_center.parquet",
+                       "bytes":  80730,
+                       "sha256":  "34EC332B1D738BFD02AB00E17B0AA99CF5AF568D1B89745499B4E7BCD8B8FAFD"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\eigenmodes\\01_Hz_center.parquet",
+                       "bytes":  80554,
+                       "sha256":  "E94F6F54C87B59A8F150514E4398AED95FE89CC8D35E96826DCE03FE8DA9A26A"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\eigenmodes\\02_Hz_center.parquet",
+                       "bytes":  80721,
+                       "sha256":  "9760F093E6EB70C09403584462839060BE66FBEF480514EDCA2A1DC989178655"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\80_logs\\eigenmodes\\03_Hz_center.parquet",
+                       "bytes":  80561,
+                       "sha256":  "7A17A02F2AFC26AEA5F30A2459B27D9A4708EB8C5CC6C8B5DF2DB1FEFA6F752C"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\99_config\\parameter.json",
+                       "bytes":  2130,
+                       "sha256":  "356746D50F486A7A0E1E604EFD30BBC812062566AFAB4CD90C29E9C7E8947D08"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\99_config\\realized_geometry.json",
+                       "bytes":  3086,
+                       "sha256":  "170884565D0E79DEEF3B1D7CFBA06938520BA5C1B56949E83F6C2366F766277E"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\99_config\\s4_postprocess.json",
+                       "bytes":  798,
+                       "sha256":  "76FD4E5E86A1E48464189DC7F8D7B027108BDBA8BD9A17C87F24CC8B9DEB6238"
+                   },
+                   {
+                       "path":  "case000_eta0.96_zeta1.156_mesh5\\99_config\\s4_summary.json",
+                       "bytes":  1529,
+                       "sha256":  "1F3502F6C0DDB7D12454B82CD96F43732CB11F46F911C2AD71DF0471DED0AD3E"
+                   }
+               ]
+}

@@ -1,0 +1,26 @@
+﻿[
+    {
+        "source":  "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qx.png",
+        "destination":  "I:\\codeXproject\\comsol-workflow\\tmp\\s4_py_names\\backup\\s4_edges_qx.png",
+        "sha256":  "DDE66EFC297016B505E3C44BF1C9DA31CBCA0F87CE5CE8CA2FA987E035768B97",
+        "bytes":  458731
+    },
+    {
+        "source":  "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qx.svg",
+        "destination":  "I:\\codeXproject\\comsol-workflow\\tmp\\s4_py_names\\backup\\s4_edges_qx.svg",
+        "sha256":  "E0FD2828861DD763AF4CCEE2B66EAB9E239F52733820CBA0B64D5CCA74C44D0C",
+        "bytes":  169216
+    },
+    {
+        "source":  "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qy.png",
+        "destination":  "I:\\codeXproject\\comsol-workflow\\tmp\\s4_py_names\\backup\\s4_edges_qy.png",
+        "sha256":  "67ED18FBFB501BC851173F27FD1A9AB3555AAB29CD410A4AD7D7DB200A7DB9F6",
+        "bytes":  460634
+    },
+    {
+        "source":  "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qy.svg",
+        "destination":  "I:\\codeXproject\\comsol-workflow\\tmp\\s4_py_names\\backup\\s4_edges_qy.svg",
+        "sha256":  "A78C0A29B7C48E4C6EE9A898C0DA521FA9F4B91517C08DFC7A66FAC0CC34D372",
+        "bytes":  169565
+    }
+]

@@ -1,0 +1,33 @@
+{
+  "published_files": [
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_audit.json",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_balance_sensitivity.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_diagnostic_py.png",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_diagnostic_py.svg",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_local_derivatives.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_local_samples.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_area.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_balance.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_edges.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_lagrange.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_thickness_fd.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_native_thickness_samples.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_periodic_pairs.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_quadrature.csv",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_report.md",
+    "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s31_thickness_fd.csv"
+  ],
+  "source_files_unchanged": 29,
+  "s4_tests": "22 passed",
+  "py_compile": "passed",
+  "whitespace": "passed",
+  "native_area_and_derivative_order_stability": "passed",
+  "finite_difference_step_trend": "passed",
+  "code_sha256": {
+    "scripts/analysis/audit_s31_boundary.py": "9d5322a7561190166df00cbb967bc35bc1a49995d9ab7af5c51e18595cfd6bcf",
+    "scripts/run_main/run_s4_boundary.py": "1be0d7de1d09dbdcf40417ddc0e3c5cee6df16fd0c077e59d91965d25b244cfd",
+    "tests/test_s4_boundary.py": "0675f09defa5ee2c091e26b2703c63c6d91c0311621aeadd7747197667b3a792",
+    "docs/s4-boundary.md": "75f6cd5fd6d40c61a2453a7c58db7710785e0f43dddcd013b6473fa198e93f82",
+    "docs/spec/plan-execute_20260917_s31_validation.md": "46be25427b99fde39cc7b1c1771abdaf198c793b6cbc05223b233bef45571f21"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "version": "s4-boundary-v2",
+  "run_id": "20260916-mesh-review",
+  "status": "prepared_not_solved",
+  "source_parameter": "I:\\codeXproject\\comsol-workflow\\scripts\\parameter.json",
+  "source_parameter_sha256": "42ee84d1dca03ddc708d45ed33579b58714c2d693f15a3a1502a091d221ba728",
+  "source_files": {
+    "scripts/run_main/run_s4_boundary.py": "905ff576397bb289583f522385454eb91ba883ed860f17a4ec8d2e29483cd0a2",
+    "comsol_workflow/s4_boundary.py": "eb0811095cc0e50de462afeb47d2054b723f18f441f18ce853c357c3d824310d",
+    "scripts/run_main/run_band_pair.py": "a43abc330cf7ef44850f6ab3eebb86ab6dfcabfce2e012beaddc9e72ea39f3d8",
+    "scripts/run_main/parameter_config.py": "13d540d20c871b145f7b6518fefd36f22c03aab502e964a9a798aa6522eefd72",
+    "comsol_workflow/geometry_utils.py": "3b2fe157e7d24985b2dc94a9f965405d3e5692eacdefc910d5d8d87a4a464a03",
+    "comsol_workflow/basis_utils.py": "4416b1a38a3388e643d363942937438247a9061b8f20cf5bddb7980d4687d187",
+    "comsol_workflow/simulation_spatial/hexagon_unit_cell.py": "65ffaba3fb7a7a499f2ad5b10584243bc14140f783e24a6801d4b5bd7cab8a4b"
+  },
+  "constants": {
+    "A": 0.82,
+    "D": 0.02,
+    "SLAB_HEIGHT": "200 [nm]",
+    "REFRACTIVE_INDEX": "3.3",
+    "MODE_TYPE": "TE",
+    "WAVELENGTH": "1550 [nm]"
+  },
+  "cases": [
+    {
+      "case_id": "case000_eta0.96_zeta1.156_mesh4",
+      "b0_nm": 245.0,
+      "eta": 0.96,
+      "zeta": 1.156,
+      "mesh": 4,
+      "snapshot": "case000_eta0.96_zeta1.156_mesh4/99_config/parameter.json",
+      "snapshot_sha256": "1d80296929d5d5dc47bef5a476251cccfb039637f690ac7cdd63404566e98f75"
+    },
+    {
+      "case_id": "case001_eta0.96_zeta1.156_mesh3",
+      "b0_nm": 245.0,
+      "eta": 0.96,
+      "zeta": 1.156,
+      "mesh": 3,
+      "snapshot": "case001_eta0.96_zeta1.156_mesh3/99_config/parameter.json",
+      "snapshot_sha256": "49b750061a23d8a825f7e004a597061348672d91eee1b762ad181c6c86440f84"
+    }
+  ],
+  "output_directory": "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh4_Gamma_2case_20260916-mesh-review",
+  "source_zeta": 1.156,
+  "configured_target_bands": [
+    "p2"
+  ],
+  "execution": {
+    "k_over_G": [
+      0,
+      0
+    ],
+    "solve_count": 2,
+    "eigenmode_pair_count": 2,
+    "expected_eigenvalue_count": 4,
+    "shift": "c_const/1.55[um]",
+    "full_k_scan": false
+  },
+  "s4": {
+    "edge_order": 64,
+    "area_order": 8,
+    "area_subdivisions": 2,
+    "z_over_H": [
+      0.05,
+      0.2,
+      0.4
+    ],
+    "trace_offset_over_a": 1e-05,
+    "parity_tolerance": 0.05,
+    "identity_tolerance": 0.001,
+    "p_weight_minimum": 0.5,
+    "mode_frequency_tolerance_thz": 7.0,
+    "minimum_mode_overlap": 0.2,
+    "minimum_ambiguity_gap": 0.05,
+    "coordinate_frame": "existing COMSOL x/y; no axis swap",
+    "target": "manuscript py: Hz odd under x reflection, even under y reflection",
+    "internal_component_expected": "px; verify rather than relabel",
+    "phasor_export": "exp(-i*omega*t); complex E,H,frequency conjugated from COMSOL",
+    "normal": "dielectric_to_air",
+    "normalization": "cell_Hz_RMS_at_first_section"
+  },
+  "limitations": [
+    "3D half-slab model, not exact 2D TE",
+    "No automatic degenerate-subspace rotation",
+    "No cache is considered a Gamma solution without recorded k identity",
+    "No automatic root search or full parameter-space scan"
+  ]
+}

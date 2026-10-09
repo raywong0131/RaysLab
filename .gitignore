@@ -1,2 +1,5 @@
 comsol-workflow/
 ArrayAntenna/
+
+# Track the COMSOL workflow project; its own rules exclude generated files.
+!comsol-workflow/

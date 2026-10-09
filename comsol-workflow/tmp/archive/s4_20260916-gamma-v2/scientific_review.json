@@ -1,0 +1,63 @@
+{
+  "status": "needs_improvement",
+  "parameter_identity": {
+    "case_id": "case000_eta0.96_zeta1.156_mesh5",
+    "b0_nm": 245.0,
+    "eta": 0.96,
+    "zeta": 1.156,
+    "mesh": 5,
+    "snapshot": "case000_eta0.96_zeta1.156_mesh5/99_config/parameter.json",
+    "snapshot_sha256": "356746d50f486a7a0e1e604efd30bbc812062566afab4cd90c29e9c7e8947d08"
+  },
+  "source_output": "I:\\codeXproject\\comsol-workflow\\scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2",
+  "mode_idx": 1,
+  "frequency_thz": 198.38683823113473,
+  "parity_max_error": 0.022087419281306527,
+  "identity_max_error": 0.0007651173761508719,
+  "outer_max_error": 0.0007700804859585304,
+  "group_refinement_relative_changes": [
+    {
+      "z_over_H": 0.05,
+      "QAx": 0.008976765080508558,
+      "QBx": 0.008013966095462993
+    },
+    {
+      "z_over_H": 0.2,
+      "QAx": 0.013770372002110324,
+      "QBx": 0.008094652658956035
+    },
+    {
+      "z_over_H": 0.4,
+      "QAx": 0.000860815306814096,
+      "QBx": 0.009746844931513269
+    }
+  ],
+  "group_refinement_max_change": 0.013770372002110324,
+  "identity_convergence": "not monotone across all sections/components; two resolutions do not establish convergence",
+  "trace_max_relative_difference": 0.08928294631117384,
+  "trace_median_by_offset_m": {
+    "4.1e-12": 0.04996987307604715,
+    "8.2e-12": 0.04997712394477726
+  },
+  "all_trace_domains_distinct": true,
+  "air_height_absolute_difference_V_per_m": 0.0030940575980411477,
+  "air_height_relative_difference": 0.07118102991970568,
+  "air_height_difference_over_finite_section_scale": 4.242293776056065e-06,
+  "finite_section_scale_V_per_m": 729.3360057958084,
+  "air_cy_absolute_difference_V_per_m": 0.0029419139487305485,
+  "air_cy_at_z0_magnitudes_V_per_m": [
+    0.002842537623246477,
+    0.00011049389197285007
+  ],
+  "gates": {
+    "identity_target": 0.001,
+    "parity_target": 0.001,
+    "group_change_target": 0.01
+  },
+  "conclusion": "P2 numerical acceptance fails parity and group convergence; no P3 scan or radiation-zero claim",
+  "limitations": [
+    "Single geometry and mesh cannot establish zeta trends or a radiation zero",
+    "Air relative error is ill-conditioned near a zero; absolute and finite-scale errors are also reported",
+    "Nonzero unwanted polarization and interface differences require mesh/integration review"
+  ]
+}

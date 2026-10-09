@@ -1,0 +1,25 @@
+{
+  "updated": [
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qx.png",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qx.svg",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qy.png",
+    "scripts\\.out\\unit_cell_2D\\S4_b245_eta0.96_zeta1.156_mesh5_Gamma_1case_20260916-gamma-v2\\case000_eta0.96_zeta1.156_mesh5\\01_results\\s4_edges_qy.svg"
+  ],
+  "all_protected_hashes_unchanged": true,
+  "compiled_files": 4,
+  "samples": 34816,
+  "grid_shape": [
+    233,
+    201
+  ],
+  "integrals_Vm": [
+    [
+      -1.2019715812729452e-14,
+      -3.9119708874153345e-15
+    ],
+    [
+      -3.6828605212019826e-17,
+      -3.277900278464256e-14
+    ]
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "preflight": {
+    "comsol_executable": "C:\\Program Files\\COMSOL\\COMSOL63\\Multiphysics\\bin\\win64\\comsol.EXE",
+    "processes_before_start": [
+      {
+        "ProcessId": 31496,
+        "Name": "python.exe",
+        "CommandLine": "\"I:\\codeXproject\\comsol-workflow\\.venv\\Scripts\\python.exe\" -"
+      },
+      {
+        "ProcessId": 10620,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Administrator\\AppData\\Roaming\\uv\\python\\cpython-3.14-windows-x86_64-none\\python.exe\"  -"
+      }
+    ],
+    "license_status": "Local license file; product availability requires COMSOL API checkout",
+    "license": "file/service checked; product checkout checked before model build"
+  },
+  "edge_count": 18,
+  "A_edges": 6,
+  "B_edges": 12,
+  "minimum_clearance_um": 0.04944142838005708,
+  "shared_parameter_unchanged": true
+}
